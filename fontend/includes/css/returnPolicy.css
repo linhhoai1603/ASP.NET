@@ -14,7 +14,8 @@ form {
 }
 
 form label {
-    display: flex;
+  display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
