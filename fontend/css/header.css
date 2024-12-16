@@ -1,0 +1,125 @@
+body {
+  line-height: unset;
+}
+.container {
+  width: 100%;
+  max-width: 1250px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.header {
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #d70018; */
+  background-color: #d70018e3;
+}
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: inherit;
+}
+.row-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 100px;
+  box-sizing: inherit;
+}
+.row-logo a.logo {
+  width: auto;
+  height: 80px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  opacity: 0.8;
+  color: green;
+}
+.row-logo a.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.row-search {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+form {
+  display: block;
+  margin-top: 0em;
+}
+.form-search {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 1.5rem;
+  border: solid 1.5px #d70018;
+}
+.form-search input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: #fff;
+  border: none;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.form-search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  overflow: visible;
+  border-radius: 0;
+  text-transform: none;
+  color: #d70018;
+  font-size: 22px;
+}
+.row-search-right {
+  display: inline-flex;
+  align-items: center;
+}
+.contact-item:first-child {
+  padding-left: 0;
+}
+.contact-item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  border-right: 1px solid black;
+  padding: 0 1rem;
+}
+.contact-item span {
+  color: #333;
+  font-weight: 400;
+  display: block;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.row-cart,
+.row-login {
+  font-size: 28px;
+}
+.row-login {
+  align-items: center;
+  display: flex;
+}
