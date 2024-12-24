@@ -33,6 +33,9 @@ body {
   width: auto;
   height: 80px;
 }
+nav {
+  display: block;
+}
 a {
   text-decoration: none;
   color: black;
@@ -40,6 +43,9 @@ a {
 a:hover {
   opacity: 0.8;
   color: green;
+}
+ul {
+  list-style-type: none;
 }
 .row-logo a.logo img {
   width: 100%;
@@ -122,4 +128,70 @@ form {
 .row-login {
   align-items: center;
   display: flex;
+}
+.nav-main {
+  position: relative;
+}
+.nav-main .wrap {
+  border-bottom: 1px solid #d70018;
+}
+nav ul {
+  padding: 0.5rem 0;
+  margin: 0;
+}
+nav ul li {
+  padding: 0.25rem 0;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.8rem;
+}
+nav ul li a {
+  color: black;
+}
+@media only screen and (min-width: 992px) {
+  .mb-nav-main li.has-child .dropdown {
+    display: block;
+    width: 770px;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 9999;
+    border: 1.5px solid grey;
+    left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .mb-nav-main li.has-child:hover > .dropdown {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (min-width: 992px) {
+  .mb-nav-main li.has-child .dropdown {
+    position: absolute;
+    z-index: 10000;
+    top: 120%;
+    left: 0;
+    background: #fff;
+    width: 180px;
+    transition: 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 4px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .mb-nav-main li.has-child .dropdown .item-has-child {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .mb-nav-main li.has-child {
+    position: relative;
+    overflow: visible;
+    z-index: 1000;
+  }
 }
