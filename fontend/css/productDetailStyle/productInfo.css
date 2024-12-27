@@ -1,0 +1,23 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    border-collapse: collapse;
+    border: 0px solid black;
+}
+tr,
+td {
+    padding: 10px;
+    text-align: center;
+}
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}

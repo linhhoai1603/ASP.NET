@@ -14,7 +14,11 @@ form {
 }
 
 form label {
+<<<<<<< HEAD
+    display: flex;
+=======
   display: flex;
+>>>>>>> 200e5b042e887f49a07d57645ee2783a7b698f9c
     justify-content: center;
     text-align: center;
     font-size: 1.5rem;

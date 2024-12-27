@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product-card {
+    padding-top: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-id {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.color-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.black {
+    background-color: #1e3047;
+    color: #fff;
+}
+
+.yellow{
+    background-color: gold;
+}
+.green{
+    background-color: mediumaquamarine;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.buy-now-price .price {
+    display: flex;
+    font-weight:bold;
+}
+
+.buy-now-price p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.buy-now-price h3,
+.installment-price h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.student-discount {
+    background-color: #fff4f4;
+    padding: 15px;
+    border: 1px solid #ffd6d6;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.special-offer {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.discount-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.verify-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discount-rates {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.warranty-section {
+    margin-bottom: 20px;
+}
+
+.warranty-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.warranty-options {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.warranty-btn {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+
+    /* width: 150px;
+    height: 100px; */
+}
+
+.warranty-btn span {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-btn {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.buy-now-btn, .installment-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy-now-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.buy-now-btn:hover {
+    background-color: var(--primary-color-btn-hover);
+}
+
+.installment-btn {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.installment-btn span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.contact-info {
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+}
+
+.contact-info span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.student-discount::before {
+    content: "🎓 Student - student - teacher privileges ";
+    position: absolute;
+    top: -12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    left: -2%;
+}
+.student-discount {
+    background-color: #fff7f7;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffd6d6;
+    display: flex;
+    flex-direction: column;
+     margin-bottom: 20px;
+    position: relative;
+}
+
+.warranty-options  {
+    padding: 4px;
+}
+
+.warranty-options .container .row div {
+    margin:0;
+    padding: 6px;
+}
+
+.selected-border {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color-active);
+    border-radius: 5px; 
+}
+
+.contact-info i {
+    color: var(--primary-color);
+}
