@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="product-detail">
+        <!-- Product Gallery -->
+        <section class="product-gallery">
+            <button class="nav-btn prev" aria-label="Previous Image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="main-image">
+                <img id="main-image" src="https://via.placeholder.com/600x400" alt="Samsung Galaxy A16">
+                <button class="nav-btn next" aria-label="Next Image">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="thumbnail-gallery">
+                <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705664.jpg" alt="Image 1" class="thumbnail"
+                    data-image="https://via.placeholder.com/600x400">
+                <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705816.jpg" alt="Image 2" class="thumbnail"
+                    data-image="https://via.placeholder.com/600x401">
+                <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705854.jpg" alt="Image 3" class="thumbnail"
+                    data-image="https://via.placeholder.com/600x402">
+            </div>
+        </section>
+
+        <!-- Product Info -->
+        <section class="product-info">
+            <h1>Samsung Galaxy A16</h1>
+            <p class="price">45,900,000₫</p>
+            <p class="description">
+                Experience the ultimate performance with the Samsung Galaxy A16. Featuring a 6.7-inch display, 8GB RAM,
+                and 128GB of storage.
+            </p>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button class="btn btn-add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="btn btn-buy-now">Buy Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Specifications -->
+    <section class="specifications">
+        <h2>Specifications</h2>
+        <table>
+            <tr>
+                <th>Display</th>
+                <td>6.7 inches, Super AMOLED, 1080 x 2340 pixels</td>
+            </tr>
+            <tr>
+                <th>Processor</th>
+                <td>Octa-core</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>8GB</td>
+            </tr>
+            <tr>
+                <th>Storage</th>
+                <td>128GB</td>
+            </tr>
+            <tr>
+                <th>Battery</th>
+                <td>5000mAh</td>
+            </tr>
+        </table>
+    </section>
+
+    <script>
+        // Danh sách ảnh trong Gallery
+        const images = [
+            "images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705664.jpg", // Image 1
+            "images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705816.jpg", // Image 2
+            "images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705854.jpg"  // Image 3
+        ];
+
+        let currentIndex = 0; // Chỉ số ảnh hiện tại
+
+        // Lấy các phần tử DOM
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        // Cập nhật ảnh chính và trạng thái thumbnail
+        function updateMainImage(index) {
+            currentIndex = (index + images.length) % images.length; // Đảm bảo không vượt giới hạn
+            mainImage.src = images[currentIndex];
+            thumbnails.forEach((thumb, idx) => {
+                thumb.classList.toggle('active', idx === currentIndex);
+            });
+        }
+
+        // Sự kiện nhấn nút Previous
+        prevButton.addEventListener('click', () => {
+            updateMainImage(currentIndex - 1);
+        });
+
+        // Sự kiện nhấn nút Next
+        nextButton.addEventListener('click', () => {
+            updateMainImage(currentIndex + 1);
+        });
+
+        // Sự kiện click vào thumbnail
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener('click', () => {
+                updateMainImage(index);
+            });
+        });
+
+        // Hiển thị ảnh đầu tiên khi tải trang
+        updateMainImage(currentIndex);
+
+
+    </script>
+</body>
+
+</html>
