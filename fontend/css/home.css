@@ -129,12 +129,12 @@ img {
   display: block;
 }
 .product .review .star span.active{
-  background-image: url(../img/star.svg);
+  background-image: url(../images/star.svg);
 }
 .product .review .star span{
   width: 12px;
   height: 12px;
-  background-image: url(../img/star-gray.svg);
+  background-image: url(../images/star-gray.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -189,10 +189,10 @@ img {
   justify-content: center;
 }
 .swiper-button-next::after{
-  content: url(../img/right.svg);
+  content: url(../images/right.svg);
 }
 .swiper-button-prev::after{
-  content: url(../img/left.svg);
+  content: url(../images/left.svg);
 }
 .swiper-button-next::after, .swiper-button-prev::after{
   font-size: 10px;
