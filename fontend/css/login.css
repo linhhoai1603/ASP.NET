@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: 'Arial', sans-serif;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+h3 {
+  font-weight: bold;
+  color: #333;
+}
