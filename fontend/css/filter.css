@@ -1,20 +1,22 @@
-.container {
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
+/* Tùy chỉnh giao diện dropdown */
+.dropdown-menu {
+  min-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
 }
 
-form {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.dropdown-menu .form-check {
+  margin-bottom: 10px;
 }
 
-button {
-  transition: background-color 0.3s ease;
+label.form-label {
+  font-weight: bold;
+  font-size: 0.95rem;
 }
 
-button:hover {
-  background-color: #007bff;
-  color: white;
+/* Icon và nút dropdown */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
