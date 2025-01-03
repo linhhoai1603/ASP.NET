@@ -1,12 +1,18 @@
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const minPrice = document.getElementById("minPrice").value;
-  const maxPrice = document.getElementById("maxPrice").value;
-  const brand = document.getElementById("brand").value;
+document.getElementById('applyFilters').addEventListener('click', function () {
+  const brand = document.getElementById('brand').value;
+  const priceRange = document.getElementById('priceRange').value;
+  const storage = document.getElementById('storage').value;
 
-  console.log(`Filtering products with:
-      Min Price: ${minPrice},
-      Max Price: ${maxPrice},
-      Brand: ${brand}`);
-  alert("Filter applied successfully!");
+  // Lấy giá trị từ các checkbox trong dropdown "Sắp xếp theo"
+  const sortCheckboxes = document.querySelectorAll('.sort-checkbox');
+  const selectedSort = Array.from(sortCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value);
+
+  console.log('Thương hiệu:', brand);
+  console.log('Khoảng giá:', priceRange);
+  console.log('Dung lượng:', storage);
+  console.log('Sắp xếp theo:', selectedSort);
+
+  // Logic tiếp theo để xử lý
 });
