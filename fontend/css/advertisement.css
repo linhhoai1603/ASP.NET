@@ -1,13 +1,101 @@
-.jumbotron {
-  background: #f8f9fa;
-  border-radius: 10px;
+/* Custom Styles */
+body {
+  background-color: #f8f9fa;
+  padding-top: 20px;
 }
 
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.container {
+  max-width: 1200px; /* Tăng kích thước container để không gian rộng rãi hơn */
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Mở rộng bo góc */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Đổ bóng mạnh hơn */
+  transition: transform 0.3s ease-in-out;
+  height: 500px; /* Tăng chiều cao của sản phẩm */
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* Tăng hiệu ứng di chuyển khi hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Giữ tỉ lệ ảnh và lấp đầy toàn bộ không gian */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-card:hover .product-image {
+  opacity: 0;
+}
+
+.product-card:hover .product-image-alt {
+  opacity: 1;
+}
+
+.product-image-alt {
+  position: absolute; /* Đảm bảo ảnh thứ 2 nằm chính xác trên ảnh đầu tiên */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-info {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Đảm bảo phần info không quá hẹp */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.product-info h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.product-info .btn {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-info .btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    height: 400px; /* Điều chỉnh lại chiều cao sản phẩm cho màn hình nhỏ */
+  }
+
+  .product-info h5 {
+    font-size: 1.2rem; /* Giảm kích thước chữ trên thiết bị di động */
+  }
+
+  .product-info p {
+    font-size: 0.9rem;
+  }
 }
