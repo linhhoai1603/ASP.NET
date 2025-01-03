@@ -45,27 +45,31 @@
                     </select>
                 </div>
                 <!-- Sắp xếp theo -->
-                <div class="col-md-3">
+                 <div class="col-md-3">
                     <label class="form-label">Sắp xếp theo</label>
                     <div class="dropdown">
                         <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-sort-up"></i> Sắp xếp theo
                         </button>
                         <ul class="dropdown-menu p-3" aria-labelledby="sortDropdown">
+                            <!-- Radio button for sorting A → Z -->
                             <div class="form-check">
-                                <input class="form-check-input sort-checkbox" type="checkbox" value="a-z" id="sortAZ">
+                                <input class="form-check-input sort-radio" type="radio" name="sortOption" value="a-z" id="sortAZ">
                                 <label class="form-check-label" for="sortAZ">A → Z</label>
                             </div>
+                            <!-- Radio button for sorting Z → A -->
                             <div class="form-check">
-                                <input class="form-check-input sort-checkbox" type="checkbox" value="z-a" id="sortZA">
+                                <input class="form-check-input sort-radio" type="radio" name="sortOption" value="z-a" id="sortZA">
                                 <label class="form-check-label" for="sortZA">Z → A</label>
                             </div>
+                            <!-- Radio button for sorting price asc -->
                             <div class="form-check">
-                                <input class="form-check-input sort-checkbox" type="checkbox" value="price-asc" id="sortAsc">
+                                <input class="form-check-input sort-radio" type="radio" name="sortOption" value="price-asc" id="sortAsc">
                                 <label class="form-check-label" for="sortAsc">Giá tăng dần</label>
                             </div>
+                            <!-- Radio button for sorting price desc -->
                             <div class="form-check">
-                                <input class="form-check-input sort-checkbox" type="checkbox" value="price-desc" id="sortDesc">
+                                <input class="form-check-input sort-radio" type="radio" name="sortOption" value="price-desc" id="sortDesc">
                                 <label class="form-check-label" for="sortDesc">Giá giảm dần</label>
                             </div>
                         </ul>
