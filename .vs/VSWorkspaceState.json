@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.idea",
-    "\\fontend"
+    "\\bin",
+    "\\Controllers",
+    "\\Models",
+    "\\Properties",
+    "\\Views"
   ],
+  "SelectedNode": "\\Models\\DetailProduct.cs",
   "PreviewInSolutionExplorer": false
 }
