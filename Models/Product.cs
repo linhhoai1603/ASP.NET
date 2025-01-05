@@ -8,13 +8,12 @@ public class Product
     string description { get; set; }
     string nameBrand { get; set; }
     int idDetailProduct { get; set; }
-    public Product(int idProduct, string name, string description, int price, string description, string nameBrand, int idDetailProduct)
+    public Product(int idProduct, string name, string description, int price, string Description, string nameBrand, int idDetailProduct)
     {
         this.idProduct = idProduct;
         this.name = name;
-        this.description = description;
+        this.description = Description;
         this.price = price;
-        this.description = description;
         this.nameBrand = nameBrand;
         this.idDetailProduct = idDetailProduct;
     }

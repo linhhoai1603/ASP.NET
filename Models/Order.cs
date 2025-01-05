@@ -16,6 +16,6 @@ public class Order
         this.state = state;
         this.dateOrder = dateOrder;
     }
-{
-
 }
+
+
