@@ -3,19 +3,20 @@
 public class Payment
 {
 
-	int idPayment{get;set; }
+    int idPayment { get; set; }
     int idOrder { get; set; }
-    string method { get; set; }
-    string state { get; set; }
-    DateTime datePayment { get; set; }
-
-    public Payment(int idPayment, int idOrder, string method, string state, DateTime datePayment)
+    int amount { get; set; }
+    int status { get; set; }
+    DateTime payment_date { get; set; }
+    string payment_method { get; set; }
+    public Payment(int idPayment, int idOrder, int amount, int status, DateTime payment_date, string payment_method)
     {
         this.idPayment = idPayment;
         this.idOrder = idOrder;
-        this.method = method;
-        this.state = state;
-        this.datePayment = datePayment;
+        this.amount = amount;
+        this.status = status;
+        this.payment_date = payment_date;
+        this.payment_method = payment_method;
     }
 
 }

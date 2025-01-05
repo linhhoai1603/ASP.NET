@@ -3,19 +3,20 @@
 public class Order
 {
     int idOrder { get; set; }
-    int idUser { get; set; }
-    int totalPrice { get; set; }
-    string state { get; set; }
     DateTime dateOrder { get; set; }
+    double totalAmount { get; set; }
+    string status { get; set; }
 
-    public Order(int idOrder, int idUser, int totalPrice, string state, DateTime dateOrder)
+    public Order(int idOrder, DateTime dateOrder, double totalAmount, string status)
     {
         this.idOrder = idOrder;
-        this.idUser = idUser;
-        this.totalPrice = totalPrice;
-        this.state = state;
         this.dateOrder = dateOrder;
+        this.totalAmount = totalAmount;
+        this.status = status;
     }
 }
+
+
+
 
 

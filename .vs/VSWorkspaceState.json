@@ -1,17 +1,12 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
-    ""
-  ],
-=======
-    "",
+    "" ,
     "\\bin",
     "\\Controllers",
     "\\Models",
     "\\Properties",
     "\\Views"
   ],
-  "SelectedNode": "\\Models\\DetailProduct.cs",
->>>>>>> 6eca1f055885e60b5a908ea1a9e0ebd1bb0c4c33
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\Models\\Warehouses.cs",
+ "PreviewInSolutionExplorer": false
 }
