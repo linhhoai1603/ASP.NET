@@ -15,6 +15,8 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0edfb8d6dddfd5bbe05b184a955b5a4a7483e751")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f5f97cae87acc5cea0acacee8eca1897d1358d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf25e1ccbe8d452ab73b8e125d76719a1d9e6585")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectDotNET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectDotNET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

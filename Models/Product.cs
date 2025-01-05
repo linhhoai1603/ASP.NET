@@ -20,3 +20,4 @@ public class Product
         this.category_id = category_id;
         this.img_url = img_url;
     }
+}

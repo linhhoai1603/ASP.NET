@@ -1,6 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
+    "" ,
     "\\bin",
     "\\Controllers",
     "\\Models",
@@ -8,5 +8,5 @@
     "\\Views"
   ],
   "SelectedNode": "\\Models\\Warehouses.cs",
-  "PreviewInSolutionExplorer": false
+ "PreviewInSolutionExplorer": false
 }
