@@ -1,18 +1,24 @@
-﻿using System;
-
-public class Warehouses
+﻿namespace ProjectDotNET.Models
 {
-	int idWarehouse { get; set; }
-	string warehouseName { get; set; }
-	string address { get; set; }
-	int quantity { get; set; }
-	int product_id { get; set; }
-	public Warehouses(int idWarehouse, string warehouseName, string address, int quantity, int product_id)
+    public class Warehouses
     {
-        this.idWarehouse = idWarehouse;
-        this.warehouseName = warehouseName;
-        this.address = address;
-        this.quantity = quantity;
-        this.product_id = product_id;
+        public int warehouse_id { get; set; }
+        public String warehouse_name { get; set; }
+        public String address { get; set; }
+        public int quantity { get; set; }
+        public int product_id { get; set; }
+        public Products Products { get; set; }
+        public Warehouses(int warehouse_id, String warehouse_name, String address, int quantity, Products Products)
+        {
+            this.warehouse_id = warehouse_id;
+            this.warehouse_name = warehouse_name;
+            this.address = address;
+            this.quantity = quantity;
+            this.product_id = Products.product_id;
+            this.Products = Products;
+        }
+        public Warehouses()
+        {
+        }
     }
 }

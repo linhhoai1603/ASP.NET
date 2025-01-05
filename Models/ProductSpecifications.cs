@@ -1,16 +1,25 @@
-﻿using System;
-
-public class ProductSpecification
+﻿namespace ProjectDotNET.Models
 {
-    int product_spe_id { get; set; }
-    string ram { get; set; }
-    string resolution { get; set; }
-    string storage_capacity { get; set; }
-    public ProductSpecification(int product_spe_id, string ram, string resolution, string storage_capacity)
+    public class ProductSpecifications
     {
-        this.product_spe_id = product_spe_id;
-        this.ram = ram;
-        this.resolution = resolution;
-        this.storage_capacity = storage_capacity;
+        public ProductSpecifications()
+        {
+        }
+
+        public int product_spe_id { get; set; }
+        public String ram { get; set; }
+        public String resolution { get; set; }
+        public String storage_capacity { get; set; }
+        public int product_id { get; set; }
+        public Products Products { get; set; }
+        public ProductSpecifications(int product_spe_id, String ram, String resolution, String store_capacity, Products Products)
+        {
+            this.product_spe_id = product_spe_id;
+            this.ram = ram;
+            this.resolution = resolution;
+            this.storage_capacity = store_capacity;
+            this.product_id = Products.product_id;
+            this.Products = Products;
+        }
     }
 }
