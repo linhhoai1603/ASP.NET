@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.NET\\ProjectDotNET\\ProjectDotNET.csproj",
+      "projectUniqueName": "D:\\.NET\\Project\\ProjectDotNET.csproj",
       "projectName": "ProjectDotNET",
-      "projectPath": "D:\\.NET\\ProjectDotNET\\ProjectDotNET.csproj",
+      "projectPath": "D:\\.NET\\Project\\ProjectDotNET.csproj",
       "packagesPath": "C:\\Users\\hoai1\\.nuget\\packages\\",
-      "outputPath": "D:\\.NET\\ProjectDotNET\\obj\\",
+      "outputPath": "D:\\.NET\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
