@@ -2,22 +2,21 @@
 
 public class Product
 {
-	int idProduct { get; set; }
-    string name { get; set; }
-    int price { get; set; }
+    int idProduct { get; set; }
+    string productName { get; set; }
+    double unitPrice { get; set; }
     string description { get; set; }
-    string nameBrand { get; set; }
-    int idDetailProduct { get; set; }
-    public Product(int idProduct, string name, string description, int price, string description, string nameBrand, int idDetailProduct)
+    int idBrand { get; set; }
+    int category_id { get; set; }
+    string img_url { get; set; }
+
+    public Product(int idProduct, string productName, double unitPrice, string description, int idBrand, int category_id, string img_url)
     {
         this.idProduct = idProduct;
-        this.name = name;
+        this.productName = productName;
+        this.unitPrice = unitPrice;
         this.description = description;
-        this.price = price;
-        this.description = description;
-        this.nameBrand = nameBrand;
-        this.idDetailProduct = idDetailProduct;
+        this.idBrand = idBrand;
+        this.category_id = category_id;
+        this.img_url = img_url;
     }
-
-
-}

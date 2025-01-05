@@ -4,20 +4,23 @@ public class User
 {
     int idUser { get; set; }
     string username { get; set; }
-    string email { get; set; }
-    string phone { get; set; }
+    string passWord { get; set; }
+    int role { get; set; }
     string address { get; set; }
-    int idAccount { get; set; }
-    int fullName { get; set; }
-    public
-        User(int idUser, string username, string email, string phone, string address, int idAccount, int fullName)
+    string phone { get; set; }
+    string email { get; set; }
+    string fullName { get; set; }
+   public User(int idUser, string username, string passWord, int role, string address, string phone, string email, string fullName)
     {
         this.idUser = idUser;
         this.username = username;
-        this.email = email;
-        this.phone = phone;
+        this.passWord = passWord;
+        this.role = role;
         this.address = address;
-        this.idAccount = idAccount;
+        this.phone = phone;
+        this.email = email;
         this.fullName = fullName;
     }
+
+
 }
