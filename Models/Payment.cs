@@ -6,10 +6,10 @@ public class Payment
     int idPayment { get; set; }
     int idOrder { get; set; }
     int amount { get; set; }
-    int status { get; set; }
+    string status { get; set; }
     DateTime payment_date { get; set; }
     string payment_method { get; set; }
-    public Payment(int idPayment, int idOrder, int amount, int status, DateTime payment_date, string payment_method)
+    public Payment(int idPayment, int idOrder, int amount, string status, DateTime payment_date, string payment_method)
     {
         this.idPayment = idPayment;
         this.idOrder = idOrder;
