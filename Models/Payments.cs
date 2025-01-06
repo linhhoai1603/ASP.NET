@@ -1,26 +1,40 @@
-﻿namespace ProjectDotNET.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectDotNET.Models
 {
     public class Payments
     {
-        public int payment_id { get; set; }
-        public double amount { get; set; }
-        public String status { get; set; }
-        public DateTime payment_date { get; set; }
-        public String payment_method { get; set; }
-        public int order_id { get; set; }
+        public int PaymentId { get; set; }
+
+        [Required(ErrorMessage = "Please enter the amount")]
+        [Range(0, double.MaxValue, ErrorMessage = "Amount must be a positive value.")]
+        public double Amount { get; set; }
+
+        [Required(ErrorMessage = "Please enter the payment status")]
+        public string Status { get; set; }
+
+        [Required(ErrorMessage = "Please enter the payment date")]
+        public DateTime PaymentDate { get; set; }
+
+        [Required(ErrorMessage = "Please select the payment method")]
+        public string PaymentMethod { get; set; }
+
+        [Required(ErrorMessage = "Order ID is required")]
+        public int OrderId { get; set; }
+
         public Orders Orders { get; set; }
-        public Payments(int payment_id, double amount, string status, DateTime payment_date, string payment_method, Orders orders)
+
+        public Payments(int paymentId, double amount, string status, DateTime paymentDate, string paymentMethod, Orders orders)
         {
-            this.payment_id = payment_id;
-            this.amount = amount;
-            this.status = status;
-            this.payment_date = payment_date;
-            this.payment_method = payment_method;
-            this.order_id = orders.order_id;
+            PaymentId = paymentId;
+            Amount = amount;
+            Status = status;
+            PaymentDate = paymentDate;
+            PaymentMethod = paymentMethod;
+            OrderId = orders.OrderId;
             Orders = orders;
         }
-        public Payments()
-        {
-        }
+
+        public Payments() { }
     }
 }

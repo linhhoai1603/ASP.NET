@@ -1,8 +1,13 @@
-﻿namespace ProjectDotNET.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectDotNET.Models
 {
     public class Categories
     {
         public int category_id { get; set; }
+        [Required (ErrorMessage = "Category name is required)]");
+        [Display(Name ="Name Category")]
+        [StringLength(100)]
         public String category_name { get; set; }
 
         public Categories(int category_id, String category_name)

@@ -1,31 +1,47 @@
-﻿using Mysqlx.Crud;
+﻿using System.ComponentModel.DataAnnotations;
+using Mysqlx.Crud;
 
 namespace ProjectDotNET.Models
 {
-    public class Order_Items
+    public class OrderItems
     {
-        public int order_item_id { get; set; }
-        public double price { get; set; }
-        public int quantity { get; set; }
-        public double totalPrice { get; set; }
-        public int product_id { get; set; }
-        public Products Products { get; set; }
-        public int order_id { get; set; }
-        public Orders Orders { get; set; }
+        public int OrderItemId { get; set; }
 
-        public Order_Items(int order_item_id, double price, int quantity, double totalPrice, Products products, Orders orders)
+        [Required(ErrorMessage = "Please enter your price")]
+        [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value.")]
+        [Display(Name = "Price")]
+        public double Price { get; set; }
+
+        [Required(ErrorMessage = "Please enter your quantity")]
+        [Range(1, int.MaxValue, ErrorMessage = "Quantity must be greater than zero.")]
+        [Display(Name = "Quantity")]
+        public int Quantity { get; set; }
+
+        public double TotalPrice => Price * Quantity; // Tính toán giá trị totalPrice
+
+        [Required(ErrorMessage = "Product id is required")]
+        [Display(Name = "Product ID")]
+        public int ProductId { get; set; }
+
+        public Products Product { get; set; }
+
+        [Required(ErrorMessage = "Order id is required")]
+        [Display(Name = "Order ID")]
+        public int OrderId { get; set; }
+
+        public Orders Order { get; set; }
+
+        public OrderItems(int orderItemId, double price, int quantity, Products product, Orders order)
         {
-            this.order_item_id = order_item_id;
-            this.price = price;
-            this.quantity = quantity;
-            this.totalPrice = totalPrice;
-            this.product_id = products.product_id;
-            this.order_id = orders.order_id;
-            Products = products;
-            Orders = orders;
+            OrderItemId = orderItemId;
+            Price = price;
+            Quantity = quantity;
+            ProductId = product.product_id;
+            OrderId = order.order_id;
+            Product = product;
+            Order = order;
         }
-        public Order_Items()
-        {
-        }
+
+        public OrderItems() { }
     }
 }
