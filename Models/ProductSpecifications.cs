@@ -1,25 +1,39 @@
-﻿namespace ProjectDotNET.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectDotNET.Models
 {
     public class ProductSpecifications
     {
-        public ProductSpecifications()
-        {
-        }
+        public ProductSpecifications() { }
 
-        public int product_spe_id { get; set; }
-        public String ram { get; set; }
-        public String resolution { get; set; }
-        public String storage_capacity { get; set; }
-        public int product_id { get; set; }
-        public Products Products { get; set; }
-        public ProductSpecifications(int product_spe_id, String ram, String resolution, String store_capacity, Products Products)
+        public int ProductSpeId { get; set; }
+
+        [Required(ErrorMessage = "RAM is required")]
+        [Display(Name = "RAM")]
+        public string Ram { get; set; }
+
+        [Required(ErrorMessage = "Resolution is required")]
+        [Display(Name = "Resolution")]
+        public string Resolution { get; set; }
+
+        [Required(ErrorMessage = "Storage capacity is required")]
+        [Display(Name = "Storage Capacity")]
+        public string StorageCapacity { get; set; }
+
+        [Required(ErrorMessage = "Product ID is required")]
+        [Display(Name = "Product ID")]
+        public int ProductId { get; set; }
+
+        public Products Product { get; set; }
+
+        public ProductSpecifications(int productSpeId, string ram, string resolution, string storageCapacity, Products product)
         {
-            this.product_spe_id = product_spe_id;
-            this.ram = ram;
-            this.resolution = resolution;
-            this.storage_capacity = store_capacity;
-            this.product_id = Products.product_id;
-            this.Products = Products;
+            ProductSpeId = productSpeId;
+            Ram = ram;
+            Resolution = resolution;
+            StorageCapacity = storageCapacity;
+            ProductId = product.ProductId;
+            Product = product;
         }
     }
 }

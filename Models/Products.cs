@@ -1,46 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectDotNET.Models
 {
     public class Products
     {
-        public int product_id { get; set; }
-        public String product_name { get; set; }
-        public double unitPrice { get; set; }
-        public String description { get; set; }
-        public int brand_id { get; set; }
-        public Brands Brands { get; set; }
-        public int category_id { get; set; }
-        public Categories Categories { get; set; }
-        public String img_url { get; set; }
+        public int ProductId { get; set; }
+
+        [Required(ErrorMessage = "Please enter the product name.")]
+        [Display(Name = "Product Name")]
+        public string ProductName { get; set; }
+
+        [Required(ErrorMessage = "Please enter the unit price.")]
+        [Range(0, double.MaxValue, ErrorMessage = "Unit price must be a positive value.")]
+        [Display(Name = "Unit Price")]
+        public double UnitPrice { get; set; }
+
+        public string Description { get; set; }
+        [Required(ErrorMessage = "Please enter the brand id.")]
+        public int BrandId { get; set; }
+
+        public Brands Brand { get; set; }
+        [Required(ErrorMessage = "Please enter the id category.")]
+        public int CategoryId { get; set; }
+
+        public Categories Category { get; set; }
+        [Required(ErrorMessage = "Please enter image url.")]
+        public string ImgUrl { get; set; }
+
         public List<Colors> Colors { get; set; }
-        public List<Order_Items> Order_Items { get; set; }
+
+        public List<OrderItems> OrderItems { get; set; }
+
         public List<Warehouses> Warehouses { get; set; }
+
         public List<ProductSpecifications> ProductSpecifications { get; set; }
 
-        public Products(int product_id, string product_name, double unitPrice, string description, Brands brands, Categories categories, string img_url)
+        public Products(int productId, string productName, double unitPrice, string description, Brands brand, Categories category, string imgUrl)
         {
-            this.product_id = product_id;
-            this.product_name = product_name;
-            this.unitPrice = unitPrice;
-            this.description = description;
-            Brands = brands;
-            Categories = categories;
-            this.img_url = img_url;
-            this.brand_id = brands.brand_id;
-            this.category_id = categories.category_id;
+            ProductId = productId;
+            ProductName = productName;
+            UnitPrice = unitPrice;
+            Description = description;
+            Brand = brand;
+            Category = category;
+            ImgUrl = imgUrl;
+            BrandId = brand.brand_id;
+            CategoryId = category.category_id;
             Colors = new List<Colors>();
-            Order_Items = new List<Order_Items>();
+            OrderItems = new List<OrderItems>();
             Warehouses = new List<Warehouses>();
             ProductSpecifications = new List<ProductSpecifications>();
         }
 
-        public Products()
-        {
-        }
+        public Products() { }
     }
 }
