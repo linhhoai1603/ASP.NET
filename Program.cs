@@ -1,7 +1,14 @@
+﻿using System.Configuration;
+using Microsoft.EntityFrameworkCore;
+using ProjectDotNET.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Shop_Context>(options =>
+    options.UseMySQL(builder.Configuration.GetConnectionString("kiemtraketnoi")));
 
 var app = builder.Build();
 
