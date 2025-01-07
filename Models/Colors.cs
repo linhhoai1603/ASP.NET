@@ -21,8 +21,8 @@ namespace ProjectDotNET.Models
             this.color_id = color_id;
             this.color_name = color_name;
             this.color_img = color_img;
-            this.product_id = Products.product_id;
             this.Products = Products;
+            this.product_id = Products.ProductId;
         }
         public Colors()
         {
