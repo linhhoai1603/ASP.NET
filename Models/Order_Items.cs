@@ -24,7 +24,6 @@ namespace ProjectDotNET.Models
         [Display(Name = "Quantity")]
         public int Quantity { get; set; }
 
-<<<<<<< HEAD
         [Column("totalPrice")]
         [Display(Name = "Product ID")]
         public double TotalPrice
@@ -36,9 +35,6 @@ namespace ProjectDotNET.Models
             set
             {}
         }
-=======
-        public double TotalPrice => Price * Quantity; // Calculate the total price
->>>>>>> e9438b977ca483a923b8537d9f139a49a05ce849
 
         [Column("productId")]
         [Required(ErrorMessage = "Product ID is required")]
@@ -50,7 +46,10 @@ namespace ProjectDotNET.Models
         [Display(Name = "Order ID")]
         public int OrderId { get; set; }
 
+        [ForeignKey("OrderId")]
         public Order Order { get; set; }
+
+        [ForeignKey("ProductId")]
         public Product Product { get; set; }
     }
 }

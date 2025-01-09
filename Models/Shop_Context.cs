@@ -12,7 +12,7 @@ namespace ProjectDotNET.Models
 {
     class Shop_Context : DbContext
     {
-        public Shop_Context(DbContextOptions options) : base(options)
+        public Shop_Context(DbContextOptions<Shop_Context> options) : base(options)
         {
         }
 
@@ -26,10 +26,6 @@ namespace ProjectDotNET.Models
         public DbSet<ProductSpecification> ProductSpecifications { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<User> Users { get; set; }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseMySQL("server=localhost;database=dotnet_db;user=root;password=;");
-        //}
     }
     
 }
