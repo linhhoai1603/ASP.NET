@@ -39,6 +39,7 @@ namespace ProjectDotNET.Models
         [Display(Name = "Order ID")]
         public int OrderId { get; set; }
 
+        [ForeignKey("OrderId")]
         public Order Order { get; set; }
     }
 }

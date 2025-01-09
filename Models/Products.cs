@@ -37,16 +37,39 @@ namespace ProjectDotNET.Models
         [Display(Name = "categoryId")]
         public int CategoryId { get; set; }
 
+        [Column("productSpecificationId")]
+        [Required(ErrorMessage = "Please enter the product specification id.")]
+        [Display(Name = "productSpecificationId")]
+        public int ProductSpecificationId { get; set; }
+
+        [Column("warehouseId")]
+        [Required(ErrorMessage = "Please enter the warehouse id.")]
+        [Display(Name = "warehouseId")]
+        public int WarehouseId { get; set; }
+
+        [Column("quantity")]
+        [Required(ErrorMessage = "Please enter the quantity.")]
+        [Range(0, int.MaxValue, ErrorMessage = "Quantity must be a positive value.")]
+        [Display(Name = "Quantity")]
+        public int Quantity { get; set; }
+
         [Column("imgUrl")]
         [Required(ErrorMessage = "Please enter image url.")]
         [Display(Name = "imgUrl")]
         public string ImgUrl { get; set; }
 
+        [ForeignKey("BrandId")]
         public Brand Brand { get; set; }
+
+        [ForeignKey("CategoryId")]
         public Category Category { get; set; }
         public List<Color> Colors { get; set; }
         public List<OrderItem> OrderItems { get; set; }
-        public List<Warehouse> Warehouses { get; set; }
+
+        [ForeignKey("WarehouseId")]
+        public Warehouse Warehouses { get; set; }
+
+        [ForeignKey("ProductSpecificationId")]
         public ProductSpecification ProductSpecification { get; set; }
         
     }

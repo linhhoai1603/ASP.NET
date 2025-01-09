@@ -23,17 +23,6 @@ namespace ProjectDotNET.Models
         [Display(Name = "Address")]
         public string Address { get; set; }
 
-        [Column("quantity")]
-        [Required(ErrorMessage = "Quantity is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "Quantity must be a positive number.")]
-        [Display(Name = "Quantity")]
-        public int Quantity { get; set; }
-
-        [Column("productId")]
-        [Required(ErrorMessage = "Product ID is required")]
-        [Display(Name = "Product ID")]
-        public int ProductId { get; set; }
-
-        public Product Product { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
