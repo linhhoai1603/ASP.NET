@@ -48,5 +48,6 @@ namespace ProjectDotNET.Models
         public List<Order_Items> OrderItems { get; set; }
         public List<Warehouses> Warehouses { get; set; }
         public List<ProductSpecifications> ProductSpecifications { get; set; }
+        
     }
 }

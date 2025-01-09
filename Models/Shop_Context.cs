@@ -31,4 +31,5 @@ namespace ProjectDotNET.Models
         //    optionsBuilder.UseMySQL("server=localhost;database=dotnet_db;user=root;password=;");
         //}
     }
+    
 }
