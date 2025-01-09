@@ -11,7 +11,7 @@ using ProjectDotNET.Models;
 namespace ProjectDotNET.Migrations
 {
     [DbContext(typeof(Shop_Context))]
-    [Migration("20250107010318_v1")]
+    [Migration("20250109015752_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -21,21 +21,6 @@ namespace ProjectDotNET.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("ColorsProducts", b =>
-                {
-                    b.Property<int>("Colorscolor_id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Colorscolor_id", "ProductsProductId");
-
-                    b.HasIndex("ProductsProductId");
-
-                    b.ToTable("ColorsProducts");
-                });
 
             modelBuilder.Entity("ProjectDotNET.Models.Brands", b =>
                 {
@@ -80,6 +65,9 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("int")
                         .HasColumnName("colorId");
 
+                    b.Property<int>("ProductsProductId")
+                        .HasColumnType("int");
+
                     b.Property<string>("color_img")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -97,6 +85,8 @@ namespace ProjectDotNET.Migrations
                         .HasColumnName("productId");
 
                     b.HasKey("color_id");
+
+                    b.HasIndex("ProductsProductId");
 
                     b.ToTable("colors");
                 });
@@ -360,19 +350,15 @@ namespace ProjectDotNET.Migrations
                     b.ToTable("warehouses");
                 });
 
-            modelBuilder.Entity("ColorsProducts", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Colors", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Colors", null)
-                        .WithMany()
-                        .HasForeignKey("Colorscolor_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProjectDotNET.Models.Products", null)
-                        .WithMany()
+                    b.HasOne("ProjectDotNET.Models.Products", "Products")
+                        .WithMany("Colors")
                         .HasForeignKey("ProductsProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.Order_Items", b =>
@@ -474,6 +460,8 @@ namespace ProjectDotNET.Migrations
 
             modelBuilder.Entity("ProjectDotNET.Models.Products", b =>
                 {
+                    b.Navigation("Colors");
+
                     b.Navigation("OrderItems");
 
                     b.Navigation("ProductSpecifications");

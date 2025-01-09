@@ -44,22 +44,6 @@ namespace ProjectDotNET.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "colors",
-                columns: table => new
-                {
-                    colorId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    colorName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    colorImg = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
-                    productId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_colors", x => x.colorId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "users",
                 columns: table => new
                 {
@@ -134,23 +118,21 @@ namespace ProjectDotNET.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ColorsProducts",
+                name: "colors",
                 columns: table => new
                 {
-                    Colorscolor_id = table.Column<int>(type: "int", nullable: false),
+                    colorId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    colorName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    colorImg = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
+                    productId = table.Column<int>(type: "int", nullable: false),
                     ProductsProductId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ColorsProducts", x => new { x.Colorscolor_id, x.ProductsProductId });
+                    table.PrimaryKey("PK_colors", x => x.colorId);
                     table.ForeignKey(
-                        name: "FK_ColorsProducts_colors_Colorscolor_id",
-                        column: x => x.Colorscolor_id,
-                        principalTable: "colors",
-                        principalColumn: "colorId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ColorsProducts_products_ProductsProductId",
+                        name: "FK_colors_products_ProductsProductId",
                         column: x => x.ProductsProductId,
                         principalTable: "products",
                         principalColumn: "productId",
@@ -259,8 +241,8 @@ namespace ProjectDotNET.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ColorsProducts_ProductsProductId",
-                table: "ColorsProducts",
+                name: "IX_colors_ProductsProductId",
+                table: "colors",
                 column: "ProductsProductId");
 
             migrationBuilder.CreateIndex(
@@ -308,7 +290,7 @@ namespace ProjectDotNET.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ColorsProducts");
+                name: "colors");
 
             migrationBuilder.DropTable(
                 name: "orderItems");
@@ -321,9 +303,6 @@ namespace ProjectDotNET.Migrations
 
             migrationBuilder.DropTable(
                 name: "warehouses");
-
-            migrationBuilder.DropTable(
-                name: "colors");
 
             migrationBuilder.DropTable(
                 name: "orders");

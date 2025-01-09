@@ -25,7 +25,17 @@ namespace ProjectDotNET.Models
         [Display(Name = "Quantity")]
         public int Quantity { get; set; }
 
-        public double TotalPrice => Price * Quantity; // Tính toán giá trị totalPrice
+        [Column("totalPrice")]
+        [Display(Name = "Product ID")]
+        public double TotalPrice
+        {
+            get
+            {
+                return Price * Quantity;
+            }
+            set
+            {}
+        }
 
         [Column("productId")]
         [Required(ErrorMessage = "Product id is required")]
