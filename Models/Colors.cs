@@ -24,23 +24,11 @@ namespace ProjectDotNET.Models
         public string ColorImg { get; set; }
 
         [Column("productId")]
-        [Required(ErrorMessage = "Product ID is required")]
-        [Display(Name = "Product ID")]
-        public int ProductId { get; set; }
+        [Required(ErrorMessage = "Product id is required")]
+        [Display(Name ="Product ID")]
+        public int product_id { get; set; }
 
-        public Product Product { get; set; }
-
-        public Color(int colorId, string colorName, string colorImg, Product product)
-        {
-            this.ColorId = colorId;
-            this.ColorName = colorName;
-            this.ColorImg = colorImg;
-            this.Product = product;
-            this.ProductId = product.ProductId;
-        }
-
-        public Color()
-        {
-        }
+        [ForeignKey("product_id")]
+        public Product Products { get; set; }
     }
 }
