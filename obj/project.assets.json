@@ -15,6 +15,19 @@
           }
         }
       },
+      "EntityFrameworkCore.Triggered.Abstractions/3.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/EntityFrameworkCore.Triggered.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/EntityFrameworkCore.Triggered.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Protobuf/3.25.1": {
         "type": "package",
         "compile": {
@@ -1367,6 +1380,19 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "EntityFrameworkCore.Triggered.Abstractions/3.2.2": {
+      "sha512": "gMBLJlBeW5X4prp6San9Qo8sSxvLd3KJUOfIQxmLtOpNWVmNdfVgDR75gYTqblejg/Ci8eDqy0bUucxUcYyukA==",
+      "type": "package",
+      "path": "entityframeworkcore.triggered.abstractions/3.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframeworkcore.triggered.abstractions.3.2.2.nupkg.sha512",
+        "entityframeworkcore.triggered.abstractions.nuspec",
+        "lib/net6.0/EntityFrameworkCore.Triggered.Abstractions.dll",
+        "lib/net6.0/EntityFrameworkCore.Triggered.Abstractions.xml"
       ]
     },
     "Google.Protobuf/3.25.1": {
@@ -3854,6 +3880,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EntityFrameworkCore.Triggered.Abstractions >= 3.2.2",
       "Microsoft.EntityFrameworkCore >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
@@ -3912,6 +3939,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "EntityFrameworkCore.Triggered.Abstractions": {
+            "target": "Package",
+            "version": "[3.2.2, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.2, )"

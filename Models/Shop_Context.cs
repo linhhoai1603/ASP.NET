@@ -10,7 +10,11 @@ using System.Text;
 
 namespace ProjectDotNET.Models
 {
+<<<<<<< HEAD
+    public class Shop_Context : DbContext
+=======
    public class Shop_Context : DbContext
+>>>>>>> eecd092345c09a42df69451befa2c6424259db1c
     {
         public Shop_Context(DbContextOptions<Shop_Context> options) : base(options)
         {
@@ -27,5 +31,5 @@ namespace ProjectDotNET.Models
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<User> Users { get; set; }
     }
-    
+
 }
