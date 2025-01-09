@@ -16,16 +16,16 @@ namespace ProjectDotNET.Models
         {
         }
 
-        public DbSet<Products> Products { get; set; }
-        public DbSet<Brands> Brands { get; set; }
-        public DbSet<Categories> Categories { get; set; }
-        public DbSet<Colors> Colors { get; set; }
-        public DbSet<Order_Items> Order_Items { get; set; }
-        public DbSet<Orders> Orders { get; set; }
-        public DbSet<Payments> Payments { get; set; }
-        public DbSet<ProductSpecifications> ProductSpecifications { get; set; }
-        public DbSet<Warehouses> Warehouses { get; set; }
-        public DbSet<Users> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<OrderItem> Order_Items { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<ProductSpecification> ProductSpecifications { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
+        public DbSet<User> Users { get; set; }
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseMySQL("server=localhost;database=dotnet_db;user=root;password=;");

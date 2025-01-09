@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ProjectDotNET.Models
 {
     [Table("products")]
-    public class Products
+    public class Product
     {
         [Key]
         [Column("productId")]
@@ -42,12 +42,12 @@ namespace ProjectDotNET.Models
         [Display(Name = "imgUrl")]
         public string ImgUrl { get; set; }
 
-        public Brands Brand { get; set; }
-        public Categories Category { get; set; }
-        public List<Colors> Colors { get; set; }
-        public List<Order_Items> OrderItems { get; set; }
-        public List<Warehouses> Warehouses { get; set; }
-        public List<ProductSpecifications> ProductSpecifications { get; set; }
+        public Brand Brand { get; set; }
+        public Category Category { get; set; }
+        public List<Color> Colors { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
+        public List<Warehouse> Warehouses { get; set; }
+        public ProductSpecification ProductSpecification { get; set; }
         
     }
 }
