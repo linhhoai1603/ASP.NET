@@ -7,8 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Cấu hình session
+builder.Services.AddDistributedMemoryCache(); // Cung cấp bộ nhớ phân tán để lưu trữ session
+builder.Services.AddSession(options => {
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn session
+});
+
 builder.Services.AddDbContext<Shop_Context>(options =>
-    options.UseMySQL(builder.Configuration.GetConnectionString("kiemtraketnoi")));
+    options.UseMySQL(builder.Configuration.GetConnectionString("kiemtraketnoi"))
+);
 
 var app = builder.Build();
 
@@ -24,6 +31,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Sử dụng session middleware
+app.UseSession(); // Thêm dòng này để sử dụng session
 
 app.UseAuthorization();
 
