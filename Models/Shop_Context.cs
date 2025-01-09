@@ -10,6 +10,7 @@ using System.Text;
 
 namespace ProjectDotNET.Models
 {
+
    public class Shop_Context : DbContext
     {
         public Shop_Context(DbContextOptions<Shop_Context> options) : base(options)
@@ -29,5 +30,5 @@ namespace ProjectDotNET.Models
 
         public DbSet<Contact> Contacts { get; set; }
     }
-    
+
 }
