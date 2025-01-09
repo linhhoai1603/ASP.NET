@@ -11,7 +11,7 @@ using ProjectDotNET.Models;
 namespace ProjectDotNET.Migrations
 {
     [DbContext(typeof(Shop_Context))]
-    [Migration("20250107010318_v1")]
+    [Migration("20250109030405_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -22,71 +22,56 @@ namespace ProjectDotNET.Migrations
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("ColorsProducts", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Brand", b =>
                 {
-                    b.Property<int>("Colorscolor_id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Colorscolor_id", "ProductsProductId");
-
-                    b.HasIndex("ProductsProductId");
-
-                    b.ToTable("ColorsProducts");
-                });
-
-            modelBuilder.Entity("ProjectDotNET.Models.Brands", b =>
-                {
-                    b.Property<int>("brand_id")
+                    b.Property<int>("BrandId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("brandId");
 
-                    b.Property<string>("brand_name")
+                    b.Property<string>("BrandName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)")
                         .HasColumnName("brandName");
 
-                    b.HasKey("brand_id");
+                    b.HasKey("BrandId");
 
                     b.ToTable("brands");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Categories", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Category", b =>
                 {
-                    b.Property<int>("category_id")
+                    b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("productSpeId");
 
-                    b.Property<string>("category_name")
+                    b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)")
                         .HasColumnName("categoryName");
 
-                    b.HasKey("category_id");
+                    b.HasKey("CategoryId");
 
                     b.ToTable("categories");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Colors", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Color", b =>
                 {
-                    b.Property<int>("color_id")
+                    b.Property<int>("ColorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("colorId");
 
-                    b.Property<string>("color_img")
+                    b.Property<string>("ColorImg")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)")
                         .HasColumnName("colorImg");
 
-                    b.Property<string>("color_name")
+                    b.Property<string>("ColorName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)")
@@ -96,12 +81,51 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("int")
                         .HasColumnName("productId");
 
-                    b.HasKey("color_id");
+                    b.HasKey("ColorId");
+
+                    b.HasIndex("product_id");
 
                     b.ToTable("colors");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Order_Items", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("orderId");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("orderDate");
+
+                    b.Property<int>("PaymentId")
+                        .HasColumnType("int")
+                        .HasColumnName("paymentId");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("status");
+
+                    b.Property<double>("TotalAmount")
+                        .HasColumnType("double")
+                        .HasColumnName("totalAmount");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
+                        .HasColumnName("userId");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("PaymentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("orders");
+                });
+
+            modelBuilder.Entity("ProjectDotNET.Models.OrderItem", b =>
                 {
                     b.Property<int>("OrderItemId")
                         .ValueGeneratedOnAdd()
@@ -124,6 +148,10 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("int")
                         .HasColumnName("quantity");
 
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("double")
+                        .HasColumnName("totalPrice");
+
                     b.HasKey("OrderItemId");
 
                     b.HasIndex("OrderId");
@@ -133,38 +161,7 @@ namespace ProjectDotNET.Migrations
                     b.ToTable("orderItems");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Orders", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("orderId");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime(6)")
-                        .HasColumnName("orderDate");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("longtext")
-                        .HasColumnName("status");
-
-                    b.Property<double>("TotalAmount")
-                        .HasColumnType("double")
-                        .HasColumnName("totalAmount");
-
-                    b.Property<int>("Userid")
-                        .HasColumnType("int")
-                        .HasColumnName("userId");
-
-                    b.HasKey("OrderId");
-
-                    b.HasIndex("Userid");
-
-                    b.ToTable("orders");
-                });
-
-            modelBuilder.Entity("ProjectDotNET.Models.Payments", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Payment", b =>
                 {
                     b.Property<int>("PaymentId")
                         .ValueGeneratedOnAdd()
@@ -178,9 +175,6 @@ namespace ProjectDotNET.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int")
                         .HasColumnName("orderId");
-
-                    b.Property<int>("OrdersOrderId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime(6)")
@@ -198,12 +192,70 @@ namespace ProjectDotNET.Migrations
 
                     b.HasKey("PaymentId");
 
-                    b.HasIndex("OrdersOrderId");
+                    b.HasIndex("OrderId");
 
                     b.ToTable("payments");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.ProductSpecifications", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Product", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("productId");
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int")
+                        .HasColumnName("brandId");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int")
+                        .HasColumnName("categoryId");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext")
+                        .HasColumnName("description");
+
+                    b.Property<string>("ImgUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("imgUrl");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("productName");
+
+                    b.Property<int>("ProductSpecificationId")
+                        .HasColumnType("int")
+                        .HasColumnName("productSpecificationId");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int")
+                        .HasColumnName("quantity");
+
+                    b.Property<double>("UnitPrice")
+                        .HasColumnType("double")
+                        .HasColumnName("unitPrice");
+
+                    b.Property<int>("WarehouseId")
+                        .HasColumnType("int")
+                        .HasColumnName("warehouseId");
+
+                    b.HasKey("ProductId");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("ProductSpecificationId");
+
+                    b.HasIndex("WarehouseId");
+
+                    b.ToTable("products");
+                });
+
+            modelBuilder.Entity("ProjectDotNET.Models.ProductSpecification", b =>
                 {
                     b.Property<int>("ProductSpeId")
                         .ValueGeneratedOnAdd()
@@ -236,49 +288,7 @@ namespace ProjectDotNET.Migrations
                     b.ToTable("productSpecifications");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Products", b =>
-                {
-                    b.Property<int>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("productId");
-
-                    b.Property<int>("BrandId")
-                        .HasColumnType("int")
-                        .HasColumnName("brandId");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int")
-                        .HasColumnName("categoryId");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("longtext")
-                        .HasColumnName("description");
-
-                    b.Property<string>("ImgUrl")
-                        .IsRequired()
-                        .HasColumnType("longtext")
-                        .HasColumnName("imgUrl");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("longtext")
-                        .HasColumnName("productName");
-
-                    b.Property<double>("UnitPrice")
-                        .HasColumnType("double")
-                        .HasColumnName("unitPrice");
-
-                    b.HasKey("ProductId");
-
-                    b.HasIndex("BrandId");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("products");
-                });
-
-            modelBuilder.Entity("ProjectDotNET.Models.Users", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -327,7 +337,7 @@ namespace ProjectDotNET.Migrations
                     b.ToTable("users");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Warehouses", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Warehouse", b =>
                 {
                     b.Property<int>("WarehouseId")
                         .ValueGeneratedOnAdd()
@@ -339,14 +349,6 @@ namespace ProjectDotNET.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int")
-                        .HasColumnName("productId");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("quantity");
-
                     b.Property<string>("WarehouseName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -355,35 +357,48 @@ namespace ProjectDotNET.Migrations
 
                     b.HasKey("WarehouseId");
 
-                    b.HasIndex("ProductId");
-
                     b.ToTable("warehouses");
                 });
 
-            modelBuilder.Entity("ColorsProducts", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Color", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Colors", null)
-                        .WithMany()
-                        .HasForeignKey("Colorscolor_id")
+                    b.HasOne("ProjectDotNET.Models.Product", "Products")
+                        .WithMany("Colors")
+                        .HasForeignKey("product_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjectDotNET.Models.Products", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Order_Items", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Order", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Orders", "Order")
+                    b.HasOne("ProjectDotNET.Models.Payment", "Payment")
+                        .WithMany()
+                        .HasForeignKey("PaymentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectDotNET.Models.User", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Payment");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ProjectDotNET.Models.OrderItem", b =>
+                {
+                    b.HasOne("ProjectDotNET.Models.Order", "Order")
                         .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjectDotNET.Models.Products", "Product")
+                    b.HasOne("ProjectDotNET.Models.Product", "Product")
                         .WithMany("OrderItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -394,62 +409,56 @@ namespace ProjectDotNET.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Orders", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Payment", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Users", "user")
-                        .WithMany("Orders")
-                        .HasForeignKey("Userid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("user");
-                });
-
-            modelBuilder.Entity("ProjectDotNET.Models.Payments", b =>
-                {
-                    b.HasOne("ProjectDotNET.Models.Orders", "Orders")
+                    b.HasOne("ProjectDotNET.Models.Order", "Order")
                         .WithMany()
-                        .HasForeignKey("OrdersOrderId")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Orders");
+                    b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.ProductSpecifications", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Product", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Products", "Product")
-                        .WithMany("ProductSpecifications")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("ProjectDotNET.Models.Products", b =>
-                {
-                    b.HasOne("ProjectDotNET.Models.Brands", "Brand")
+                    b.HasOne("ProjectDotNET.Models.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjectDotNET.Models.Categories", "Category")
+                    b.HasOne("ProjectDotNET.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectDotNET.Models.ProductSpecification", "ProductSpecification")
+                        .WithMany()
+                        .HasForeignKey("ProductSpecificationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectDotNET.Models.Warehouse", "Warehouses")
+                        .WithMany("Products")
+                        .HasForeignKey("WarehouseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
+
+                    b.Navigation("ProductSpecification");
+
+                    b.Navigation("Warehouses");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Warehouses", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.ProductSpecification", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Products", "Product")
-                        .WithMany("Warehouses")
+                    b.HasOne("ProjectDotNET.Models.Product", "Product")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -457,33 +466,36 @@ namespace ProjectDotNET.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Brands", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Brand", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Categories", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Category", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Orders", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Products", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.Product", b =>
                 {
+                    b.Navigation("Colors");
+
                     b.Navigation("OrderItems");
-
-                    b.Navigation("ProductSpecifications");
-
-                    b.Navigation("Warehouses");
                 });
 
-            modelBuilder.Entity("ProjectDotNET.Models.Users", b =>
+            modelBuilder.Entity("ProjectDotNET.Models.User", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("ProjectDotNET.Models.Warehouse", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

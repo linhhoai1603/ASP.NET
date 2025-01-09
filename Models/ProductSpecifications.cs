@@ -31,6 +31,7 @@ namespace ProjectDotNET.Models
         [Display(Name = "Product ID")]
         public int ProductId { get; set; }
 
+        [ForeignKey("ProductId")]
         public Product Product { get; set; }
     }
 }
