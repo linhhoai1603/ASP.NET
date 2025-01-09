@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8VfzgKMx8zPV3l/NAxpMe7I2UjYrS9GfxCi7gh30YFg=",
+  "Hash": "s61imBAFjKjyPpQVS8fx+nDcW3TGhQNSOhKvfCpun18=",
   "Source": "ProjectDotNET",
   "BasePath": "_content/ProjectDotNET",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ProjectDotNET\\wwwroot",
       "Source": "ProjectDotNET",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css",
+      "Identity": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "ProjectDotNET#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "pNZw8iqZQ1LZKw+iz5kdWjorc49WyzzAjdKPqbktq9U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css"
+      "OriginalItemSpec": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css",
+      "Identity": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "ProjectDotNET#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "pNZw8iqZQ1LZKw+iz5kdWjorc49WyzzAjdKPqbktq9U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css"
+      "OriginalItemSpec": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\home.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\css\\home.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "css/home#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\css\\home.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\products.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\css\\products.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "css/products#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\css\\products.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\site.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\css\\site.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\favicon.ico",
+      "Identity": "G:\\ASP.NET\\wwwroot\\favicon.ico",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/3767720866-1732853859bao-sale-op-spigen0#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/7932414962-1722482370may-cu-gia-tot-thang-40#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/apple-iphone-16-pro-max-512gb-ll-a-01726631158#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/banner-dien-thoai-sam-sung-moi-nhat-7#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\calendar-event.svg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\calendar-event.svg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/calendar-event#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\images\\calendar-event.svg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-128gb.jpg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-128gb.jpg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/cty-apple-iphone-15-128gb#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cty-apple-iphone-15-128gb.jpg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/cty-apple-iphone-15-pro-max-1tb#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/cty-apple-iphone-15-pro-max-256gb#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/fans-nha-tao-mong-cho-dieu-gi-26761#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\left.svg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\left.svg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/left#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\images\\left.svg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\right.svg",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\right.svg",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/right#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\images\\right.svg"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
+      "Identity": "G:\\ASP.NET\\wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "images/ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\home.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\js\\home.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "js/home#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\js\\home.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\products.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\js\\products.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "js/products#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\js\\products.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\site.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\js\\site.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -794,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -836,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -878,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -920,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -962,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -983,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1004,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1025,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1046,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1067,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1109,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1130,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1151,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1172,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1193,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1235,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1256,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1277,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1298,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1319,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1340,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1361,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1382,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1403,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1424,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1466,10 +1466,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1487,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1508,10 +1508,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1529,10 +1529,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1550,10 +1550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1571,10 +1571,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1592,10 +1592,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1634,10 +1634,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1655,10 +1655,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1676,10 +1676,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1697,10 +1697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1718,10 +1718,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1739,10 +1739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1760,10 +1760,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1781,10 +1781,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ProjectDotNET",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\",
+      "ContentRoot": "G:\\ASP.NET\\wwwroot\\",
       "BasePath": "_content/ProjectDotNET",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1826,7 +1826,7 @@
   "Endpoints": [
     {
       "Route": "css/home.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\home.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\css\\home.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1847,7 +1847,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1863,7 +1863,7 @@
     },
     {
       "Route": "css/home.y4p61i0hj1.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\home.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\css\\home.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1884,7 +1884,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1908,7 +1908,7 @@
     },
     {
       "Route": "css/products.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\products.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\css\\products.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1929,7 +1929,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1945,7 +1945,7 @@
     },
     {
       "Route": "css/products.xvxuju0set.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\products.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\css\\products.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1966,7 +1966,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1990,7 +1990,7 @@
     },
     {
       "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\site.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2011,7 +2011,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2035,7 +2035,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\css\\site.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2056,7 +2056,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2072,7 +2072,7 @@
     },
     {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\favicon.ico",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2093,7 +2093,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2117,7 +2117,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\favicon.ico",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2138,7 +2138,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2154,7 +2154,7 @@
     },
     {
       "Route": "images/2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.52abphx9jh.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2175,7 +2175,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2199,7 +2199,7 @@
     },
     {
       "Route": "images/2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\2039208817-1733997260galaxy-z-fold6-br-ngap-tran-qua-tang0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2220,7 +2220,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2236,7 +2236,7 @@
     },
     {
       "Route": "images/3767720866-1732853859bao-sale-op-spigen0.pxp23p2102.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2257,7 +2257,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2281,7 +2281,7 @@
     },
     {
       "Route": "images/3767720866-1732853859bao-sale-op-spigen0.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\3767720866-1732853859bao-sale-op-spigen0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2302,7 +2302,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2318,7 +2318,7 @@
     },
     {
       "Route": "images/3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.ltm78u7u43.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2339,7 +2339,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2363,7 +2363,7 @@
     },
     {
       "Route": "images/3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\3928881166-1734517783iphone-16-pro-max-br-gia-hap-dan0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2384,7 +2384,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2400,7 +2400,7 @@
     },
     {
       "Route": "images/618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.k3r9j74fy7.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2421,7 +2421,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2445,7 +2445,7 @@
     },
     {
       "Route": "images/618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\618938850-1728556233muadee-tra-gop-0d-br-giam-them-200k0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2466,7 +2466,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2482,7 +2482,7 @@
     },
     {
       "Route": "images/7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2503,7 +2503,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2519,7 +2519,7 @@
     },
     {
       "Route": "images/7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.xi7oqugxdb.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\7929177946-1733458880cho-xiu-br-hnam-xa-kho-ne0.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2540,7 +2540,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2564,7 +2564,7 @@
     },
     {
       "Route": "images/7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2585,7 +2585,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2601,7 +2601,7 @@
     },
     {
       "Route": "images/7932414962-1722482370may-cu-gia-tot-thang-40.r3t3wix2hh.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\7932414962-1722482370may-cu-gia-tot-thang-40.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2622,7 +2622,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2646,7 +2646,7 @@
     },
     {
       "Route": "images/apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2667,7 +2667,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2683,7 +2683,7 @@
     },
     {
       "Route": "images/apple-iphone-16-pro-max-512gb-ll-a-01726631158.t6wfq1c0fc.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\apple-iphone-16-pro-max-512gb-ll-a-01726631158.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2704,7 +2704,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2728,7 +2728,7 @@
     },
     {
       "Route": "images/banner-dien-thoai-sam-sung-moi-nhat-7.9f6spzxm8l.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2749,7 +2749,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2773,7 +2773,7 @@
     },
     {
       "Route": "images/banner-dien-thoai-sam-sung-moi-nhat-7.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\banner-dien-thoai-sam-sung-moi-nhat-7.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2794,7 +2794,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2810,7 +2810,7 @@
     },
     {
       "Route": "images/calendar-event.q5vytabkvf.svg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\calendar-event.svg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\calendar-event.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2831,7 +2831,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2855,7 +2855,7 @@
     },
     {
       "Route": "images/calendar-event.svg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\calendar-event.svg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\calendar-event.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2876,7 +2876,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2892,7 +2892,7 @@
     },
     {
       "Route": "images/cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.grm05k55pv.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2913,7 +2913,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2937,7 +2937,7 @@
     },
     {
       "Route": "images/cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cap-nhat-lien-tuc-thong-tin-ve-iphone-16-tai-hnammobile-26763.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2958,7 +2958,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2974,7 +2974,7 @@
     },
     {
       "Route": "images/cty-apple-iphone-15-128gb.bstexer243.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-128gb.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-128gb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2995,7 +2995,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3019,7 +3019,7 @@
     },
     {
       "Route": "images/cty-apple-iphone-15-128gb.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-128gb.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-128gb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3040,7 +3040,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3056,7 +3056,7 @@
     },
     {
       "Route": "images/cty-apple-iphone-15-pro-max-1tb.92wgunb0be.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3077,7 +3077,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3101,7 +3101,7 @@
     },
     {
       "Route": "images/cty-apple-iphone-15-pro-max-1tb.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-1tb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3122,7 +3122,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3138,7 +3138,7 @@
     },
     {
       "Route": "images/cty-apple-iphone-15-pro-max-256gb.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3159,7 +3159,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3175,7 +3175,7 @@
     },
     {
       "Route": "images/cty-apple-iphone-15-pro-max-256gb.og89shv3gv.jpg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\cty-apple-iphone-15-pro-max-256gb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3196,7 +3196,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3220,7 +3220,7 @@
     },
     {
       "Route": "images/fans-nha-tao-mong-cho-dieu-gi-26761.q3en2mwksj.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3241,7 +3241,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3265,7 +3265,7 @@
     },
     {
       "Route": "images/fans-nha-tao-mong-cho-dieu-gi-26761.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\fans-nha-tao-mong-cho-dieu-gi-26761.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3286,7 +3286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3302,7 +3302,7 @@
     },
     {
       "Route": "images/gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.j05ha056w8.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3323,7 +3323,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3347,7 +3347,7 @@
     },
     {
       "Route": "images/gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\gia-iphone-16-pro-max-chinh-thuc-ra-mat-la-bao-nhieu-26760.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3368,7 +3368,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3384,7 +3384,7 @@
     },
     {
       "Route": "images/giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.3ynj8ei7g5.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3405,7 +3405,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3429,7 +3429,7 @@
     },
     {
       "Route": "images/giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\giam-200k-tra-gop-0d-qua-the-tra-gop-muadee-khi-mua-sam-tai-hnammobile-26784.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3450,7 +3450,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3466,7 +3466,7 @@
     },
     {
       "Route": "images/iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3487,7 +3487,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3503,7 +3503,7 @@
     },
     {
       "Route": "images/iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.x007sqktt5.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\iphone-co-tro-thanh-chiec-smartphone-chup-anh-dep-nhat-26762.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3524,7 +3524,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3548,7 +3548,7 @@
     },
     {
       "Route": "images/left.n3sob6rm4t.svg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\left.svg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\left.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3569,7 +3569,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3593,7 +3593,7 @@
     },
     {
       "Route": "images/left.svg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\left.svg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\left.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3614,7 +3614,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3630,7 +3630,7 @@
     },
     {
       "Route": "images/right.svg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\right.svg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\right.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3651,7 +3651,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3667,7 +3667,7 @@
     },
     {
       "Route": "images/right.u2wlk3ie2v.svg",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\right.svg",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\right.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3688,7 +3688,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3712,7 +3712,7 @@
     },
     {
       "Route": "images/ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.4tirzpatew.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3733,7 +3733,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3757,7 +3757,7 @@
     },
     {
       "Route": "images/ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\images\\ro-ri-thiet-ke-iphone-16-nhung-thay-doi-dot-pha-26764.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3778,7 +3778,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3794,7 +3794,7 @@
     },
     {
       "Route": "js/home.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\home.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\js\\home.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3815,7 +3815,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3831,7 +3831,7 @@
     },
     {
       "Route": "js/home.npu0cqutgd.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\home.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\js\\home.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3852,7 +3852,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3876,7 +3876,7 @@
     },
     {
       "Route": "js/products.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\products.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\js\\products.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3897,7 +3897,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3913,7 +3913,7 @@
     },
     {
       "Route": "js/products.vdipbnxq7c.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\products.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\js\\products.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3934,7 +3934,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3958,7 +3958,7 @@
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\site.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3979,7 +3979,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3995,7 +3995,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\js\\site.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4016,7 +4016,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4040,7 +4040,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4061,7 +4061,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4077,7 +4077,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4098,7 +4098,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4122,7 +4122,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4143,7 +4143,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4159,7 +4159,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4180,7 +4180,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4204,7 +4204,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4225,7 +4225,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4241,7 +4241,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4262,7 +4262,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4286,7 +4286,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4307,7 +4307,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4323,7 +4323,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4344,7 +4344,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4368,7 +4368,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4389,7 +4389,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4405,7 +4405,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4426,7 +4426,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4450,7 +4450,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4471,7 +4471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4487,7 +4487,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4508,7 +4508,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4532,7 +4532,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4553,7 +4553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4577,7 +4577,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4598,7 +4598,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4614,7 +4614,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4635,7 +4635,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4659,7 +4659,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4680,7 +4680,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4696,7 +4696,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4717,7 +4717,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4733,7 +4733,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4754,7 +4754,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4770,7 +4770,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4791,7 +4791,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4815,7 +4815,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4836,7 +4836,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4860,7 +4860,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4881,7 +4881,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4897,7 +4897,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4918,7 +4918,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4942,7 +4942,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4963,7 +4963,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4979,7 +4979,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.nakmwdwsxp.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5000,7 +5000,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5024,7 +5024,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5045,7 +5045,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5061,7 +5061,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5082,7 +5082,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5106,7 +5106,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5127,7 +5127,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5143,7 +5143,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.e6q6xbwqzk.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5164,7 +5164,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5188,7 +5188,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5209,7 +5209,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5225,7 +5225,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5246,7 +5246,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5262,7 +5262,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5283,7 +5283,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5307,7 +5307,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5328,7 +5328,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5352,7 +5352,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5373,7 +5373,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5389,7 +5389,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5410,7 +5410,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5434,7 +5434,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5455,7 +5455,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5471,7 +5471,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5492,7 +5492,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5508,7 +5508,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5529,7 +5529,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5545,7 +5545,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5566,7 +5566,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5590,7 +5590,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5611,7 +5611,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5635,7 +5635,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.mk8rdyw69w.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5656,7 +5656,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5680,7 +5680,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.97yrjpyf9r.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5701,7 +5701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5725,7 +5725,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5746,7 +5746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5762,7 +5762,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5783,7 +5783,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5807,7 +5807,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5828,7 +5828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5844,7 +5844,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5865,7 +5865,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5881,7 +5881,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5902,7 +5902,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5918,7 +5918,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5939,7 +5939,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5963,7 +5963,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5984,7 +5984,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6008,7 +6008,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6029,7 +6029,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6045,7 +6045,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6066,7 +6066,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6090,7 +6090,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6111,7 +6111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6127,7 +6127,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6148,7 +6148,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6172,7 +6172,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6193,7 +6193,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6209,7 +6209,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6230,7 +6230,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6246,7 +6246,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6267,7 +6267,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6291,7 +6291,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6312,7 +6312,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6328,7 +6328,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6349,7 +6349,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6373,7 +6373,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6394,7 +6394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6410,7 +6410,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6431,7 +6431,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6447,7 +6447,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6468,7 +6468,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6492,7 +6492,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6513,7 +6513,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6529,7 +6529,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6550,7 +6550,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6574,7 +6574,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.ophe14yye5.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6595,7 +6595,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6619,7 +6619,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.z9shlbduue.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6640,7 +6640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6664,7 +6664,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.1piudyfv7h.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6685,7 +6685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6709,7 +6709,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.f6zq8v6eb3.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6730,7 +6730,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6754,7 +6754,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6775,7 +6775,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6791,7 +6791,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6812,7 +6812,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6836,7 +6836,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6857,7 +6857,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6873,7 +6873,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6894,7 +6894,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6918,7 +6918,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6939,7 +6939,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6955,7 +6955,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6976,7 +6976,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7000,7 +7000,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7021,7 +7021,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7037,7 +7037,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7058,7 +7058,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7074,7 +7074,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7095,7 +7095,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7119,7 +7119,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7140,7 +7140,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7156,7 +7156,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7177,7 +7177,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7201,7 +7201,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7222,7 +7222,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7238,7 +7238,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7259,7 +7259,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7275,7 +7275,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7296,7 +7296,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7320,7 +7320,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.n5w6o92d9r.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7341,7 +7341,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7365,7 +7365,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7386,7 +7386,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7402,7 +7402,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7423,7 +7423,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7447,7 +7447,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7468,7 +7468,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7484,7 +7484,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7505,7 +7505,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7529,7 +7529,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7550,7 +7550,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7566,7 +7566,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7587,7 +7587,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7603,7 +7603,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7624,7 +7624,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7648,7 +7648,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7669,7 +7669,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7685,7 +7685,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7706,7 +7706,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7730,7 +7730,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7751,7 +7751,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7775,7 +7775,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7796,7 +7796,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7812,7 +7812,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7833,7 +7833,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7857,7 +7857,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7878,7 +7878,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7902,7 +7902,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7923,7 +7923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7939,7 +7939,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7960,7 +7960,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7976,7 +7976,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7997,7 +7997,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8021,7 +8021,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8042,7 +8042,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8058,7 +8058,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8079,7 +8079,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8103,7 +8103,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8124,7 +8124,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8140,7 +8140,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8161,7 +8161,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8185,7 +8185,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8206,7 +8206,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8222,7 +8222,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.6d0lkjaslc.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8243,7 +8243,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8267,7 +8267,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8288,7 +8288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8304,7 +8304,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8325,7 +8325,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8341,7 +8341,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8362,7 +8362,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8386,7 +8386,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8407,7 +8407,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8423,7 +8423,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8444,7 +8444,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8468,7 +8468,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8489,7 +8489,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8513,7 +8513,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8534,7 +8534,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8550,7 +8550,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8571,7 +8571,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8595,7 +8595,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8616,7 +8616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8632,7 +8632,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8653,7 +8653,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8677,7 +8677,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "G:\\ASP.NET\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8698,7 +8698,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 03:35:24 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8714,7 +8714,7 @@
     },
     {
       "Route": "ProjectDotNET.46kpj1y54w.bundle.scp.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css",
+      "AssetFile": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8735,7 +8735,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 00:35:17 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8759,7 +8759,7 @@
     },
     {
       "Route": "ProjectDotNET.46kpj1y54w.styles.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css",
+      "AssetFile": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8780,7 +8780,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 00:35:17 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8804,7 +8804,7 @@
     },
     {
       "Route": "ProjectDotNET.bundle.scp.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css",
+      "AssetFile": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDotNET.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8825,7 +8825,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 00:35:17 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8841,7 +8841,7 @@
     },
     {
       "Route": "ProjectDotNET.styles.css",
-      "AssetFile": "D:\\Study\\NET\\Project\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css",
+      "AssetFile": "G:\\ASP.NET\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDotNET.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8862,7 +8862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 00:35:17 GMT"
+          "Value": "Sat, 04 Jan 2025 06:26:44 GMT"
         },
         {
           "Name": "Cache-Control",
