@@ -33,13 +33,30 @@ namespace ProjectDotNET.Migrations
                 name: "categories",
                 columns: table => new
                 {
-                    productSpeId = table.Column<int>(type: "int", nullable: false)
+                    categoryId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     categoryName = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_categories", x => x.productSpeId);
+                    table.PrimaryKey("PK_categories", x => x.categoryId);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "contacts",
+                columns: table => new
+                {
+                    contactId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    fullName = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    email = table.Column<string>(type: "longtext", nullable: false),
+                    phone = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: false),
+                    message = table.Column<string>(type: "longtext", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_contacts", x => x.contactId);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -168,13 +185,14 @@ namespace ProjectDotNET.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     productName = table.Column<string>(type: "longtext", nullable: false),
                     unitPrice = table.Column<double>(type: "double", nullable: false),
+                    lastPrice = table.Column<double>(type: "double", nullable: false),
                     description = table.Column<string>(type: "longtext", nullable: true),
                     brandId = table.Column<int>(type: "int", nullable: false),
                     categoryId = table.Column<int>(type: "int", nullable: false),
                     productSpecificationId = table.Column<int>(type: "int", nullable: false),
-                    warehouseId = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
-                    imgUrl = table.Column<string>(type: "longtext", nullable: false)
+                    imgUrl = table.Column<string>(type: "longtext", nullable: false),
+                    WarehouseId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -189,14 +207,13 @@ namespace ProjectDotNET.Migrations
                         name: "FK_products_categories_categoryId",
                         column: x => x.categoryId,
                         principalTable: "categories",
-                        principalColumn: "productSpeId",
+                        principalColumn: "categoryId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_products_warehouses_warehouseId",
-                        column: x => x.warehouseId,
+                        name: "FK_products_warehouses_WarehouseId",
+                        column: x => x.WarehouseId,
                         principalTable: "warehouses",
-                        principalColumn: "warehouseId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "warehouseId");
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -222,25 +239,7 @@ namespace ProjectDotNET.Migrations
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
-            migrationBuilder.CreateTable(
-                name: "contacts",
-                columns: table => new
-                {
-                    contactId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    name = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
-                    email = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
-                    phone = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    message = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_contacts", x => x.contactId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
 
-
-            // Chỉ mục cho các cột cần thiết
             migrationBuilder.CreateIndex(
                 name: "IX_colors_productId",
                 table: "colors",
@@ -255,6 +254,21 @@ namespace ProjectDotNET.Migrations
                 name: "IX_orderItems_productId",
                 table: "orderItems",
                 column: "productId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_orders_paymentId",
+                table: "orders",
+                column: "paymentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_orders_userId",
+                table: "orders",
+                column: "userId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_payments_orderId",
+                table: "payments",
+                column: "orderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_products_brandId",
@@ -272,16 +286,15 @@ namespace ProjectDotNET.Migrations
                 column: "productSpecificationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_products_warehouseId",
+                name: "IX_products_WarehouseId",
                 table: "products",
-                column: "warehouseId");
+                column: "WarehouseId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_productSpecifications_productId",
                 table: "productSpecifications",
                 column: "productId");
 
-            // Khóa ngoại
             migrationBuilder.AddForeignKey(
                 name: "FK_colors_products_productId",
                 table: "colors",
@@ -309,17 +322,9 @@ namespace ProjectDotNET.Migrations
             migrationBuilder.AddForeignKey(
                 name: "FK_orders_payments_paymentId",
                 table: "orders",
-                column: "paymentId",  // Điều chỉnh chính xác mối quan hệ này
+                column: "paymentId",
                 principalTable: "payments",
                 principalColumn: "paymentId",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_products_categories_categoryId",
-                table: "products",
-                column: "categoryId",
-                principalTable: "categories",
-                principalColumn: "productSpeId",  // Điều chỉnh khóa ngoại này
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
@@ -327,17 +332,8 @@ namespace ProjectDotNET.Migrations
                 table: "products",
                 column: "productSpecificationId",
                 principalTable: "productSpecifications",
-                principalColumn: "productSpeId",  // Điều chỉnh khóa ngoại này
+                principalColumn: "productSpeId",
                 onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_productSpecifications_products_productId",
-                table: "productSpecifications",
-                column: "productId",
-                principalTable: "products",
-                principalColumn: "productId",
-                onDelete: ReferentialAction.Cascade);
-
         }
 
         /// <inheritdoc />
@@ -353,6 +349,9 @@ namespace ProjectDotNET.Migrations
 
             migrationBuilder.DropTable(
                 name: "colors");
+
+            migrationBuilder.DropTable(
+                name: "contacts");
 
             migrationBuilder.DropTable(
                 name: "orderItems");

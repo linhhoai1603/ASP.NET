@@ -28,7 +28,7 @@ namespace ProjectDotNET.Models
         [Display(Name ="Product ID")]
         public int ProductId { get; set; }
 
-        [ForeignKey("product_id")]
+        [ForeignKey("ProductId")]
         public Product Product { get; set; }
     }
 }

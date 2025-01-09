@@ -7,7 +7,7 @@ namespace ProjectDotNET.Models
     public class Category
     {
         [Key]
-        [Column("productSpeId")]
+        [Column("categoryId")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Category Id")]
         public int CategoryId { get; set; }
