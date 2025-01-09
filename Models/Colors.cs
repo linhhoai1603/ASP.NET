@@ -26,7 +26,7 @@ namespace ProjectDotNET.Models
         [Column("productId")]
         [Required(ErrorMessage = "Product id is required")]
         [Display(Name ="Product ID")]
-        public int product_id { get; set; }
+        public int ProductId { get; set; }
 
         [ForeignKey("product_id")]
         public Product Product { get; set; }
