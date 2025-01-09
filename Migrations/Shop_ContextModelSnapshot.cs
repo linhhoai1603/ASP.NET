@@ -19,35 +19,6 @@ namespace ProjectDotNET.Migrations
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Contact", b =>
-                {
-                    b.Property<int>("ContactId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("varchar(15)");
-
-                    b.HasKey("ContactId");
-
-                    b.ToTable("Contacts");
-                });
-
             modelBuilder.Entity("ProjectDotNET.Models.Brand", b =>
                 {
                     b.Property<int>("BrandId")
@@ -71,7 +42,7 @@ namespace ProjectDotNET.Migrations
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("productSpeId");
+                        .HasColumnName("categoryId");
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
@@ -103,15 +74,49 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("colorName");
 
-                    b.Property<int>("product_id")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int")
                         .HasColumnName("productId");
 
                     b.HasKey("ColorId");
 
-                    b.HasIndex("product_id");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("colors");
+                });
+
+            modelBuilder.Entity("ProjectDotNET.Models.Contact", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("contactId");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("email");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("fullName");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("message");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("varchar(15)")
+                        .HasColumnName("phone");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("contacts");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.Order", b =>
@@ -247,6 +252,10 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("longtext")
                         .HasColumnName("imgUrl");
 
+                    b.Property<double>("LastPrice")
+                        .HasColumnType("double")
+                        .HasColumnName("lastPrice");
+
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("longtext")
@@ -264,9 +273,8 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("double")
                         .HasColumnName("unitPrice");
 
-                    b.Property<int>("WarehouseId")
-                        .HasColumnType("int")
-                        .HasColumnName("warehouseId");
+                    b.Property<int?>("WarehouseId")
+                        .HasColumnType("int");
 
                     b.HasKey("ProductId");
 
@@ -390,7 +398,7 @@ namespace ProjectDotNET.Migrations
                 {
                     b.HasOne("ProjectDotNET.Models.Product", "Product")
                         .WithMany("Colors")
-                        .HasForeignKey("product_id")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -425,7 +433,7 @@ namespace ProjectDotNET.Migrations
                         .IsRequired();
 
                     b.HasOne("ProjectDotNET.Models.Product", "Product")
-                        .WithMany("OrderItems")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -466,19 +474,15 @@ namespace ProjectDotNET.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjectDotNET.Models.Warehouse", "Warehouses")
+                    b.HasOne("ProjectDotNET.Models.Warehouse", null)
                         .WithMany("Products")
-                        .HasForeignKey("WarehouseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("WarehouseId");
 
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("ProductSpecification");
-
-                    b.Navigation("Warehouses");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.ProductSpecification", b =>
@@ -510,8 +514,6 @@ namespace ProjectDotNET.Migrations
             modelBuilder.Entity("ProjectDotNET.Models.Product", b =>
                 {
                     b.Navigation("Colors");
-
-                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.User", b =>

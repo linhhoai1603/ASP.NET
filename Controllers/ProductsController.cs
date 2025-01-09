@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using ProjectDotNET.Models;
 using System.Linq;
 
-
 namespace ProjectDotNET.Controllers
 {
     public class ProductsController : Controller
