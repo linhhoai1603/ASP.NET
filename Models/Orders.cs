@@ -6,16 +6,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ProjectDotNET.Models
 {
     [Table("orders")]
-    public class Orders
+    public class Order
     {
         [Key]
         [Column("orderId")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "orderId")]
+        [Display(Name = "Order ID")]
         public int OrderId { get; set; }
 
         [Column("orderDate")]
-        [Required(ErrorMessage = "Please esnter the order date")]
+        [Required(ErrorMessage = "Please enter the order date")]
         [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
 
@@ -31,11 +31,11 @@ namespace ProjectDotNET.Models
         public string Status { get; set; }
 
         [Column("userId")]
-        [Required(ErrorMessage = "user not null")]
-        [Display(Name = "userId")]
-        public int Userid { get; set; }
+        [Required(ErrorMessage = "User ID cannot be null")]
+        [Display(Name = "User ID")]
+        public int UserId { get; set; }
 
-        public Users user { get; set; }
-        public List<Order_Items> OrderItems { get; set; }
+        public User User { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
     }
 }

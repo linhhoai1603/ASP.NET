@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ProjectDotNET.Models
 {
     [Table("warehouses")]
-    public class Warehouses
+    public class Warehouse
     {
         [Key]
         [Column("warehouseId")]
@@ -34,6 +34,6 @@ namespace ProjectDotNET.Models
         [Display(Name = "Product ID")]
         public int ProductId { get; set; }
 
-        public Products Product { get; set; }
+        public Product Product { get; set; }
     }
 }
