@@ -29,6 +29,6 @@ namespace ProjectDotNET.Models
         public int product_id { get; set; }
 
         [ForeignKey("product_id")]
-        public Product Products { get; set; }
+        public Product Product { get; set; }
     }
 }
