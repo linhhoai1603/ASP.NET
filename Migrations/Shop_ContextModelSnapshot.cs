@@ -19,6 +19,35 @@ namespace ProjectDotNET.Migrations
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Contact", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("varchar(15)");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("Contacts");
+                });
+
             modelBuilder.Entity("ProjectDotNET.Models.Brand", b =>
                 {
                     b.Property<int>("BrandId")
@@ -359,13 +388,13 @@ namespace ProjectDotNET.Migrations
 
             modelBuilder.Entity("ProjectDotNET.Models.Color", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Product", "Products")
+                    b.HasOne("ProjectDotNET.Models.Product", "Product")
                         .WithMany("Colors")
                         .HasForeignKey("product_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Products");
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.Order", b =>

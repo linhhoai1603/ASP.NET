@@ -10,7 +10,8 @@ using System.Text;
 
 namespace ProjectDotNET.Models
 {
-    class Shop_Context : DbContext
+
+   public class Shop_Context : DbContext
     {
         public Shop_Context(DbContextOptions<Shop_Context> options) : base(options)
         {
@@ -26,6 +27,8 @@ namespace ProjectDotNET.Models
         public DbSet<ProductSpecification> ProductSpecifications { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Contact> Contacts { get; set; }
     }
-    
+
 }
