@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\Study\\NET\\Project\\ASP.NET\\",
   "Documents": [
     {
@@ -101,6 +102,10 @@
 >>>>>>> f90843192b8610c345dc99288216ef9d6ef9bc11
     }
   ],
+=======
+  "WorkspaceRootPath": "G:\\ASP.NET\\",
+  "Documents": [],
+>>>>>>> 8c562d01af7f394a59d9e0fcf07ebe292ee73b0b
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -109,11 +114,19 @@
         {
           "DockedWidth": 200,
 <<<<<<< HEAD
+<<<<<<< HEAD
           "SelectedChildIndex": 7,
 =======
           "SelectedChildIndex": 9,
 >>>>>>> f90843192b8610c345dc99288216ef9d6ef9bc11
+=======
+          "SelectedChildIndex": -1,
+>>>>>>> 8c562d01af7f394a59d9e0fcf07ebe292ee73b0b
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -121,6 +134,7 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+<<<<<<< HEAD
             },
             {
               "$type": "Bookmark",
@@ -438,6 +452,8 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-01-06T23:13:27.264Z"
 >>>>>>> f90843192b8610c345dc99288216ef9d6ef9bc11
+=======
+>>>>>>> 8c562d01af7f394a59d9e0fcf07ebe292ee73b0b
             }
           ]
         }
