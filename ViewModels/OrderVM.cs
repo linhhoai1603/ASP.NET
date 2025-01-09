@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class OrderViewModel
+    public class OrderVM
     {
         [Required(ErrorMessage = "Please enter the order date")]
         [Display(Name = "Order Date")]
@@ -24,6 +24,6 @@ namespace ProjectDotNET.ViewModels
         [Required(ErrorMessage = "At least one product must be added to the order.")]
         [MinLength(1, ErrorMessage = "At least one product must be selected.")]
         [Display(Name = "Order Items")]
-        public List<OrderItemsViewModel> OrderItems { get; set; } // OrderItems
+        public List<OrderItemsVM> OrderItems { get; set; } // OrderItems
     }
 }

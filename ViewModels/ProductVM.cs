@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class ProductViewModel
+    public class ProductVM
     {
         [Required(ErrorMessage = "Please enter the product name.")]
         [Display(Name = "Product Name")]

@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class ColorsViewModel
+    public class ColorsVM
     {
         [Required(ErrorMessage = "Color name is required")]
         [Display(Name = "Color Name")]

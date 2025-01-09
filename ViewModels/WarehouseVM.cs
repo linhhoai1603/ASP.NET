@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class WarehouseViewModel
+    public class WarehouseVM
     {
         [Required(ErrorMessage = "Warehouse name is required")]
         [StringLength(100)]

@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class PaymentViewModel
+    public class PaymentVM
     {
         [Required(ErrorMessage = "Please enter the order date")]
         [Display(Name = "Order Date")]

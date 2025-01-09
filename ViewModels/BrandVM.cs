@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class BrandViewModel
+    public class BrandVM
     {
         [Required(ErrorMessage = "Brand name is required")]
         [Display(Name = "Brand Name")]

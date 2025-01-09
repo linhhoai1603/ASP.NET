@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class OrderItemsViewModel
+    public class OrderItemsVM
     {
         [Required(ErrorMessage = "Please enter the price")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value.")]

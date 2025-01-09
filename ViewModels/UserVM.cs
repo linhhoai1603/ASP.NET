@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class UserViewModel
+    public class UserVM
     {
         [Required(ErrorMessage = "Username is required.")]
         [StringLength(100)]

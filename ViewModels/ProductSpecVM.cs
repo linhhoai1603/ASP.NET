@@ -2,7 +2,7 @@
 
 namespace ProjectDotNET.ViewModels
 {
-    public class ProductSpecViewModel
+    public class ProductSpecVM
     {
         [Required(ErrorMessage = "RAM is required")]
         [Display(Name = "RAM")]
