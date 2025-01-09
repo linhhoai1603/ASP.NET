@@ -424,3 +424,4 @@ G:\ASP.NET\obj\Debug\net8.0\refint\ProjectDotNET.dll
 G:\ASP.NET\obj\Debug\net8.0\ProjectDotNET.pdb
 G:\ASP.NET\obj\Debug\net8.0\ProjectDotNET.genruntimeconfig.cache
 G:\ASP.NET\obj\Debug\net8.0\ref\ProjectDotNET.dll
+G:\ASP.NET\bin\Debug\net8.0\EntityFrameworkCore.Triggered.Abstractions.dll

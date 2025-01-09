@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\ASP.NET\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\models\\shop_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:models\\shop_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +39,57 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "G:\\ASP.NET\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "G:\\ASP.NET\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T07:09:35.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Products.cshtml",
+              "DocumentMoniker": "G:\\ASP.NET\\Views\\Products\\Products.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Products.cshtml",
+              "ToolTip": "G:\\ASP.NET\\Views\\Products\\Products.cshtml",
+              "RelativeToolTip": "Views\\Products\\Products.cshtml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAiwHoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-09T06:47:23.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Shop_Context.cs",
+              "DocumentMoniker": "G:\\ASP.NET\\Models\\Shop_Context.cs",
+              "RelativeDocumentMoniker": "Models\\Shop_Context.cs",
+              "ToolTip": "G:\\ASP.NET\\Models\\Shop_Context.cs",
+              "RelativeToolTip": "Models\\Shop_Context.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:32:34.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Products.cs",
+              "DocumentMoniker": "G:\\ASP.NET\\Models\\Products.cs",
+              "RelativeDocumentMoniker": "Models\\Products.cs",
+              "ToolTip": "G:\\ASP.NET\\Models\\Products.cs",
+              "RelativeToolTip": "Models\\Products.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAkwDUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:11:29.707Z",
+              "EditorCaption": ""
             }
           ]
         }
