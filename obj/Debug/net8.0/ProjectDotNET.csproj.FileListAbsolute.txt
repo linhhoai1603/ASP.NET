@@ -291,9 +291,7 @@ D:\.NET\Project\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security
 D:\.NET\Project\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\.NET\Project\obj\Debug\net8.0\ProjectDotNET.csproj.AssemblyReference.cache
 D:\.NET\Project\obj\Debug\net8.0\ProjectD.E0D1CE90.Up2Date
-<<<<<<< HEAD
 D:\.NET\Project\bin\Debug\net8.0\Newtonsoft.Json.dll
-=======
 G:\ASP.NET\bin\Debug\net8.0\appsettings.Development.json
 G:\ASP.NET\bin\Debug\net8.0\appsettings.json
 G:\ASP.NET\bin\Debug\net8.0\ProjectDotNET.staticwebassets.runtime.json
@@ -428,6 +426,4 @@ G:\ASP.NET\obj\Debug\net8.0\ProjectDotNET.pdb
 G:\ASP.NET\obj\Debug\net8.0\ProjectDotNET.genruntimeconfig.cache
 G:\ASP.NET\obj\Debug\net8.0\ref\ProjectDotNET.dll
 G:\ASP.NET\bin\Debug\net8.0\EntityFrameworkCore.Triggered.Abstractions.dll
->>>>>>> 8c562d01af7f394a59d9e0fcf07ebe292ee73b0b
->>>>>>> eecd092345c09a42df69451befa2c6424259db1c
 G:\ASP.NET\bin\Debug\net8.0\Newtonsoft.Json.dll
