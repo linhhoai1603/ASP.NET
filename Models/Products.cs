@@ -23,6 +23,12 @@ namespace ProjectDotNET.Models
         [Display(Name = "Unit Price")]
         public double UnitPrice { get; set; }
 
+        [Column("lastPrice")]
+        [Required(ErrorMessage = "Please enter the unit price.")]
+        [Range(0, double.MaxValue, ErrorMessage = "Unit price must be a positive value.")]
+        [Display(Name = "Unit Price")]
+        public double LastPrice { get; set; }
+
         [Column("description")]
         [Display(Name = "description")]
         public string? Description { get; set; }
@@ -42,11 +48,6 @@ namespace ProjectDotNET.Models
         [Display(Name = "productSpecificationId")]
         public int ProductSpecificationId { get; set; }
 
-        [Column("warehouseId")]
-        [Required(ErrorMessage = "Please enter the warehouse id.")]
-        [Display(Name = "warehouseId")]
-        public int WarehouseId { get; set; }
-
         [Column("quantity")]
         [Required(ErrorMessage = "Please enter the quantity.")]
         [Range(0, int.MaxValue, ErrorMessage = "Quantity must be a positive value.")]
@@ -64,10 +65,6 @@ namespace ProjectDotNET.Models
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
         public List<Color> Colors { get; set; }
-        public List<OrderItem> OrderItems { get; set; }
-
-        [ForeignKey("WarehouseId")]
-        public Warehouse Warehouses { get; set; }
 
         [ForeignKey("ProductSpecificationId")]
         public ProductSpecification ProductSpecification { get; set; }

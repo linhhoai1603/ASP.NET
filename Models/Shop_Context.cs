@@ -21,5 +21,7 @@ namespace ProjectDotNET.Models
         public DbSet<ProductSpecification> ProductSpecifications { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Contact> Contacts { get; set; }
     }
 }
