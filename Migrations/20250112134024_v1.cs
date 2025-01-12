@@ -61,6 +61,22 @@ namespace ProjectDotNET.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "productSpecifications",
+                columns: table => new
+                {
+                    productSpeId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    ram = table.Column<string>(type: "longtext", nullable: false),
+                    resolution = table.Column<string>(type: "longtext", nullable: false),
+                    storageCapacity = table.Column<string>(type: "longtext", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_productSpecifications", x => x.productSpeId);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "users",
                 columns: table => new
                 {
@@ -96,40 +112,6 @@ namespace ProjectDotNET.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "colors",
-                columns: table => new
-                {
-                    colorId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    colorName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    colorImg = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
-                    productId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_colors", x => x.colorId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "orderItems",
-                columns: table => new
-                {
-                    orderItemId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    price = table.Column<double>(type: "double", nullable: false),
-                    quantity = table.Column<int>(type: "int", nullable: false),
-                    totalPrice = table.Column<double>(type: "double", nullable: false),
-                    productId = table.Column<int>(type: "int", nullable: false),
-                    orderId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_orderItems", x => x.orderItemId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "orders",
                 columns: table => new
                 {
@@ -138,8 +120,7 @@ namespace ProjectDotNET.Migrations
                     orderDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     totalAmount = table.Column<double>(type: "double", nullable: false),
                     status = table.Column<string>(type: "longtext", nullable: false),
-                    userId = table.Column<int>(type: "int", nullable: false),
-                    paymentId = table.Column<int>(type: "int", nullable: false)
+                    userId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -149,30 +130,6 @@ namespace ProjectDotNET.Migrations
                         column: x => x.userId,
                         principalTable: "users",
                         principalColumn: "userId",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "payments",
-                columns: table => new
-                {
-                    paymentId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    amount = table.Column<double>(type: "double", nullable: false),
-                    status = table.Column<string>(type: "longtext", nullable: false),
-                    paymentDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    paymentMethod = table.Column<string>(type: "longtext", nullable: false),
-                    orderId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_payments", x => x.paymentId);
-                    table.ForeignKey(
-                        name: "FK_payments_orders_orderId",
-                        column: x => x.orderId,
-                        principalTable: "orders",
-                        principalColumn: "orderId",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
@@ -210,6 +167,12 @@ namespace ProjectDotNET.Migrations
                         principalColumn: "categoryId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_products_productSpecifications_productSpecificationId",
+                        column: x => x.productSpecificationId,
+                        principalTable: "productSpecifications",
+                        principalColumn: "productSpeId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_products_warehouses_WarehouseId",
                         column: x => x.WarehouseId,
                         principalTable: "warehouses",
@@ -218,21 +181,74 @@ namespace ProjectDotNET.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "productSpecifications",
+                name: "payments",
                 columns: table => new
                 {
-                    productSpeId = table.Column<int>(type: "int", nullable: false)
+                    paymentId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    ram = table.Column<string>(type: "longtext", nullable: false),
-                    resolution = table.Column<string>(type: "longtext", nullable: false),
-                    storageCapacity = table.Column<string>(type: "longtext", nullable: false),
+                    amount = table.Column<double>(type: "double", nullable: false),
+                    status = table.Column<string>(type: "longtext", nullable: false),
+                    paymentDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    paymentMethod = table.Column<string>(type: "longtext", nullable: false),
+                    orderId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_payments", x => x.paymentId);
+                    table.ForeignKey(
+                        name: "FK_payments_orders_orderId",
+                        column: x => x.orderId,
+                        principalTable: "orders",
+                        principalColumn: "orderId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "colors",
+                columns: table => new
+                {
+                    colorId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    colorName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    colorImg = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     productId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_productSpecifications", x => x.productSpeId);
+                    table.PrimaryKey("PK_colors", x => x.colorId);
                     table.ForeignKey(
-                        name: "FK_productSpecifications_products_productId",
+                        name: "FK_colors_products_productId",
+                        column: x => x.productId,
+                        principalTable: "products",
+                        principalColumn: "productId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "orderItems",
+                columns: table => new
+                {
+                    orderItemId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    price = table.Column<double>(type: "double", nullable: false),
+                    quantity = table.Column<int>(type: "int", nullable: false),
+                    totalPrice = table.Column<double>(type: "double", nullable: false),
+                    productId = table.Column<int>(type: "int", nullable: false),
+                    orderId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_orderItems", x => x.orderItemId);
+                    table.ForeignKey(
+                        name: "FK_orderItems_orders_orderId",
+                        column: x => x.orderId,
+                        principalTable: "orders",
+                        principalColumn: "orderId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_orderItems_products_productId",
                         column: x => x.productId,
                         principalTable: "products",
                         principalColumn: "productId",
@@ -254,11 +270,6 @@ namespace ProjectDotNET.Migrations
                 name: "IX_orderItems_productId",
                 table: "orderItems",
                 column: "productId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_orders_paymentId",
-                table: "orders",
-                column: "paymentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_orders_userId",
@@ -289,64 +300,11 @@ namespace ProjectDotNET.Migrations
                 name: "IX_products_WarehouseId",
                 table: "products",
                 column: "WarehouseId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_productSpecifications_productId",
-                table: "productSpecifications",
-                column: "productId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_colors_products_productId",
-                table: "colors",
-                column: "productId",
-                principalTable: "products",
-                principalColumn: "productId",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_orderItems_orders_orderId",
-                table: "orderItems",
-                column: "orderId",
-                principalTable: "orders",
-                principalColumn: "orderId",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_orderItems_products_productId",
-                table: "orderItems",
-                column: "productId",
-                principalTable: "products",
-                principalColumn: "productId",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_orders_payments_paymentId",
-                table: "orders",
-                column: "paymentId",
-                principalTable: "payments",
-                principalColumn: "paymentId",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_products_productSpecifications_productSpecificationId",
-                table: "products",
-                column: "productSpecificationId",
-                principalTable: "productSpecifications",
-                principalColumn: "productSpeId",
-                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_productSpecifications_products_productId",
-                table: "productSpecifications");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_payments_orders_orderId",
-                table: "payments");
-
             migrationBuilder.DropTable(
                 name: "colors");
 
@@ -357,7 +315,13 @@ namespace ProjectDotNET.Migrations
                 name: "orderItems");
 
             migrationBuilder.DropTable(
+                name: "payments");
+
+            migrationBuilder.DropTable(
                 name: "products");
+
+            migrationBuilder.DropTable(
+                name: "orders");
 
             migrationBuilder.DropTable(
                 name: "brands");
@@ -370,12 +334,6 @@ namespace ProjectDotNET.Migrations
 
             migrationBuilder.DropTable(
                 name: "warehouses");
-
-            migrationBuilder.DropTable(
-                name: "orders");
-
-            migrationBuilder.DropTable(
-                name: "payments");
 
             migrationBuilder.DropTable(
                 name: "users");

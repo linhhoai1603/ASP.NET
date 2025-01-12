@@ -130,10 +130,6 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("datetime(6)")
                         .HasColumnName("orderDate");
 
-                    b.Property<int>("PaymentId")
-                        .HasColumnType("int")
-                        .HasColumnName("paymentId");
-
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("longtext")
@@ -148,8 +144,6 @@ namespace ProjectDotNET.Migrations
                         .HasColumnName("userId");
 
                     b.HasKey("OrderId");
-
-                    b.HasIndex("PaymentId");
 
                     b.HasIndex("UserId");
 
@@ -296,10 +290,6 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("int")
                         .HasColumnName("productSpeId");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int")
-                        .HasColumnName("productId");
-
                     b.Property<string>("Ram")
                         .IsRequired()
                         .HasColumnType("longtext")
@@ -316,8 +306,6 @@ namespace ProjectDotNET.Migrations
                         .HasColumnName("storageCapacity");
 
                     b.HasKey("ProductSpeId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("productSpecifications");
                 });
@@ -407,19 +395,11 @@ namespace ProjectDotNET.Migrations
 
             modelBuilder.Entity("ProjectDotNET.Models.Order", b =>
                 {
-                    b.HasOne("ProjectDotNET.Models.Payment", "Payment")
-                        .WithMany()
-                        .HasForeignKey("PaymentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ProjectDotNET.Models.User", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Payment");
 
                     b.Navigation("User");
                 });
@@ -483,17 +463,6 @@ namespace ProjectDotNET.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("ProductSpecification");
-                });
-
-            modelBuilder.Entity("ProjectDotNET.Models.ProductSpecification", b =>
-                {
-                    b.HasOne("ProjectDotNET.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.Brand", b =>
