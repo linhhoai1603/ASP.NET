@@ -25,13 +25,5 @@ namespace ProjectDotNET.Models
         [Required(ErrorMessage = "Storage capacity is required")]
         [Display(Name = "Storage Capacity")]
         public string StorageCapacity { get; set; }
-
-        [Column("productId")]
-        [Required(ErrorMessage = "Product ID is required")]
-        [Display(Name = "Product ID")]
-        public int ProductId { get; set; }
-
-        [ForeignKey("ProductId")]
-        public Product Product { get; set; }
     }
 }

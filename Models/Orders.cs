@@ -35,14 +35,6 @@ namespace ProjectDotNET.Models
         [Display(Name = "User ID")]
         public int UserId { get; set; }
 
-        [Column("paymentId")]
-        [Required(ErrorMessage = "Payment ID cannot be null")]
-        [Display(Name = "Payment ID")]
-        public int PaymentId { get; set; }
-
-        [ForeignKey("PaymentId")]
-        public Payment Payment { get; set; }
-
         [ForeignKey("UserId")]
         public User User { get; set; }
         public List<OrderItem> OrderItems { get; set; }
