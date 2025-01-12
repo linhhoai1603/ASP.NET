@@ -17,12 +17,12 @@ namespace ProjectDotNET.Controllers
         public IActionResult Products()
 
         {
-            var products = context.Products.ToList();  
+            var products = context.Products.ToList();
             return View(products);
         }
         // Khởi tạo Shop_Context thông qua Dependency Injection
         public ProductsController(Shop_Context context)
-        {
+        {   
             this.context = context;
         }
     }
