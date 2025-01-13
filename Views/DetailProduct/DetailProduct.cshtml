@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Chi tiết sản phẩm";
 }
+@model ProjectDotNET.Models.Product;
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <div class="container py-5">
     <main class="row g-4">
@@ -11,8 +12,10 @@
         <section class="col-md-6">
             <div id="productGallery" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
+                    
+                    <!----Ảnh chính----->
                     <div class="carousel-item active">
-                        <img id="main-image" src="https://via.placeholder.com/600x400" class="d-block w-100" alt="Samsung Galaxy A16">
+                        <img id="main-image" src="@Model.ImgUrl" class="d-block w-100" alt="@Model.ProductName">
                     </div>
                     <div class="carousel-item">
                         <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705664.jpg" class="d-block w-100" alt="Image 1">
@@ -43,9 +46,9 @@
 
         <!-- Product Info -->
         <section class="col-md-6">
-            <h1 class="fw-bold">Samsung Galaxy A16</h1>
-            <p class="h4 text-danger">45,900,000₫</p>
-            <p>Experience the ultimate performance with the Samsung Galaxy A16. Featuring a 6.7-inch display, 8GB RAM, and 128GB of storage.</p>
+            <h1 class="fw-bold">@Model.ProductName</h1>
+            <p class="h4 text-danger">@Model.UnitPrice</p>
+            <p>@Model.Description</p>
 
             <!-- Actions -->
             <div class="d-flex gap-2 mt-4">
@@ -61,25 +64,18 @@
         <table class="table table-bordered">
             <tbody>
                 <tr>
-                    <th>Display</th>
-                    <td>6.7 inches, Super AMOLED, 1080 x 2340 pixels</td>
-                </tr>
-                <tr>
-                    <th>Processor</th>
-                    <td>Octa-core</td>
-                </tr>
-                <tr>
                     <th>RAM</th>
-                    <td>8GB</td>
+                    <td>@Model.ProductSpecification?.Ram ?? "N/A"</td>
                 </tr>
                 <tr>
-                    <th>Storage</th>
-                    <td>128GB</td>
+                    <th>Resolution</th>
+                    <td>@Model.ProductSpecification?.Resolution ?? "N/A"</td>
                 </tr>
                 <tr>
-                    <th>Battery</th>
-                    <td>5000mAh</td>
+                    <th>Storage Capacity</th>
+                    <td>@Model.ProductSpecification?.StorageCapacity ?? "N/A"</td>
                 </tr>
+
             </tbody>
         </table>
     </section>
