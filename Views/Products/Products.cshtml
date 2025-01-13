@@ -80,171 +80,40 @@
 <section style="background-color: #eee;">
 	<div class="container py-5">
 		<div class="grid-container">
-			@foreach (var product in Model)
+			@if (Model != null)
 			{
-				<!-- Sản phẩm -->
-				<div class="card" data-url="detail-product?id=1">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
+				@foreach (var product in Model)
+				{
+					<!-- Sản phẩm -->
+					<div class="card" data-url="detail-product?id=1">
+						<div class="d-flex justify-content-between p-3">
+							<p class="lead mb-0">@product.Brand.BrandName</p>
+							<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+								 style="width: 35px; height: 35px;">
+								<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
+							</div>
 						</div>
-					</div>
-					<img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-m556blgdxxv/gallery/vn-galaxy-m55-5g-sm-m556-sm-m556blgdxxv-thumb-541204554?$252_252_PNG$"
-						 class="card-img-top" alt="Laptop" />
-					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
-						</div>
-						<div class="d-flex justify-content-between mb-3">
-							<h5 class="mb-0">@product.ProductName</h5>
-							<h5 class="text-dark mb-0"></h5>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-							<div class="ms-auto text-secondary">
-								<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
+						<img src="@product.ImgUrl"
+							 class="card-img-top" alt="Laptop" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between">
+								<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
+							</div>
+							<div class="d-flex justify-content-between mb-3">
+								<h5 class="mb-0">@product.ProductName</h5>
+								<h5 class="text-dark mb-0"></h5>
+							</div>
+							<div class="d-flex justify-content-between mb-2">
+								<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
+								<div class="ms-auto text-secondary">
+									<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- Sản phẩm -->
-				<div class="card" data-url="detail-product?id=1">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
-						</div>
-					</div>
-					<img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-m556blgdxxv/gallery/vn-galaxy-m55-5g-sm-m556-sm-m556blgdxxv-thumb-541204554?$252_252_PNG$"
-						 class="card-img-top" alt="Laptop" />
-					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
-						</div>
-						<div class="d-flex justify-content-between mb-3">
-							<h5 class="mb-0">@product.ProductName</h5>
-							<h5 class="text-dark mb-0"></h5>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-							<div class="ms-auto text-secondary">
-								<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Sản phẩm -->
-				<div class="card" data-url="detail-product?id=1">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
-						</div>
-					</div>
-					<img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-m556blgdxxv/gallery/vn-galaxy-m55-5g-sm-m556-sm-m556blgdxxv-thumb-541204554?$252_252_PNG$"
-						 class="card-img-top" alt="Laptop" />
-					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
-						</div>
-						<div class="d-flex justify-content-between mb-3">
-							<h5 class="mb-0">@product.ProductName</h5>
-							<h5 class="text-dark mb-0"></h5>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-							<div class="ms-auto text-secondary">
-								<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Sản phẩm -->
-				<div class="card" data-url="detail-product?id=1">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
-						</div>
-					</div>
-					<img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-m556blgdxxv/gallery/vn-galaxy-m55-5g-sm-m556-sm-m556blgdxxv-thumb-541204554?$252_252_PNG$"
-						 class="card-img-top" alt="Laptop" />
-					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
-						</div>
-						<div class="d-flex justify-content-between mb-3">
-							<h5 class="mb-0">@product.ProductName</h5>
-							<h5 class="text-dark mb-0"></h5>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-							<div class="ms-auto text-secondary">
-								<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Sản phẩm -->
-				<div class="card" data-url="detail-product?id=1">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
-						</div>
-					</div>
-					<img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-m556blgdxxv/gallery/vn-galaxy-m55-5g-sm-m556-sm-m556blgdxxv-thumb-541204554?$252_252_PNG$"
-						 class="card-img-top" alt="Laptop" />
-					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
-						</div>
-						<div class="d-flex justify-content-between mb-3">
-							<h5 class="mb-0">@product.ProductName</h5>
-							<h5 class="text-dark mb-0"></h5>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-							<div class="ms-auto text-secondary">
-								<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Sản phẩm -->
-				<div class="card" data-url="detail-product?id=1">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
-						</div>
-					</div>
-					<img src="https://images.samsung.com/is/image/samsung/p6pim/vn/sm-m556blgdxxv/gallery/vn-galaxy-m55-5g-sm-m556-sm-m556blgdxxv-thumb-541204554?$252_252_PNG$"
-						 class="card-img-top" alt="Laptop" />
-					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<p class="small"><a href="#!" class="text-muted">@product.Category.CategoryName</a></p>
-						</div>
-						<div class="d-flex justify-content-between mb-3">
-							<h5 class="mb-0">@product.ProductName</h5>
-							<h5 class="text-dark mb-0"></h5>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-							<div class="ms-auto text-secondary">
-								<p>Dung lượng: @product.ProductSpecification.StorageCapacity</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				}
 			}
+			
 
 			<!-- Lặp lại các sản phẩm khác -->
 		</div>
