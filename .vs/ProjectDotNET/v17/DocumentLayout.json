@@ -1,21 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\ASP.NET\\",
+  "WorkspaceRootPath": "F:\\ASP3\\ASP.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\views\\admin\\managerwarehouse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\admin\\managerwarehouse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\views\\detailproduct\\detailproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\detailproduct\\detailproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\projectdotnet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\models\\productspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:models\\productspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\views\\admin\\managerproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\admin\\managerproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\models\\shop_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:models\\shop_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|f:\\asp3\\asp.net\\projectdotnet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:projectdotnet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -30,10 +62,6 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
@@ -41,51 +69,149 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "G:\\ASP.NET\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "G:\\ASP.NET\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAAMkAAAAyAAAAAAAAAA==",
+              "Title": "ManagerWareHouse.cshtml",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Views\\Admin\\ManagerWareHouse.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ManagerWareHouse.cshtml",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Views\\Admin\\ManagerWareHouse.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ManagerWareHouse.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-13T05:09:50.245Z",
+              "WhenOpened": "2025-01-13T08:15:46.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ManagerProduct.cshtml",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Views\\Admin\\ManagerProduct.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ManagerProduct.cshtml",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Views\\Admin\\ManagerProduct.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ManagerProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-13T08:08:53.973Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "G:\\ASP.NET\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "G:\\ASP.NET\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Title": "DetailProduct.cshtml",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Views\\DetailProduct\\DetailProduct.cshtml",
+              "RelativeDocumentMoniker": "Views\\DetailProduct\\DetailProduct.cshtml",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Views\\DetailProduct\\DetailProduct.cshtml",
+              "RelativeToolTip": "Views\\DetailProduct\\DetailProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-13T06:12:08.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Products.cs",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Models\\Products.cs",
+              "RelativeDocumentMoniker": "Models\\Products.cs",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Models\\Products.cs",
+              "RelativeToolTip": "Models\\Products.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAA3wFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T03:43:31.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T06:39:09.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductSpecifications.cs",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Models\\ProductSpecifications.cs",
+              "RelativeDocumentMoniker": "Models\\ProductSpecifications.cs",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Models\\ProductSpecifications.cs",
+              "RelativeToolTip": "Models\\ProductSpecifications.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wBcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T06:57:20.721Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Products.cshtml",
-              "DocumentMoniker": "G:\\ASP.NET\\Views\\Products\\Products.cshtml",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Views\\Products\\Products.cshtml",
               "RelativeDocumentMoniker": "Views\\Products\\Products.cshtml",
-              "ToolTip": "G:\\ASP.NET\\Views\\Products\\Products.cshtml",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Views\\Products\\Products.cshtml",
               "RelativeToolTip": "Views\\Products\\Products.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAABkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-13T03:31:05.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T03:31:05.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-13T09:17:51.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T03:43:31.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwCwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T07:44:54.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Shop_Context.cs",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Models\\Shop_Context.cs",
+              "RelativeDocumentMoniker": "Models\\Shop_Context.cs",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Models\\Shop_Context.cs",
+              "RelativeToolTip": "Models\\Shop_Context.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T07:04:54.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAxwBQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-13T05:09:50.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ProjectDotNET",
-              "DocumentMoniker": "G:\\ASP.NET\\ProjectDotNET.csproj",
+              "DocumentMoniker": "F:\\ASP3\\ASP.NET\\ProjectDotNET.csproj",
               "RelativeDocumentMoniker": "ProjectDotNET.csproj",
-              "ToolTip": "G:\\ASP.NET\\ProjectDotNET.csproj",
+              "ToolTip": "F:\\ASP3\\ASP.NET\\ProjectDotNET.csproj",
               "RelativeToolTip": "ProjectDotNET.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-01-13T03:33:26.56Z",

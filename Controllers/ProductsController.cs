@@ -18,7 +18,7 @@ namespace ProjectDotNET.Controllers
         public IActionResult Index(int? page)
         {
             int pageSize = 8;
-            int pageNumber = page ?? 1;  
+            int pageNumber = page ?? 1;
 
             var products = context.Products
                                   .Include(p => p.Brand)
@@ -26,7 +26,7 @@ namespace ProjectDotNET.Controllers
                                   .Include(p => p.ProductSpecification)
                                   .Include(p => p.Warehouse)
                                   .OrderBy(p => p.ProductId)
-                                  .ToPagedList(pageNumber, pageSize);  
+                                  .ToPagedList(pageNumber, pageSize);
 
             return View(products);
         }
@@ -42,9 +42,26 @@ namespace ProjectDotNET.Controllers
                                .Include(p => p.ProductSpecification)
                                .Include(p => p.Warehouse)
                                .OrderBy(p => p.ProductId)
-                               .ToPagedList(pageNumber, pageSize);  
+                               .ToPagedList(pageNumber, pageSize);
 
             return View(model);
+        }
+        [HttpGet]
+        public IActionResult Detail(int id)
+        {
+            var product = context.Products
+                .Include(p => p.Brand)                    // Thương hiệu
+                .Include(p => p.Category)                 // Danh mục
+                .Include(p => p.ProductSpecification)     // Thông số kỹ thuật
+                .Include(p => p.Warehouse)                // Kho hàng
+                .Include(p => p.Colors)                   // Màu sắc
+                .FirstOrDefault(p => p.ProductId == id);  // Lấy sản phẩm theo ID
+
+            if (product == null)
+            {
+                return NotFound(); // Nếu không tìm thấy sản phẩm
+            }
+            return View(product); // Trả về View với dữ liệu sản phẩm
         }
 
     }
