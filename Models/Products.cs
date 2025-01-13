@@ -58,29 +58,23 @@ namespace ProjectDotNET.Models
         [Display(Name = "Image URL")]
         public string ImgUrl { get; set; }
 
-        // ✅ Thêm WarehouseId
         [Column("warehouseId")]
         [Required(ErrorMessage = "Please enter the warehouse id.")]
         [Display(Name = "Warehouse ID")]
         public int WarehouseId { get; set; }
 
-        // 🔗 Liên kết với bảng Brand
         [ForeignKey("BrandId")]
         public Brand Brand { get; set; }
 
-        // 🔗 Liên kết với bảng Category
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
 
-        // 🔗 Liên kết với bảng ProductSpecification
         [ForeignKey("ProductSpecificationId")]
         public ProductSpecification ProductSpecification { get; set; }
 
-        // 🔗 Liên kết với bảng Warehouse
         [ForeignKey("WarehouseId")]
         public Warehouse Warehouse { get; set; }
 
-        // 🔗 Danh sách màu sắc sản phẩm
         public List<Color> Colors { get; set; }
     }
 }
