@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectDotNET.Models;
-using System.Linq;
+using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace ProjectDotNET.Controllers
 {
@@ -14,33 +15,37 @@ namespace ProjectDotNET.Controllers
             this.context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            // Nạp thêm dữ liệu Brand, Category, ProductSpecification, Warehouse
+            int pageSize = 8;
+            int pageNumber = page ?? 1;  
+
             var products = context.Products
                                   .Include(p => p.Brand)
                                   .Include(p => p.Category)
                                   .Include(p => p.ProductSpecification)
                                   .Include(p => p.Warehouse)
-                                  .ToList();
+                                  .OrderBy(p => p.ProductId)
+                                  .ToPagedList(pageNumber, pageSize);  
+
             return View(products);
         }
-
         [HttpGet]
-        public IActionResult Products()
+        public IActionResult Products(int? page)
         {
+            int pageSize = 8;
+            int pageNumber = page ?? 1;
+
             var model = context.Products
                                .Include(p => p.Brand)
                                .Include(p => p.Category)
                                .Include(p => p.ProductSpecification)
                                .Include(p => p.Warehouse)
-                               .ToList();
+                               .OrderBy(p => p.ProductId)
+                               .ToPagedList(pageNumber, pageSize);  
 
-            if (model == null || !model.Any())
-            {
-                return View("Error"); // Trả về trang lỗi nếu không có sản phẩm
-            }
             return View(model);
         }
+
     }
 }
