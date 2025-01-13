@@ -52,8 +52,74 @@ namespace ProjectDotNET.Controllers
         [HttpGet]
         public IActionResult ManagerOrder()
         {
-            return View();
+            var orders = _context.Orders
+                .Include(o => o.User)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .ToList();
+            return View(orders);
         }
+
+        [HttpGet]
+        public IActionResult ViewOrder(int id)
+        {
+            var order = _context.Orders
+                .Include(o => o.User)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .FirstOrDefault(o => o.OrderId == id);
+
+            if (order == null)
+            {
+                TempData["ErrorMessage"] = "Order not found.";
+                return RedirectToAction("ManagerOrder");
+            }
+
+            return View(order);
+        }
+
+        [HttpPost]
+        public IActionResult AddOrder(Order order)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Orders.Add(order);
+                _context.SaveChanges();
+                TempData["SuccessMessage"] = "Order added successfully!";
+                return RedirectToAction("ManagerOrder");
+            }
+
+            TempData["ErrorMessage"] = "Error adding order.";
+            return RedirectToAction("ManagerOrder");
+        }
+        [HttpPost]
+        public IActionResult DeleteOrder(int orderId)
+        {
+            // Tìm Order và bao gồm OrderItems
+            var order = _context.Orders
+                                .Include(o => o.OrderItems) // Bao gồm các OrderItems
+                                .FirstOrDefault(o => o.OrderId == orderId);
+
+            // Kiểm tra nếu không tìm thấy Order
+            if (order == null)
+            {
+                return Json(new { success = false, message = "Order not found." });
+            }
+
+            // Xóa OrderItems trước nếu có
+            if (order.OrderItems != null && order.OrderItems.Count > 0)
+            {
+                _context.Order_Items.RemoveRange(order.OrderItems);
+            }
+
+            // Xóa Order
+            _context.Orders.Remove(order);
+            _context.SaveChanges();
+
+            return Json(new { success = true });
+        }
+
+
         [HttpGet]
         public IActionResult ManagerPayment()
         {
@@ -248,5 +314,6 @@ namespace ProjectDotNET.Controllers
 
             return RedirectToAction("ManagerUser");
         }
+
     }
 }
