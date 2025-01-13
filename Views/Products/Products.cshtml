@@ -1,0 +1,61 @@
+﻿@using X.PagedList.Mvc.Core
+@using X.PagedList
+@model IPagedList<ProjectDotNET.Models.Product>
+
+@{
+    ViewData["Title"] = "Sản phẩm";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+<link rel="stylesheet" href="~/css/products.css">
+
+<div class="container mt-4">
+    <div class="grid-container">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var product in Model)
+            {
+                <div class="card">
+                    <div class="d-flex justify-content-between p-3">
+                        <p class="lead mb-0">@product.Brand.BrandName</p>
+                        <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                             style="width: 35px; height: 35px;">
+                            <p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
+                        </div>
+                    </div>
+                    <img src="@product.ImgUrl" class="card-img-top" alt="@product.ProductName" />
+                    <div class="card-body">
+                        <h5 class="mb-0">@product.ProductName</h5>
+                        <p class="text-muted mb-0">Giá: <span class="fw-bold">@product.UnitPrice.ToString("N0") VNĐ</span></p>
+                        <p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Không có sản phẩm nào.</p>
+        }
+    </div>
+
+    <!-- ✅ Thêm phân trang -->
+    <div class="mt-4 d-flex justify-content-center">
+        @Html.PagedListPager(
+                 Model,
+                 page => Url.Action("Products", new { page }),
+                 new PagedListRenderOptions
+        {
+            DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+            DisplayLinkToLastPage = PagedListDisplayMode.Always,
+            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+            DisplayLinkToNextPage = PagedListDisplayMode.Always,
+            LinkToFirstPageFormat = "«",
+            LinkToPreviousPageFormat = "‹",
+            LinkToNextPageFormat = "›",
+            LinkToLastPageFormat = "»",
+            MaximumPageNumbersToDisplay = 5,
+            UlElementClasses = new[] { "pagination" },
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        })
+    </div>
+</div>
