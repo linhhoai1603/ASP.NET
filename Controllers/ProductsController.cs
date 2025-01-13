@@ -43,7 +43,6 @@ namespace ProjectDotNET.Controllers
                                .Include(p => p.Warehouse)
                                .OrderBy(p => p.ProductId)
                                .AsQueryable();
-
             if (!string.IsNullOrEmpty(brand))
             {
                 products = products.Where(p => p.Brand.BrandName.ToUpper() == brand.ToUpper());
@@ -88,6 +87,23 @@ namespace ProjectDotNET.Controllers
             }
             var pagedProducts = products.ToPagedList(pageNumber, pageSize);
             return View(pagedProducts);
+        }
+        [HttpGet]
+        public IActionResult Detail(int id)
+        {
+            var product = context.Products
+                .Include(p => p.Brand)                    // Thương hiệu
+                .Include(p => p.Category)                 // Danh mục
+                .Include(p => p.ProductSpecification)     // Thông số kỹ thuật
+                .Include(p => p.Warehouse)                // Kho hàng
+                .Include(p => p.Colors)                   // Màu sắc
+                .FirstOrDefault(p => p.ProductId == id);  // Lấy sản phẩm theo ID
+
+            if (product == null)
+            {
+                return NotFound(); // Nếu không tìm thấy sản phẩm
+            }
+            return View(product); // Trả về View với dữ liệu sản phẩm
         }
 
     }

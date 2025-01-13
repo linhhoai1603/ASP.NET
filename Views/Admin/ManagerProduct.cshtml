@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Manage Products";
 }
+@model IEnumerable<ProjectDotNET.Models.Product>;
 
 <!-- Main content -->
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -27,48 +28,30 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Example Product 1 -->
-            <tr>
-                <td>1</td>
-                <td>Product A</td>
-                <td>$30.00</td>
-                <td>A great product.</td>
-                <td>101</td>
-                <td>201</td>
-                <td><img src="/images/product_a.jpg" alt="Product A" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewProductModal" title="View">
-                        <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal" title="Edit">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteProductModal" title="Delete">
-                        <i class="bi bi-trash"></i>
-                    </button>
-                </td>
-            </tr>
-            <!-- Example Product 2 -->
-            <tr>
-                <td>2</td>
-                <td>Product B</td>
-                <td>$50.00</td>
-                <td>Another great product.</td>
-                <td>102</td>
-                <td>202</td>
-                <td><img src="/images/product_b.jpg" alt="Product B" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewProductModal" title="View">
-                        <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal" title="Edit">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteProductModal" title="Delete">
-                        <i class="bi bi-trash"></i>
-                    </button>
-                </td>
-            </tr>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ProductId</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.UnitPrice</td>
+                    <td>@product.Description</td>
+                    <td>@product.BrandId</td>
+                    <td>@product.CategoryId</td>
+                    <td><img src="@product.ImgUrl" alt="@product.ProductName" style="width: 50px; height: 50px;"></td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewProductModal" title="View">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal" title="Edit">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteProductModal" title="Delete">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+
+            }
         </tbody>
     </table>
 </div>
@@ -82,12 +65,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <strong>Product ID:</strong> 1<br>
-                <strong>Product Name:</strong> Product A<br>
-                <strong>Unit Price:</strong> $30.00<br>
-                <strong>Description:</strong> A great product.<br>
-                <strong>Brand ID:</strong> 101<br>
-                <strong>Category ID:</strong> 201<br>
+                <strong>Product ID:</strong> <span id="viewProductId"></span><br>
+                <strong>Product Name:</strong> <span id="viewProductName"></span><br>
+                <strong>Unit Price:</strong> $<span id="viewUnitPrice"></span><br>
+                <strong>Description:</strong> <span id="viewDescription"></span><br>
+                <strong>Brand ID:</strong> <span id="viewBrandId"></span><br>
+                <strong>Category ID:</strong> <span id="viewCategoryId"></span><br>
                 <strong>Image:</strong><br>
                 <img src="/images/product_a.jpg" alt="Product A" style="width: 100px; height: 100px;">
             </div>
@@ -107,41 +90,82 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="editProductForm">
                     <div class="mb-3">
                         <label for="productName" class="form-label">Product Name</label>
-                        <input type="text" class="form-control" id="productName" value="Product A">
+                        <input type="text" class="form-control" id="productName" name="ProductName" required>
                     </div>
                     <div class="mb-3">
                         <label for="unitPrice" class="form-label">Unit Price</label>
-                        <input type="number" class="form-control" id="unitPrice" value="30.00">
+                        <input type="number" class="form-control" id="unitPrice" name="UnitPrice" required>
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description">A great product.</textarea>
+                        <textarea class="form-control" id="description" name="Description"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="brandId" class="form-label">Brand ID</label>
-                        <input type="number" class="form-control" id="brandId" value="101">
+                        <input type="number" class="form-control" id="brandId" name="BrandId" required>
                     </div>
                     <div class="mb-3">
                         <label for="categoryId" class="form-label">Category ID</label>
-                        <input type="number" class="form-control" id="categoryId" value="201">
+                        <input type="number" class="form-control" id="categoryId" name="CategoryId" required>
                     </div>
                     <div class="mb-3">
                         <label for="productImage" class="form-label">Product Image</label>
-                        <input type="text" class="form-control" id="productImage" value="/images/product_a.jpg">
+                        <input type="text" class="form-control" id="productImage" name="ImgUrl" required>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-success">Save Changes</button>
+                <button type="button" class="btn btn-warning" id="editProductButton">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div><!-- Modal for Editing a Product -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editProductForm">
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="productName" name="ProductName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="unitPrice" class="form-label">Unit Price</label>
+                        <input type="number" class="form-control" id="unitPrice" name="UnitPrice" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="Description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="brandId" class="form-label">Brand ID</label>
+                        <input type="number" class="form-control" id="brandId" name="BrandId" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryId" class="form-label">Category ID</label>
+                        <input type="number" class="form-control" id="categoryId" name="CategoryId" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productImage" class="form-label">Product Image</label>
+                        <input type="text" class="form-control" id="productImage" name="ImgUrl" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-warning" id="editProductButton">Save Changes</button>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Modal for Adding a Product -->
 <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -199,8 +223,69 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-danger" id="deleteProductButton">Delete</button>
             </div>
         </div>
     </div>
 </div>
+<script>
+            $('#viewProductModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var productId = button.data('product-id');
+        $.ajax({
+            url: '/Controller/ViewProduct',
+            type: 'GET',
+            data: { productId: productId },
+            success: function(response) {
+                if(response.success) {
+                    $('#viewProductId').text(response.product.ProductId);
+                    $('#viewProductName').text(response.product.ProductName);
+                    $('#viewUnitPrice').text(response.product.UnitPrice);
+                    $('#viewDescription').text(response.product.Description);
+                    $('#viewBrandId').text(response.product.BrandId);
+                    $('#viewCategoryId').text(response.product.CategoryId);
+                    $('#viewProductImage').attr('src', response.product.ImgUrl); // Cập nhật URL ảnh
+                }
+            }
+        });
+    });
+
+    $('#deleteProductButton').on('click', function() {
+        var productId = $(this).data('product-id');
+        $.ajax({
+            url: '/Controller/DeleteProduct',
+            type: 'POST',
+            data: { productId: productId },
+            success: function(response) {
+                if(response.success) {
+                    // Xử lý sau khi xóa thành công (cập nhật UI)
+                }
+            }
+        });
+    });
+           $('#addProductButton').on('click', function() {
+        var newProduct = {
+            ProductName: $('#newProductName').val(),
+            UnitPrice: $('#newUnitPrice').val(),
+            Description: $('#newDescription').val(),
+            BrandId: $('#newBrandId').val(),
+            CategoryId: $('#newCategoryId').val(),
+            ImgUrl: $('#newProductImage').val()
+        };
+
+        $.ajax({
+            url: '/Controller/AddProduct',
+            type: 'POST',
+            data: newProduct,
+            success: function(response) {
+                if(response.success) {
+                    // Cập nhật UI sau khi thêm thành công
+                    location.reload(); // Làm mới trang để hiển thị sản phẩm mới
+                }
+            }
+        });
+    });
+
+    });
+
+</script>
