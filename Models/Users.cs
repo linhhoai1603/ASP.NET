@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProjectDotNET.Models
 {
     [Table("users")]
+    [Index(nameof(Phone), IsUnique = true)]
     public class User
     {
         [Key]
@@ -38,6 +40,7 @@ namespace ProjectDotNET.Models
         [Required(ErrorMessage = "phone contact is 10 number.")]
         [Display(Name = "Phone")]
         [StringLength(10)]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "Phone number must be 10 digits.")]
         public string Phone { get; set; }
 
         [Column("email")]

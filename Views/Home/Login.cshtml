@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@
     <div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
         <div class="auth-container shadow-lg rounded p-4 p-sm-5 bg-white">
             <h2 class="auth-title text-center mb-4 text-primary">Đăng Nhập</h2>
-            <form class="auth-form" id="login-form" onsubmit="handleLogin(event)">
+            <form asp-controller="Home" asp-action="Login" method="post" class="auth-form">
                 <div class="form-group mb-3">
                     <label for="login-phone" class="form-label">Số điện thoại</label>
                     <input type="text" id="login-phone" name="phone" class="form-control" placeholder="Nhập số điện thoại" required>
