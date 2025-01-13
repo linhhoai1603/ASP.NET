@@ -52,7 +52,7 @@ namespace ProjectDotNET.Controllers
             ViewBag.RecentOrders = recentOrders;
 
 
-           
+
 
             return View();
         }
@@ -82,7 +82,7 @@ namespace ProjectDotNET.Controllers
         //    return View(users);
         //}
         // Hiển thị danh sách người dùng và form thêm, chỉnh sửa
-  
+
         [HttpGet]
         public IActionResult ManagerProduct()
         {
@@ -323,8 +323,8 @@ namespace ProjectDotNET.Controllers
         //    return RedirectToAction("ManagerUser", "Admin");  // Quay lại trang quản lý người dùng
         //}
         // Thêm người dùng
-       
-        
-       
+
+
+
     }
 }
