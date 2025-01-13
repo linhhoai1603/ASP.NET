@@ -18,7 +18,7 @@ namespace ProjectDotNET.Controllers
         public IActionResult Index(int? page)
         {
             int pageSize = 8;
-            int pageNumber = page ?? 1;  
+            int pageNumber = page ?? 1;
 
             var products = context.Products
                                   .Include(p => p.Brand)
@@ -26,25 +26,68 @@ namespace ProjectDotNET.Controllers
                                   .Include(p => p.ProductSpecification)
                                   .Include(p => p.Warehouse)
                                   .OrderBy(p => p.ProductId)
-                                  .ToPagedList(pageNumber, pageSize);  
+                                  .ToPagedList(pageNumber, pageSize);
 
             return View(products);
         }
         [HttpGet]
-        public IActionResult Products(int? page)
+        public IActionResult Products(string brand, string priceRange, string storage, string sortOption, int? page)
         {
             int pageSize = 8;
             int pageNumber = page ?? 1;
 
-            var model = context.Products
+            var products = context.Products
                                .Include(p => p.Brand)
                                .Include(p => p.Category)
                                .Include(p => p.ProductSpecification)
                                .Include(p => p.Warehouse)
                                .OrderBy(p => p.ProductId)
-                               .ToPagedList(pageNumber, pageSize);  
+                               .AsQueryable();
 
-            return View(model);
+            if (!string.IsNullOrEmpty(brand))
+            {
+                products = products.Where(p => p.Brand.BrandName.ToUpper() == brand.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(priceRange))
+            {
+                switch (priceRange)
+                {
+                    case "below5":
+                        products = products.Where(p => p.UnitPrice < 5000000);
+                        break;
+                    case "5to10":
+                        products = products.Where(p => p.UnitPrice >= 5000000 && p.UnitPrice <= 10000000);
+                        break;
+                    case "above10":
+                        products = products.Where(p => p.UnitPrice > 10000000);
+                        break;
+                }
+
+            }
+            if (!string.IsNullOrEmpty(storage))
+            {
+                products = products.Where(p => p.ProductSpecification.StorageCapacity.Contains(storage));
+            }
+            if (!string.IsNullOrEmpty(sortOption))
+            {
+                switch (sortOption)
+                {
+                    case "a-z":
+                        products = products.OrderBy(p => p.ProductName);
+                        break;
+                    case "z-a":
+                        products = products.OrderByDescending(p => p.ProductName);
+                        break;
+                    case "price-asc":
+                        products = products.OrderBy(p => p.UnitPrice);
+                        break;
+                    case "price-desc":
+                        products = products.OrderByDescending(p => p.UnitPrice);
+                        break;
+                }
+            }
+            var pagedProducts = products.ToPagedList(pageNumber, pageSize);
+            return View(pagedProducts);
         }
 
     }
