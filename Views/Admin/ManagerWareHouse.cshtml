@@ -2,181 +2,249 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Manage Warehouses";
 }
+@model IEnumerable<ProjectDotNET.Models.Warehouse>;
 
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Manage Warehouses</h1>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Manage Warehouses</h1>
+</div>
+
+<!-- Table to display warehouse information -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Warehouse ID</th>
+                <th>Warehouse Name</th>
+                <th>Address</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var warehouse in Model)
+            {
+                <tr>
+                    <td>@warehouse.WarehouseId</td>
+                    <td>@warehouse.WarehouseName</td>
+                    <td>@warehouse.Address</td>
+                    <td>@warehouse.Products.Count()</td>
+                    <td>
+                        <!-- Button to view warehouse details -->
+                        <button class="btn btn-info btn-sm viewWarehouseButton" data-bs-toggle="modal" data-bs-target="#viewWarehouseModal" data-warehouse-id="@warehouse.WarehouseId" title="View">
+                            <i class="bi bi-eye"></i>
+                        </button>
+
+                        <!-- Button to edit warehouse -->
+                        <button class="btn btn-primary btn-sm editWarehouseButton" data-bs-toggle="modal" data-bs-target="#editWarehouseModal" data-warehouse-id="@warehouse.WarehouseId" title="Edit">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+
+                        <!-- Button to delete warehouse -->
+                        <button class="btn btn-danger btn-sm deleteWarehouseButton" data-bs-toggle="modal" data-bs-target="#deleteWarehouseModal" data-warehouse-id="@warehouse.WarehouseId" title="Delete">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Add New Warehouse Button -->
+<div class="text-end mt-4">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWarehouseModal">Add New Warehouse</button>
+</div>
+
+<!-- Modal for Viewing a Warehouse -->
+<div class="modal fade" id="viewWarehouseModal" tabindex="-1" aria-labelledby="viewWarehouseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewWarehouseModalLabel">View Warehouse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-            <!-- Table to display warehouse information -->
-            <div class="table-responsive">
-                <table class="table table-striped table-bordered mt-4">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Warehouse ID</th>
-                            <th>Warehouse Name</th>
-                            <th>Address</th>
-                            <th>Quantity</th>
-                            <th>Product ID</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example Warehouse 1 -->
-                        <tr>
-                            <td>1</td>
-                            <td>Warehouse A</td>
-                            <td>1234 Main Street</td>
-                            <td>500</td>
-                            <td>101</td>
-                            <td>
-                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewWarehouseModal" title="View">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editWarehouseModal" title="Edit">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteWarehouseModal" title="Delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <!-- Example Warehouse 2 -->
-                        <tr>
-                            <td>2</td>
-                            <td>Warehouse B</td>
-                            <td>5678 Oak Avenue</td>
-                            <td>300</td>
-                            <td>102</td>
-                            <td>
-                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewWarehouseModal" title="View">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editWarehouseModal" title="Edit">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteWarehouseModal" title="Delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="modal-body">
+                <strong>Warehouse Name:</strong> <span id="viewWarehouseName"></span><br>
+                <strong>Address:</strong> <span id="viewAddress"></span><br>
+                <strong>Quantity:</strong> <span id="viewQuantity"></span><br>
+                <strong>Product ID:</strong> <span id="viewProductId"></span><br>
             </div>
-
-            <!-- Add New Warehouse Button -->
-            <div class="text-end mt-4">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWarehouseModal">Add New Warehouse</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
+        </div>
+    </div>
+</div>
 
-            <!-- Modal for Viewing a Warehouse -->
-            <div class="modal fade" id="viewWarehouseModal" tabindex="-1" aria-labelledby="viewWarehouseModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="viewWarehouseModalLabel">View Warehouse</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <strong>Warehouse Name:</strong> Warehouse A <br>
-                            <strong>Address:</strong> 1234 Main Street <br>
-                            <strong>Quantity:</strong> 500 <br>
-                            <strong>Product ID:</strong> 101
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+<!-- Modal for Editing a Warehouse -->
+<div class="modal fade" id="editWarehouseModal" tabindex="-1" aria-labelledby="editWarehouseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editWarehouseModalLabel">Edit Warehouse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="warehouseName" class="form-label">Warehouse Name</label>
+                        <input type="text" class="form-control" id="warehouseName">
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal for Editing a Warehouse -->
-            <div class="modal fade" id="editWarehouseModal" tabindex="-1" aria-labelledby="editWarehouseModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="editWarehouseModalLabel">Edit Warehouse</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="warehouseName" class="form-label">Warehouse Name</label>
-                                    <input type="text" class="form-control" id="warehouseName" value="Warehouse A">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address" value="1234 Main Street">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="quantity" class="form-label">Quantity</label>
-                                    <input type="number" class="form-control" id="quantity" value="500">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="productId" class="form-label">Product ID</label>
-                                    <input type="number" class="form-control" id="productId" value="101">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address">
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal for Deleting a Warehouse -->
-            <div class="modal fade" id="deleteWarehouseModal" tabindex="-1" aria-labelledby="deleteWarehouseModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="deleteWarehouseModalLabel">Delete Warehouse</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to delete this warehouse?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="quantity">
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal for Adding a New Warehouse -->
-            <div class="modal fade" id="addWarehouseModal" tabindex="-1" aria-labelledby="addWarehouseModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="addWarehouseModalLabel">Add New Warehouse</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="newWarehouseName" class="form-label">Warehouse Name</label>
-                                    <input type="text" class="form-control" id="newWarehouseName">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newAddress" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="newAddress">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newQuantity" class="form-label">Quantity</label>
-                                    <input type="number" class="form-control" id="newQuantity">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newProductId" class="form-label">Product ID</label>
-                                    <input type="number" class="form-control" id="newProductId">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success">Add Warehouse</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="productId" class="form-label">Product ID</label>
+                        <input type="number" class="form-control" id="productId">
                     </div>
-                </div>
+                </form>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveChangesButton">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Modal for Deleting a Warehouse -->
+<div class="modal fade" id="deleteWarehouseModal" tabindex="-1" aria-labelledby="deleteWarehouseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteWarehouseModalLabel">Delete Warehouse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this warehouse?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="deleteWarehouseButton">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Adding a New Warehouse -->
+<div class="modal fade" id="addWarehouseModal" tabindex="-1" aria-labelledby="addWarehouseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addWarehouseModalLabel">Add New Warehouse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="newWarehouseName" class="form-label">Warehouse Name</label>
+                        <input type="text" class="form-control" id="newWarehouseName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="newAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="newAddress">
+                    </div>
+                    <div class="mb-3">
+                        <label for="newQuantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="newQuantity">
+                    </div>
+                    <div class="mb-3">
+                        <label for="newProductId" class="form-label">Product ID</label>
+                        <input type="number" class="form-control" id="newProductId">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="addWarehouseButton">Add Warehouse</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        $('.viewWarehouseButton').click(function() {
+        var warehouseId = $(this).data('warehouse-id');
+        $.get('/Admin/ViewWarehouse/' + warehouseId, function(data) {
+            if (data.success) {
+                $('#viewWarehouseName').text(data.warehouse.WarehouseName);
+                $('#viewAddress').text(data.warehouse.Address);
+
+                    var totalQuantity = data.warehouse.Products.reduce((sum, p) => sum + p.Quantity, 0);
+    
+                    $('#viewQuantity').text(totalQuantity);
+
+                var productIds = data.warehouse.Products.map(p => p.ProductId).join(", ");
+                $('#viewProductId').text(productIds);
+            }
+        });
+    });
+        $.get('/Admin/ViewWarehouse/' + warehouseId, function(data) {
+        if (data.success) {
+            // Điền dữ liệu vào modal
+        } else {
+            alert('Lỗi khi tải thông tin kho hàng.');
+        }
+    }).fail(function() {
+        alert('Không thể lấy thông tin kho hàng.');
+    });
+
+        $('.editWarehouseButton').click(function() {
+        var warehouseId = $(this).data('warehouse-id');
+        $.get('/Admin/ViewWarehouse/' + warehouseId, function(data) {
+            if (data.success) {
+                $('#warehouseName').val(data.warehouse.WarehouseName);
+                $('#address').val(data.warehouse.Address);
+                $('#quantity').val(data.warehouse.Products.length);
+                $('#productId').val(data.warehouse.Products.Select(p => p.ProductId).join(", "));
+                $('#editWarehouseModal').data('warehouse-id', data.warehouse.WarehouseId);
+            }
+        });
+    });
+    $('#saveChangesButton').click(function() {
+        var warehouseId = $('#editWarehouseModal').data('warehouse-id');
+        var warehouse = {
+            WarehouseId: warehouseId,
+            WarehouseName: $('#warehouseName').val(),
+            Address: $('#address').val(),
+            Products: $('#productId').val() // Adjust this to match your model
+        };
+
+        $.ajax({
+            url: '/Admin/EditWarehouse',
+            method: 'POST',
+            data: warehouse,
+            success: function(response) {
+                if (response.success) {
+                    // Update UI or reload the page
+                    location.reload();
+                }
+            }
+        });
+    });
+    $('.deleteWarehouseButton').click(function() {
+        var warehouseId = $(this).data('warehouse-id');
+        $('#deleteWarehouseButton').data('warehouse-id', warehouseId);
+    });
+
+    $('#deleteWarehouseButton').click(function() {
+        var warehouseId = $(this).data('warehouse-id');
+        $.ajax({
+            url: '/Admin/DeleteWarehouse',
+            method: 'POST',
+            data: { warehouseId: warehouseId },
+            success: function(response) {
+                if (response.success) {
+                    // Remove the warehouse from the table or reload the page
+                    location.reload();
+                }
+            }
+        });
+    });
+
+
+</script>

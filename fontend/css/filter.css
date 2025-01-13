@@ -1,0 +1,22 @@
+/* Tùy chỉnh giao diện dropdown */
+.dropdown-menu {
+  min-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.dropdown-menu .form-check {
+  margin-bottom: 10px;
+}
+
+label.form-label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* Icon và nút dropdown */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
