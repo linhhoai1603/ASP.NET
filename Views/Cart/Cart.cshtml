@@ -1,6 +1,5 @@
-﻿@using Models
-@model Cart
-
+﻿@model List<Models.CartItem>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 @{
     ViewData["Title"] = "Giỏ hàng";
 }
@@ -9,29 +8,49 @@
     <div class="row no-gutters">
         <div class="col-md-8">
             <div class="product-details mr-2">
-                <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span class="ml-2" style="font-size: small; margin-left: 5px">Mua thêm sản phẩm khác</span></div>
+                <div class="d-flex flex-row align-items-center">
+                    <i class="fa fa-long-arrow-left"></i><span class="ml-2" style="font-size: small; margin-left: 5px">Mua thêm sản phẩm khác</span>
+                </div>
                 <hr>
 
                 <h3 style="margin-right: 20px"><i class="fa-solid fa-cart-plus"></i> Giỏ Hàng </h3>
 
-                @foreach (var item in Model.Items.Values)
+                @if (Model.Any())
                 {
-                    <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                        <div class="d-flex flex-row align-items-center" style="flex: 1;">
-                            <img class="rounded" src="https://stcv4.hnammobile.com/uploads/products/colors/6/apple-iphone-12-pro-max-1-sim-128gb-cu-99-ll-01708505338.jpg" width="70">
-                            <div class="ml-3">
-                                <span class="font-weight-bold d-block" style="font-weight: bold">@item.Color.</span> <!-- Hiển thị tên màu -->
-                                <span class="font-weight-bold d-block" style="font-size: 12px; color: gray;">Màu: @item.Color.ColorName</span>
+                    @foreach (var item in Model)
+                    {
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row align-items-center" style="flex: 1;">
+                                <img class="rounded" src="@item.Image" width="70">
+                                <div class="ml-3">
+                                    <span class="font-weight-bold d-block">@item.ProductName</span> <!-- Hiển thị tên sản phẩm -->
+                                    <span class="font-weight-bold d-block" style="font-size: 12px; color: gray;">Số lượng: @item.Quantity</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center justify-content-end" style="flex: 1;">
+                                <form method="post" action="@Url.Action("UpdateQuantity", "Cart")" class="d-flex align-items-center">
+                                    <input type="hidden" name="productId" value="@item.ProductId" />
+                                    <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control w-25 mx-2" />
+                                    <button type="submit" class="btn btn-light btn-sm">Lưu</button>
+                                </form>
+
+
+
+                                <span class="d-block ml-5 font-weight-bold price" style="font-size: large">@item.TotalPrice.ToString("N0") đ</span> <!-- Hiển thị tổng tiền -->
+                                <form method="post" action="@Url.Action("RemoveItem", "Cart")">
+                                    <input type="hidden" name="productId" value="@item.ProductId" />
+                                    <button type="submit" class="btn btn-light btn-sm" style="background-color: transparent; border: none; display: inline-block; padding: 5px;">
+                                        <i class="fa fa-trash text-danger" style="cursor: pointer;"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
-                        <div class="d-flex flex-row align-items-center justify-content-end" style="flex: 1;">
-                            <button class="btn btn-light btn-sm" onclick="decreaseQuantity(event, @item.TotalPrice)">-</button>
-                            <span class="d-block mx-2 quantity">@item.Quantity</span>
-                            <button class="btn btn-light btn-sm" onclick="increaseQuantity(event, @item.TotalPrice)">+</button>
-                            <span class="d-block ml-5 font-weight-bold price" style="font-size: large">@item.TotalPrice.ToString("N0") + "đ"</span> <!-- Hiển thị tổng tiền -->
-                            <i class="fa fa-trash text-danger ml-3" style="margin-left: 20px; width: 20px"></i>
-                        </div>
-                    </div>
+                    }
+                }
+                else
+                {
+                    <p>Giỏ hàng của bạn đang trống.</p>
                 }
 
                 <!-- payment -->
@@ -45,21 +64,22 @@
                 <hr class="line">
                 <div class="d-flex justify-content-between information">
                     <span style="font-size: 14px">Sản phẩm:</span>
-                    <span style="font-size: 16px" id="total-price">@Model.TotalPrice.ToString("N0") + "đ"</span> <!-- Hiển thị tổng giá trị sản phẩm -->
+                    <span style="font-size: 16px" id="total-price">@Model.Sum(item => item.TotalPrice).ToString("N0") đ</span> <!-- Hiển thị tổng giá trị sản phẩm -->
                 </div>
                 <div class="d-flex justify-content-between information">
                     <span style="font-size: 14px; font-weight: lighter">Phí vận chuyển tạm tính:</span>
-                    <span style="font-size: 16px">0.000 VNĐ</span>
+                    <span style="font-size: 16px">Miễn phí vận chuyển</span>
                 </div>
                 <div class="d-flex justify-content-between information">
                     <span style="font-size: 14px; font-weight: lighter">Cần thanh toán:</span>
                     <span style="font-size: 20px; font-weight: bold; color: #FF6F00 " id="final-price">
-                        @Model.LastPrice.ToString("N0") + "đ" <!-- Hiển thị tổng giá cuối cùng -->
+                        @Model.Sum(item => item.TotalPrice).ToString("N0") đ<!-- Hiển thị tổng giá cuối cùng -->
                     </span>
                 </div>
 
                 <hr class="line">
-                <a class="btn btn-primary btn-block" type="button" style="background-color: #FF6F00; margin-top: 10px" href="@Url.Action("Payment", "Payment")">Tiếp tục</a>
+                <a class="btn btn-primary btn-block" type="button" style="background-color: #FF6F00; margin-top: 10px" href="@Url.Action("Payment", "Cart")">Thanh toán</a>
+            
             </div>
         </div>
     </div>

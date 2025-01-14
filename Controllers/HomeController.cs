@@ -22,19 +22,7 @@ namespace ProjectDotNET.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            // Kiểm tra nếu session "Cart" đã tồn tại
-            var cartSession = HttpContext.Session.GetString("Cart");
-
-            // Nếu chưa có cart trong session, tạo mới một cart và set vào session
-            if (string.IsNullOrEmpty(cartSession))
-            {
-                Cart cart = new Cart();
-
-                // Serialize đối tượng Cart thành JSON và lưu vào session
-                var serializedCart = JsonConvert.SerializeObject(cart);
-                HttpContext.Session.SetString("Cart", serializedCart);
-            }
-
+          
             return View();
         }
 
