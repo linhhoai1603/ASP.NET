@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectDotNET.Models;
 using ProjectDotNET.ViewModels;
+using System;
+using System.Linq;
 
 
 namespace ProjectDotNET.Controllers
@@ -16,46 +18,50 @@ namespace ProjectDotNET.Controllers
         public AdminController(Shop_Context context)
         {
             this.context = context;
-
-
         }
 
         [HttpGet]
         public IActionResult Dashboard()
         {
+            try
+            {
+                // Tính doanh thu theo tháng
+                var monthlyRevenue = context.Orders
+                    .Where(o => o.OrderDate != null) // Đảm bảo OrderDate không null
+                    .GroupBy(o => new { o.OrderDate.Year, o.OrderDate.Month })
+                    .Select(g => new
+                    {
+                        Month = $"{g.Key.Month}-{g.Key.Year}",
+                        Revenue = g.Sum(o => o.TotalAmount)
+                    })
+                    .ToList();
 
-            // Tính doanh thu theo tháng
-            var monthlyRevenue = context.Orders
-                .GroupBy(o => new { o.OrderDate.Year, o.OrderDate.Month })
-                .Select(g => new
-                {
-                    Month = $"{g.Key.Month}-{g.Key.Year}",
-                    Revenue = g.Sum(o => o.TotalAmount)
-                })
-                .ToList();
+                // Lấy dữ liệu doanh thu và tháng
+                var revenueData = monthlyRevenue.Select(m => m.Revenue).ToList();
+                var months = monthlyRevenue.Select(m => m.Month).ToList();
 
-            // Lấy dữ liệu doanh thu và tháng
-            var revenueData = monthlyRevenue.Select(m => m.Revenue).ToList();
-            var months = monthlyRevenue.Select(m => m.Month).ToList();
+                // Lấy 5 đơn hàng gần đây
+                var recentOrders = context.Orders
+                    .Include(o => o.User) // Đảm bảo User được nạp (eager loading)
+                    .OrderByDescending(o => o.OrderDate)
+                    .Take(5)
+                    .ToList();
 
-            // Truyền dữ liệu doanh thu và tháng vào ViewBag
-            ViewBag.Revenue = revenueData;
-            ViewBag.MonthlyRevenue = months;
+                // Truyền dữ liệu vào ViewBag
+                ViewBag.Revenue = revenueData ?? new List<double>();
+                ViewBag.MonthlyRevenue = months ?? new List<string>();
+                ViewBag.RecentOrders = recentOrders ?? new List<Order>();
 
-            // Lấy 5 đơn hàng gần đây
-            var recentOrders = context.Orders
-                .Include(o => o.User) // Đảm bảo User được nạp (eager loading)
-                .OrderByDescending(o => o.OrderDate)
-                .Take(5)
-                .ToList();
-
-            ViewBag.RecentOrders = recentOrders;
-
-
-
-
-            return View();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                // Log lỗi nếu cần
+                ViewBag.ErrorMessage = "An error occurred while loading the dashboard.";
+                return View();
+            }
         }
+
         //[HttpGet]
         //public IActionResult ManagerUser()
         //{
@@ -187,34 +193,43 @@ namespace ProjectDotNET.Controllers
             return View(products);
         }
 
-        // GET: View Product
+        // Xem chi tiết sản phẩm
         [HttpGet]
         public IActionResult ViewProduct(int productId)
         {
             var product = context.Products.FirstOrDefault(p => p.ProductId == productId);
-
             if (product == null)
             {
-                return Json(new { success = false });
+                return Json(new { success = false, message = "Product not found." });
             }
-
             return Json(new { success = true, product });
         }
 
-        // POST: Edit Product
+
+        // Chỉnh sửa sản phẩm
         [HttpPost]
         public IActionResult EditProduct(Product product)
         {
             if (ModelState.IsValid)
             {
-                context.Entry(product).State = EntityState.Modified;
-                context.SaveChanges();
-                return Json(new { success = true });
+                var existingProduct = context.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
+                if (existingProduct != null)
+                {
+                    existingProduct.ProductName = product.ProductName;
+                    existingProduct.UnitPrice = product.UnitPrice;
+                    existingProduct.Description = product.Description;
+                    existingProduct.BrandId = product.BrandId;
+                    existingProduct.CategoryId = product.CategoryId;
+                    existingProduct.ImgUrl = product.ImgUrl;
+
+                    context.SaveChanges();
+                    return Json(new { success = true, message = "Product updated successfully!" });
+                }
             }
-            return Json(new { success = false });
+            return Json(new { success = false, message = "Failed to update product." });
         }
 
-        // POST: Add Product
+        // Thêm sản phẩm
         [HttpPost]
         public IActionResult AddProduct(Product product)
         {
@@ -222,12 +237,12 @@ namespace ProjectDotNET.Controllers
             {
                 context.Products.Add(product);
                 context.SaveChanges();
-                return Json(new { success = true });
+                return Json(new { success = true, message = "Product added successfully!" });
             }
-            return Json(new { success = false });
+            return Json(new { success = false, message = "Failed to add product." });
         }
 
-        // POST: Delete Product
+        // Xóa sản phẩm
         [HttpPost]
         public IActionResult DeleteProduct(int productId)
         {
@@ -236,11 +251,11 @@ namespace ProjectDotNET.Controllers
             {
                 return Json(new { success = false, message = "Product not found." });
             }
-
             context.Products.Remove(product);
             context.SaveChanges();
-            return Json(new { success = true });
+            return Json(new { success = true, message = "Product deleted successfully!" });
         }
+
 
 
         // --- Manage Warehouses ---
@@ -249,47 +264,52 @@ namespace ProjectDotNET.Controllers
         [HttpGet]
         public IActionResult ManagerWareHouse()
         {
-            var warehouses = context.Warehouses.ToList();
-            return View(warehouses);
+            // Nạp dữ liệu từ bảng Warehouses và danh sách Products
+            var warehouses = context.Warehouses
+                .Include(w => w.Products) // Eager Loading
+                .ToList();
+
+            // Đảm bảo danh sách không null
+            return View(warehouses ?? new List<Warehouse>());
         }
 
-        // GET: View Warehouse
         [HttpGet]
         public IActionResult ViewWarehouse(int warehouseId)
         {
+            // Nạp chi tiết kho và sản phẩm liên quan
             var warehouse = context.Warehouses
-                .Include(w => w.Products)  // Include products if you need to show them as well
+                .Include(w => w.Products)
                 .FirstOrDefault(w => w.WarehouseId == warehouseId);
 
             if (warehouse == null)
             {
-                return Json(new { success = false });
+                return Json(new { success = false, message = "Warehouse not found." });
             }
 
             return Json(new { success = true, warehouse });
         }
-        // POST: Edit Warehouse
+
         [HttpPost]
         public IActionResult EditWarehouse(Warehouse warehouse)
         {
             if (ModelState.IsValid)
             {
                 var existingWarehouse = context.Warehouses
+                    .Include(w => w.Products)
                     .FirstOrDefault(w => w.WarehouseId == warehouse.WarehouseId);
 
                 if (existingWarehouse != null)
                 {
                     existingWarehouse.WarehouseName = warehouse.WarehouseName;
                     existingWarehouse.Address = warehouse.Address;
-                    // Update other fields as necessary
                     context.SaveChanges();
                     return Json(new { success = true });
                 }
             }
-            return Json(new { success = false });
+
+            return Json(new { success = false, message = "Failed to update warehouse." });
         }
 
-        // POST: Add Warehouse
         [HttpPost]
         public IActionResult AddWarehouse(Warehouse warehouse)
         {
@@ -299,22 +319,33 @@ namespace ProjectDotNET.Controllers
                 context.SaveChanges();
                 return Json(new { success = true });
             }
+
             return Json(new { success = false });
         }
 
-        // POST: Delete Warehouse
         [HttpPost]
         public IActionResult DeleteWarehouse(int warehouseId)
         {
-            var warehouse = context.Warehouses.FirstOrDefault(w => w.WarehouseId == warehouseId);
+            var warehouse = context.Warehouses
+                .Include(w => w.Products)
+                .FirstOrDefault(w => w.WarehouseId == warehouseId);
+
             if (warehouse != null)
             {
+                if (warehouse.Products.Any())
+                {
+                    context.Products.RemoveRange(warehouse.Products);
+                }
+
                 context.Warehouses.Remove(warehouse);
                 context.SaveChanges();
                 return Json(new { success = true });
             }
-            return Json(new { success = false });
+
+            return Json(new { success = false, message = "Warehouse not found." });
         }
+    
+
         //[HttpGet]
         //public IActionResult AddUser()
         //{
@@ -498,5 +529,5 @@ namespace ProjectDotNET.Controllers
 
     }
 }
-        
-       
+
+

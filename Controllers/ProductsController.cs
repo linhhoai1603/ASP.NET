@@ -93,21 +93,25 @@ namespace ProjectDotNET.Controllers
         public IActionResult Detail(int id)
         {
             var product = context.Products
-                .Include(p => p.Brand)                    // Thương hiệu
-                .Include(p => p.Category)                 // Danh mục
-                .Include(p => p.ProductSpecification)     // Thông số kỹ thuật
-                .Include(p => p.Warehouse)                // Kho hàng
-                .Include(p => p.Colors)                   // Màu sắc
-                .FirstOrDefault(p => p.ProductId == id);  // Lấy sản phẩm theo ID
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.ProductSpecification)
+                .Include(p => p.Warehouse)
+                .Include(p => p.Colors)
+                .AsNoTracking()
+                .FirstOrDefault(p => p.ProductId == id);
 
             if (product == null)
             {
-                return NotFound(); // Nếu không tìm thấy sản phẩm
+                TempData["ErrorMessage"] = "Sản phẩm không tồn tại.";
+                return RedirectToAction("Index", "Home");
             }
-            return View(product); // Trả về View với dữ liệu sản phẩm
+
+            return View(product);
         }
 
-        
+
+
 
         [HttpGet]
         public IActionResult Search(string query, int? page)
