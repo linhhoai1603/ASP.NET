@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model ProjectDotNET.ViewModels.UserVM
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -49,10 +50,24 @@
              
                     <a href="@Url.Action("Cart", "Cart")" class="text-white fs-4 px-2"><i class="bi bi-basket"></i></a>
                     <a asp-action="Profile" asp-controller="Home" class="nav-link text-white fs-4 px-2"><i class="bi bi-person-circle"></i></a>
-                    
-                    <!-- Add Login and Register links here -->
-                    <a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a>/
-                        <a href="@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a>
+
+@*                         @if (HttpContext.Session.GetInt32("UserId") != null){ *@
+@*                             <a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a> *@
+@* / *@
+@*                                     < a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a> *@
+@*                         }else{ *@
+
+@*                         } *@
+                        @if (Model.Id != null)
+                        {
+                            <li><a href="@Url.Action("Profile", "Home")" class="text-black px-2" style="text-decoration:none;">Hello, @Model.FullName</a></li>
+                            <li><a href="/Home/Logout">Logout</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a></li>
+                            <li><a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a></li>
+                        }
                 </div>
             </div>
         </div>
