@@ -8,7 +8,6 @@
     <h1 class="h2">Manage Warehouses</h1>
 </div>
 
-<!-- Table to display warehouse information -->
 <div class="table-responsive">
     <table class="table table-striped table-bordered mt-4">
         <thead class="table-dark">
@@ -21,39 +20,48 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var warehouse in Model)
+            @if (Model != null && Model.Any())
+            {
+                foreach (var warehouse in Model)
+                {
+                    <tr>
+                        <td>@warehouse.WarehouseId</td>
+                        <td>@warehouse.WarehouseName</td>
+                        <td>@warehouse.Address</td>
+                        <td>@(warehouse.Products?.Count() ?? 0)</td>
+                        <td>
+                            <button class="btn btn-info btn-sm viewWarehouseButton"
+                                    data-warehouse-id="@warehouse.WarehouseId" title="View">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm editWarehouseButton"
+                                    data-bs-toggle="modal" data-bs-target="#editWarehouseModal"
+                                    data-warehouse-id="@warehouse.WarehouseId" title="Edit">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm deleteWarehouseButton"
+                                    data-bs-toggle="modal" data-bs-target="#deleteWarehouseModal"
+                                    data-warehouse-id="@warehouse.WarehouseId" title="Delete">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
             {
                 <tr>
-                    <td>@warehouse.WarehouseId</td>
-                    <td>@warehouse.WarehouseName</td>
-                    <td>@warehouse.Address</td>
-                    <td>@warehouse.Products.Count()</td>
-                    <td>
-                        <!-- Button to view warehouse details -->
-                        <button class="btn btn-info btn-sm viewWarehouseButton" data-bs-toggle="modal" data-bs-target="#viewWarehouseModal" data-warehouse-id="@warehouse.WarehouseId" title="View">
-                            <i class="bi bi-eye"></i>
-                        </button>
-
-                        <!-- Button to edit warehouse -->
-                        <button class="btn btn-primary btn-sm editWarehouseButton" data-bs-toggle="modal" data-bs-target="#editWarehouseModal" data-warehouse-id="@warehouse.WarehouseId" title="Edit">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-
-                        <!-- Button to delete warehouse -->
-                        <button class="btn btn-danger btn-sm deleteWarehouseButton" data-bs-toggle="modal" data-bs-target="#deleteWarehouseModal" data-warehouse-id="@warehouse.WarehouseId" title="Delete">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </td>
+                    <td colspan="5" class="text-center">No warehouses found.</td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
 
-<!-- Add New Warehouse Button -->
 <div class="text-end mt-4">
     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWarehouseModal">Add New Warehouse</button>
 </div>
+
 
 <!-- Modal for Viewing a Warehouse -->
 <div class="modal fade" id="viewWarehouseModal" tabindex="-1" aria-labelledby="viewWarehouseModalLabel" aria-hidden="true">
@@ -67,10 +75,38 @@
                 <strong>Warehouse Name:</strong> <span id="viewWarehouseName"></span><br>
                 <strong>Address:</strong> <span id="viewAddress"></span><br>
                 <strong>Quantity:</strong> <span id="viewQuantity"></span><br>
-                <strong>Product ID:</strong> <span id="viewProductId"></span><br>
+                <strong>Product IDs:</strong> <span id="viewProductId"></span><br>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Adding a New Warehouse -->
+<div class="modal fade" id="addWarehouseModal" tabindex="-1" aria-labelledby="addWarehouseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addWarehouseModalLabel">Add Warehouse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addWarehouseForm">
+                    <div class="mb-3">
+                        <label for="newWarehouseName" class="form-label">Warehouse Name</label>
+                        <input type="text" class="form-control" id="newWarehouseName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="newAddress" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="addWarehouseButton">Add Warehouse</button>
             </div>
         </div>
     </div>
@@ -85,22 +121,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="editWarehouseForm">
                     <div class="mb-3">
-                        <label for="warehouseName" class="form-label">Warehouse Name</label>
-                        <input type="text" class="form-control" id="warehouseName">
+                        <label for="editWarehouseName" class="form-label">Warehouse Name</label>
+                        <input type="text" class="form-control" id="editWarehouseName" required>
                     </div>
                     <div class="mb-3">
-                        <label for="address" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="address">
-                    </div>
-                    <div class="mb-3">
-                        <label for="quantity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" id="quantity">
-                    </div>
-                    <div class="mb-3">
-                        <label for="productId" class="form-label">Product ID</label>
-                        <input type="number" class="form-control" id="productId">
+                        <label for="editAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="editAddress" required>
                     </div>
                 </form>
             </div>
@@ -121,130 +149,141 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete this warehouse?
+                <p>Are you sure you want to delete this warehouse?</p>
+                <p><strong>Warehouse ID:</strong> <span id="modalWarehouseId"></span></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger" id="deleteWarehouseButton">Delete</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteWarehouseButton">Delete</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Modal for Adding a New Warehouse -->
-<div class="modal fade" id="addWarehouseModal" tabindex="-1" aria-labelledby="addWarehouseModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addWarehouseModalLabel">Add New Warehouse</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="newWarehouseName" class="form-label">Warehouse Name</label>
-                        <input type="text" class="form-control" id="newWarehouseName">
-                    </div>
-                    <div class="mb-3">
-                        <label for="newAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="newAddress">
-                    </div>
-                    <div class="mb-3">
-                        <label for="newQuantity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" id="newQuantity">
-                    </div>
-                    <div class="mb-3">
-                        <label for="newProductId" class="form-label">Product ID</label>
-                        <input type="number" class="form-control" id="newProductId">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" id="addWarehouseButton">Add Warehouse</button>
-            </div>
-        </div>
-    </div>
-</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-        $('.viewWarehouseButton').click(function() {
-        var warehouseId = $(this).data('warehouse-id');
-        $.get('/Admin/ViewWarehouse/' + warehouseId, function(data) {
-            if (data.success) {
-                $('#viewWarehouseName').text(data.warehouse.WarehouseName);
-                $('#viewAddress').text(data.warehouse.Address);
+       $(document).ready(function () {
+        // --- Sửa kho ---
+        $('.editWarehouseButton').click(function () {
+            var warehouseId = $(this).data('warehouse-id');
+            $('#editWarehouseModal').data('warehouse-id', warehouseId); // Lưu ID vào modal
 
-                    var totalQuantity = data.warehouse.Products.reduce((sum, p) => sum + p.Quantity, 0);
-    
-                    $('#viewQuantity').text(totalQuantity);
-
-                var productIds = data.warehouse.Products.map(p => p.ProductId).join(", ");
-                $('#viewProductId').text(productIds);
-            }
-        });
-    });
-        $.get('/Admin/ViewWarehouse/' + warehouseId, function(data) {
-        if (data.success) {
-            // Điền dữ liệu vào modal
-        } else {
-            alert('Lỗi khi tải thông tin kho hàng.');
-        }
-    }).fail(function() {
-        alert('Không thể lấy thông tin kho hàng.');
-    });
-
-        $('.editWarehouseButton').click(function() {
-        var warehouseId = $(this).data('warehouse-id');
-        $.get('/Admin/ViewWarehouse/' + warehouseId, function(data) {
-            if (data.success) {
-                $('#warehouseName').val(data.warehouse.WarehouseName);
-                $('#address').val(data.warehouse.Address);
-                $('#quantity').val(data.warehouse.Products.length);
-                $('#productId').val(data.warehouse.Products.Select(p => p.ProductId).join(", "));
-                $('#editWarehouseModal').data('warehouse-id', data.warehouse.WarehouseId);
-            }
-        });
-    });
-    $('#saveChangesButton').click(function() {
-        var warehouseId = $('#editWarehouseModal').data('warehouse-id');
-        var warehouse = {
-            WarehouseId: warehouseId,
-            WarehouseName: $('#warehouseName').val(),
-            Address: $('#address').val(),
-            Products: $('#productId').val() // Adjust this to match your model
-        };
-
-        $.ajax({
-            url: '/Admin/EditWarehouse',
-            method: 'POST',
-            data: warehouse,
-            success: function(response) {
+            $.get('/ManagerWarehouse/ViewWarehouse', { warehouseId: warehouseId }, function (response) {
                 if (response.success) {
-                    // Update UI or reload the page
-                    location.reload();
+                    $('#editWarehouseName').val(response.warehouse.WarehouseName);  // Sửa lại ID này
+                    $('#editAddress').val(response.warehouse.Address);  // Sửa lại ID này
+                    $('#editWarehouseModal').modal('show');
+                } else {
+                    alert(response.message || 'Failed to load warehouse.');
                 }
+            });
+        });
+
+        $('#saveChangesButton').click(function () {
+            var warehouseId = $('#editWarehouseModal').data('warehouse-id');
+            var warehouseName = $('#editWarehouseName').val();  // Sửa lại ID này
+            var address = $('#editAddress').val();  // Sửa lại ID này
+
+            if (!warehouseName || !address) {
+                alert('Please fill in all required fields.');
+                return;
             }
+
+            $.ajax({
+                url: '/ManagerWarehouse/EditWarehouse',
+                type: 'POST',
+                data: {
+                    WarehouseId: warehouseId,
+                    WarehouseName: warehouseName,
+                    Address: address
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert('Warehouse updated successfully.');
+                        location.reload();
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
+                },
+                error: function () {
+                    alert('Error occurred while saving changes.');
+                }
+            });
+        });
+
+        // --- Thêm kho ---
+        $('#addWarehouseButton').click(function () {
+            var warehouseName = $('#newWarehouseName').val();
+            var address = $('#newAddress').val();
+
+            if (!warehouseName || !address) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            $.ajax({
+                url: '/ManagerWarehouse/AddWarehouse',
+                type: 'POST',
+                data: {
+                    WarehouseName: warehouseName,
+                    Address: address
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert('Warehouse added successfully.');
+                        location.reload();
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
+                },
+                error: function () {
+                    alert('Error occurred while adding the warehouse.');
+                }
+            });
+        });
+
+        // --- Xóa kho ---
+        $('.deleteWarehouseButton').click(function () {
+            var warehouseId = $(this).data('warehouse-id');
+            $('#confirmDeleteWarehouseButton').data('warehouse-id', warehouseId);
+        });
+
+        $('#confirmDeleteWarehouseButton').click(function () {
+            var warehouseId = $(this).data('warehouse-id');
+
+            $.ajax({
+                url: '/ManagerWarehouse/DeleteWarehouse',
+                type: 'POST',
+                data: { warehouseId: warehouseId },
+                success: function (response) {
+                    if (response.success) {
+                        alert('Warehouse deleted successfully.');
+                        location.reload();
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
+                },
+                error: function () {
+                    alert('Error occurred while deleting the warehouse.');
+                }
+            });
         });
     });
-    $('.deleteWarehouseButton').click(function() {
-        var warehouseId = $(this).data('warehouse-id');
-        $('#deleteWarehouseButton').data('warehouse-id', warehouseId);
+    // --- Xem kho ---
+    $('.viewWarehouseButton').click(function () {
+        var warehouseId = $(this).data('warehouse-id');  // Lấy ID kho từ dữ liệu của nút bấm
+        $.get('/ManagerWarehouse/ViewWarehouse', { warehouseId: warehouseId }, function (response) {
+            if (response.success) {
+                // Hiển thị thông tin kho trong modal
+                $('#viewWarehouseName').text(response.warehouse.WarehouseName); // Hiển thị tên kho
+                $('#viewAddress').text(response.warehouse.Address); // Hiển thị địa chỉ kho
+                $('#viewWarehouseModal').modal('show'); // Mở modal
+            } else {
+                alert(response.message || 'Failed to load warehouse.');
+            }
+        });
     });
 
-    $('#deleteWarehouseButton').click(function() {
-        var warehouseId = $(this).data('warehouse-id');
-        $.ajax({
-            url: '/Admin/DeleteWarehouse',
-            method: 'POST',
-            data: { warehouseId: warehouseId },
-            success: function(response) {
-                if (response.success) {
-                    // Remove the warehouse from the table or reload the page
-                    location.reload();
-                }
-            }
-        });
-    });
 
 
 </script>

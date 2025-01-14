@@ -24,42 +24,56 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var order in ViewBag.RecentOrders as List<Order>)
+        @if (ViewBag.RecentOrders != null && ViewBag.RecentOrders is List<ProjectDotNET.Models.Order>)
         {
-
-            <tr>
-                <td>@order.OrderId</td>
-                <td>@order.User.Username</td>
-                <td>@order.TotalAmount</td>
-                <td>@order.Status</td>
-                <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
-            </tr>
-
+            foreach (var order in ViewBag.RecentOrders as List<ProjectDotNET.Models.Order>)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.User?.Username</td>
+                    <td>@order.TotalAmount.ToString("C")</td> <!-- Định dạng tiền tệ -->
+                    <td>@order.Status</td>
+                    <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
         }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center">No recent orders available.</td>
+            </tr>
+        }
+
     </tbody>
 </table>
 
 <script>
     // Revenue Chart Data as Bar Chart
+        if (@(ViewBag.Revenue != null ? "true" : "false") === "true") {
+        const ctx = document.getElementById('revenueChart').getContext('2d');
         const revenueChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: @Html.Raw(Json.Serialize(ViewBag.MonthlyRevenue)), // Labels cho tháng
-            datasets: [{
-                label: 'Revenue',
-                data: @Html.Raw(Json.Serialize(ViewBag.Revenue)), // Dữ liệu doanh thu
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
+            type: 'bar',
+            data: {
+                labels: @Html.Raw(Json.Serialize(ViewBag.MonthlyRevenue)),
+                datasets: [{
+                    label: 'Revenue',
+                    data: @Html.Raw(Json.Serialize(ViewBag.Revenue)),
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
-    });
+        });
+    } else {
+        console.log("Revenue data is not available.");
+    }
+
 </script>
