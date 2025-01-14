@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ProjectDotNET.Models
 {
@@ -74,7 +75,7 @@ namespace ProjectDotNET.Models
 
         [ForeignKey("WarehouseId")]
         public Warehouse Warehouse { get; set; }
-
+        [JsonIgnore]
         public List<Color> Colors { get; set; }
     }
 }
