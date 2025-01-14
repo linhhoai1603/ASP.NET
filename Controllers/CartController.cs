@@ -48,7 +48,7 @@ public class CartController : Controller
         {
             // Nếu có, tăng số lượng
             cart.Items[colorId].SetQuantity(cart.Items[colorId].Quantity + quantity);
-        }
+        }   
         else
         {
             // Thêm mới sản phẩm vào giỏ hàng
