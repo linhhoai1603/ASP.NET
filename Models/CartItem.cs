@@ -1,30 +1,19 @@
-﻿using ProjectDotNET.Models;
-using System;
-
-namespace Models
+﻿namespace Models
 {
     public class CartItem
     {
-        public Color Color { get; set; }
+      public int ProductId { get; set; }
+      public string ProductName { get; set; }
+        public string Image { get; set; }
         public int Quantity { get; set; }
-        public double TotalPrice { get; set; }
-
-        public CartItem(Color color, int quantity)
+        public double UnitPrice { get; set; }
+        public double TotalPrice
         {
-            this.Color = color;
-            this.Quantity = quantity;
-            this.TotalPrice = quantity * color.Product.UnitPrice;
+            get
+            {
+                return Quantity * UnitPrice;
+            }
         }
 
-        public void SetQuantity(int quantity)
-        {
-            this.Quantity = quantity;
-            this.TotalPrice = quantity * Color.Product.UnitPrice;
-        }
-
-        public override string ToString()
-        {
-            return $"{this.Color} {this.Quantity} {this.TotalPrice}";
-        }
     }
 }

@@ -1,25 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models;
 
 namespace ProjectDotNET.ViewModels
 {
     public class PaymentVM
     {
-        [Required(ErrorMessage = "Please enter the order date")]
-        [Display(Name = "Order Date")]
+        public int UserID { get; set; }
+        public string FullName { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
         public DateTime OrderDate { get; set; }
-        [Required(ErrorMessage = "Please select the payment method")]
-        [Display(Name = "Payment Method")]
-        public string PaymentMethod { get; set; }
-        [Required(ErrorMessage = "Please enter the amount")]
-        [Range(0, double.MaxValue, ErrorMessage = "Amount must be a positive value.")]
-        [Display(Name = "Amount")]
-        public double Amount { get; set; }
-        [Required(ErrorMessage = "Please enter the payment status")]
-        [Display(Name = "Status")]
+        public double TotalAmount { get; set; }
         public string Status { get; set; }
-        [Required(ErrorMessage = "Please enter the payment date")]
-        [Display(Name = "Payment Date")]
-        public string? PaymentDate { get; set; }
+      
+        public List<CartItem> cartItems { get; set; }
 
     }
 }
