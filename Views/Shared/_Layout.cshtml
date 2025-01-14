@@ -22,12 +22,12 @@
                 </a>
             </div>
             <div class="w-100 d-flex align-items-center">
-                <form class="d-flex flex-grow-1 mx-3" action="search" method="post">
+                <form class="d-flex flex-grow-1 mx-3" action="@Url.Action("Search","Products")" method="get">
                     <input class="form-control rounded-0 border-danger"
                            type="text"
-                           name="search"
+                           name="query"
                            id="search"
-                           placeholder="Tìm kiếm..." />
+                           placeholder="Tìm kiếm sản phẩm..." />
                     <button class="btn btn-outline-danger rounded-0"
                             type="submit">
                         <i class="bi bi-search"></i>
