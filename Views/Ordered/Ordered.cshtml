@@ -3,51 +3,56 @@
 }
 
 <div class="container py-5 position-relative">
-	<h2 class="mb-4 text-center">Lịch Sử Mua Hàng</h2>
-	<!-- Bảng lịch sử mua hàng -->
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th scope="col">Mã đơn hàng</th>
-				<th scope="col">Hình ảnh</th>
-				<th scope="col">Tên sản phẩm</th>
-				<th scope="col">Ngày mua</th>
-				<th scope="col">Số lượng</th>
-				<th scope="col">Giá</th>
-				<th scope="col">Trạng thái</th>
-				<th scope="col">Tổng</th>
-			</tr>
-		</thead>
-		<tbody>
-
-			@if (Model != null)
-			{
-				@foreach (var order in Model)
-				{
-					@foreach (var item in order.OrderItems)
-					{
-						<tr>
-							<td scope="row">@order.OrderId</td>
-							<td><img src="@item.ProductImgUrl" alt="@item.ProductName" class="w-25"></td>
-							<td>@item.ProductName</td>
-							<td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
-							<td>@item.Quantity</td>
-							<td>@string.Format("{0:N0}", item.Price) VNĐ</td>  <!-- Chia hàng nghìn với định dạng -->
-							<td>
-								@if (order.Status == "Đã giao")
-								{
-									<span class="badge bg-success">Đã giao</span>
-								}
-								else
-								{
-									<span class="badge bg-warning">@order.Status</span>
-								}
-							</td>
-							<td>@string.Format("{0:N0}", item.Quantity * item.Price) VNĐ</td>  <!-- Chia hàng nghìn cho tổng tiền -->
-						</tr>
-					}
-				}
-			}
-			</tbody>
-		</table>
-	</div>
+    <h2 class="mb-4 text-center">Lịch Sử Mua Hàng</h2>
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="text-center">
+            <p class="text-muted">Bạn chưa có đơn hàng.</p>
+        </div>
+    }
+    else
+    {
+        <!-- Bảng lịch sử mua hàng -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Ngày mua</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col">Tổng</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    @foreach (var item in order.OrderItems)
+                    {
+                        <tr>
+                            <td scope="row">@order.OrderId</td>
+                            <td><img src="@item.ProductImgUrl" alt="@item.ProductName" class="w-25"></td>
+                            <td>@item.ProductName</td>
+                            <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
+                            <td>@item.Quantity</td>
+                            <td>@string.Format("{0:N0}", item.Price) VNĐ</td>
+                            <td>
+                                @if (order.Status == "Đã giao")
+                                {
+                                    <span class="badge bg-success">Đã giao</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning">@order.Status</span>
+                                }
+                            </td>
+                            <td>@string.Format("{0:N0}", item.Quantity * item.Price) VNĐ</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+</div>

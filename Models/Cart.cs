@@ -20,24 +20,30 @@ namespace Models
             LastPrice = 0.0;
         }
 
-        // Method to add an item
         public void Add(CartItem item)
         {
-            if (item.Quantity < 0) return;
+            // Kiểm tra số lượng không hợp lệ
+            if (item.Quantity <= 0) return;  // Đảm bảo số lượng phải là số dương
 
-            int idColor = item.Color.ColorId; // Adjusted to use ColorId
+            int idColor = item.Color.ColorId; // Sử dụng ColorId để nhận diện sản phẩm theo màu sắc
+
+            // Kiểm tra nếu sản phẩm chưa có trong giỏ hàng
             if (!Items.ContainsKey(idColor))
             {
+                // Nếu chưa có, thêm sản phẩm mới vào giỏ hàng
                 Items[idColor] = item;
             }
             else
             {
+                // Nếu sản phẩm đã có trong giỏ hàng, chỉ cần cập nhật số lượng
                 CartItem existing = Items[idColor];
                 existing.SetQuantity(existing.Quantity + item.Quantity);
             }
 
+            // Tính lại thông tin giỏ hàng sau khi thay đổi
             CalculateInfo();
         }
+
 
         // Method to calculate all costs and values (without shipping fee)
         private void CalculateInfo()

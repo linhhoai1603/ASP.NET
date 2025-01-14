@@ -4,6 +4,15 @@
     ViewData["Title"] = "Liên hệ";
 }
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
 <div class="container contact-form">
     <div class="d-flex justify-content-center mb-4">
         <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" class="img-fluid" />

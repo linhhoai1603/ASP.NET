@@ -22,19 +22,57 @@ else
         @foreach (var product in Model)
         {
             <div class="col-md-3 mb-4">
-                <div class="card h-100">
-                    <img src="@product.ImgUrl" class="card-img-top" alt="@product.ProductName" style="height: 200px; object-fit: cover;" />
+                <div class="card h-100 shadow-sm border-light">
+                    <img src="@product.ImgUrl" class="card-img-top product-img" alt="@product.ProductName" />
+
                     <div class="card-body">
-                        <h5 class="card-title">@product.ProductName</h5>
-                        <p class="card-text">Giá: @product.UnitPrice.ToString("N0") VNĐ</p>
+                        <h5 class="card-title text-center">@product.ProductName</h5>
+                        <p class="card-text text-center">Giá: @product.UnitPrice.ToString("N0") VNĐ</p>
                         <p class="card-text">Thương hiệu: @product.Brand.BrandName</p>
-                        <a href="@Url.Action("Detail", "Products", new { id = product.ProductId })" class="btn btn-primary">Xem chi tiết</a>
+
+                        <!-- Hiển thị các màu sắc -->
+                        <div class="mb-3">
+                            <label><strong>Màu sắc:</strong></label>
+                            <div class="d-flex justify-content-start flex-wrap">
+                                @foreach (var color in product.Colors)
+                                {
+                                    <div class="me-2 mb-2">
+                                        <input type="radio"
+                                               name="color_@product.ProductId"
+                                               value="@color.ColorId"
+                                               id="color_@color.ColorId"
+                                               class="btn-check" />
+                                        <label class="btn btn-outline-secondary p-1"
+                                               for="color_@color.ColorId"
+                                               title="@color.ColorName">
+                                            <img src="@color.ColorImg"
+                                                 alt="@color.ColorName"
+                                                 width="30" height="30"
+                                                 style="border-radius: 50%;" />
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Nút thêm vào giỏ hàng -->
+                        <form asp-action="AddToCart" asp-controller="Cart" method="post">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="hidden" name="colorId" id="selectedColor_@product.ProductId" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <input type="number" name="quantity" value="1" min="1" class="form-control w-50 me-2" />
+                                <button type="submit" class="btn btn-success w-50" onclick="setSelectedColor(@product.ProductId)">
+                                    <i class="bi bi-cart-plus"></i> 
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         }
     </div>
 
+    <!-- Phân trang -->
     <div class="mt-4 d-flex justify-content-center">
         @Html.PagedListPager(Model, page => Url.Action("Search", new { query = Context.Request.Query["query"], page }),
                 new PagedListRenderOptions
@@ -53,4 +91,16 @@ else
         PageClasses = new[] { "page-link" }
     })
     </div>
+
+    <script>
+        function setSelectedColor(productId) {
+            var selectedColor = document.querySelector('input[name="color_' + productId + '"]:checked');
+            if (selectedColor) {
+                document.getElementById('selectedColor_' + productId).value = selectedColor.value;
+            } else {
+                alert("Vui lòng chọn màu sắc trước khi thêm vào giỏ hàng!");
+                event.preventDefault(); // Ngăn submit nếu chưa chọn màu
+            }
+        }
+    </script>
 }
