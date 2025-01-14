@@ -11,7 +11,7 @@ using ProjectDotNET.Models;
 namespace ProjectDotNET.Migrations
 {
     [DbContext(typeof(Shop_Context))]
-    [Migration("20250112134024_v1")]
+    [Migration("20250114023529_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -270,8 +270,9 @@ namespace ProjectDotNET.Migrations
                         .HasColumnType("double")
                         .HasColumnName("unitPrice");
 
-                    b.Property<int?>("WarehouseId")
-                        .HasColumnType("int");
+                    b.Property<int>("WarehouseId")
+                        .HasColumnType("int")
+                        .HasColumnName("warehouseId");
 
                     b.HasKey("ProductId");
 
@@ -358,6 +359,9 @@ namespace ProjectDotNET.Migrations
                         .HasColumnName("userName");
 
                     b.HasKey("UserId");
+
+                    b.HasIndex("Phone")
+                        .IsUnique();
 
                     b.ToTable("users");
                 });
@@ -457,15 +461,19 @@ namespace ProjectDotNET.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjectDotNET.Models.Warehouse", null)
+                    b.HasOne("ProjectDotNET.Models.Warehouse", "Warehouse")
                         .WithMany("Products")
-                        .HasForeignKey("WarehouseId");
+                        .HasForeignKey("WarehouseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("ProductSpecification");
+
+                    b.Navigation("Warehouse");
                 });
 
             modelBuilder.Entity("ProjectDotNET.Models.Brand", b =>

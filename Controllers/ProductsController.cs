@@ -106,7 +106,36 @@ namespace ProjectDotNET.Controllers
             }
             return View(product); // Trả về View với dữ liệu sản phẩm
         }
+
         
 
+        [HttpGet]
+        public IActionResult Search(string query, int? page)
+        {
+            int pageSize = 8;
+            int pageNumber = page ?? 1;
+            var products = context.Products
+                .Include(p => p.Brand)
+                .Include(p => p.Category)
+                .Include(p => p.ProductSpecification)
+                .Include(p => p.Warehouse)
+                .AsQueryable();
+            if (!string.IsNullOrEmpty(query))
+            {
+                query = query.ToLower().Trim();
+                products = products.Where(p =>
+           p.ProductName.ToLower().Contains(query) ||          // Tìm theo tên sản phẩm
+           p.Description.ToLower().Contains(query) ||          // Tìm theo mô tả
+           p.Brand.BrandName.ToLower().Contains(query) ||      // Tìm theo tên thương hiệu
+           p.ProductSpecification.StorageCapacity.Contains(query) // Tìm theo dung lượng
+       );
+            }
+            products = products.OrderBy(p => p.ProductName);
+
+
+            var pagedProducts = products.ToPagedList(pageNumber, pageSize);
+
+            return View("Search", pagedProducts);
+        }
     }
 }

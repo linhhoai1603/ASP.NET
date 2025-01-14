@@ -149,7 +149,7 @@ namespace ProjectDotNET.Migrations
                     productSpecificationId = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
                     imgUrl = table.Column<string>(type: "longtext", nullable: false),
-                    WarehouseId = table.Column<int>(type: "int", nullable: true)
+                    warehouseId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -173,10 +173,11 @@ namespace ProjectDotNET.Migrations
                         principalColumn: "productSpeId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_products_warehouses_WarehouseId",
-                        column: x => x.WarehouseId,
+                        name: "FK_products_warehouses_warehouseId",
+                        column: x => x.warehouseId,
                         principalTable: "warehouses",
-                        principalColumn: "warehouseId");
+                        principalColumn: "warehouseId",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -297,9 +298,15 @@ namespace ProjectDotNET.Migrations
                 column: "productSpecificationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_products_WarehouseId",
+                name: "IX_products_warehouseId",
                 table: "products",
-                column: "WarehouseId");
+                column: "warehouseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_users_phone",
+                table: "users",
+                column: "phone",
+                unique: true);
         }
 
         /// <inheritdoc />
