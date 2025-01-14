@@ -52,7 +52,7 @@ namespace ProjectDotNET.Controllers
             ViewBag.RecentOrders = recentOrders;
 
 
-           
+
 
             return View();
         }
@@ -82,20 +82,19 @@ namespace ProjectDotNET.Controllers
         //    return View(users);
         //}
         // Hiển thị danh sách người dùng và form thêm, chỉnh sửa
-<<<<<<< HEAD
         public IActionResult ManagerUser(int? id)
         {
             if (id.HasValue)
             {
                 // Nếu có id, trả về thông tin người dùng để chỉnh sửa
-                var user = _context.Users.FirstOrDefault(u => u.UserId == id);
+                var user = context.Users.FirstOrDefault(u => u.UserId == id);
                 if (user != null)
                 {
                     return View(user);  // Trả về view cùng dữ liệu user cần chỉnh sửa
                 }
             }
 
-            var users = _context.Users.ToList();
+            var users = context.Users.ToList();
             return View(users);  // Trả về tất cả người dùng
         }
         [HttpGet]
@@ -106,7 +105,7 @@ namespace ProjectDotNET.Controllers
         [HttpGet]
         public IActionResult ManagerOrder()
         {
-            var orders = _context.Orders
+            var orders = context.Orders
                 .Include(o => o.User)
                 .Include(o => o.OrderItems)
                 .ThenInclude(oi => oi.Product)
@@ -117,7 +116,7 @@ namespace ProjectDotNET.Controllers
         [HttpGet]
         public IActionResult ViewOrder(int id)
         {
-            var order = _context.Orders
+            var order = context.Orders
                 .Include(o => o.User)
                 .Include(o => o.OrderItems)
                 .ThenInclude(oi => oi.Product)
@@ -137,8 +136,8 @@ namespace ProjectDotNET.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Orders.Add(order);
-                _context.SaveChanges();
+                context.Orders.Add(order);
+                context.SaveChanges();
                 TempData["SuccessMessage"] = "Order added successfully!";
                 return RedirectToAction("ManagerOrder");
             }
@@ -150,7 +149,7 @@ namespace ProjectDotNET.Controllers
         public IActionResult DeleteOrder(int orderId)
         {
             // Tìm Order và bao gồm OrderItems
-            var order = _context.Orders
+            var order = context.Orders
                                 .Include(o => o.OrderItems) // Bao gồm các OrderItems
                                 .FirstOrDefault(o => o.OrderId == orderId);
 
@@ -163,12 +162,12 @@ namespace ProjectDotNET.Controllers
             // Xóa OrderItems trước nếu có
             if (order.OrderItems != null && order.OrderItems.Count > 0)
             {
-                _context.Order_Items.RemoveRange(order.OrderItems);
+                context.Order_Items.RemoveRange(order.OrderItems);
             }
 
             // Xóa Order
-            _context.Orders.Remove(order);
-            _context.SaveChanges();
+            context.Orders.Remove(order);
+            context.SaveChanges();
 
             return Json(new { success = true });
         }
@@ -179,9 +178,6 @@ namespace ProjectDotNET.Controllers
         {
             return View();
         }
-=======
-  
->>>>>>> origin/main
         [HttpGet]
         public IActionResult ManagerProduct()
         {
@@ -422,11 +418,10 @@ namespace ProjectDotNET.Controllers
         //    return RedirectToAction("ManagerUser", "Admin");  // Quay lại trang quản lý người dùng
         //}
         // Thêm người dùng
-<<<<<<< HEAD
+
         [HttpPost]
         public IActionResult AddUser(UserVM user)
         {
-            if (ModelState.IsValid)
             {
                 var newUser = new User
                 {
@@ -439,8 +434,8 @@ namespace ProjectDotNET.Controllers
                     Role = user.Role
                 };
 
-                _context.Users.Add(newUser);
-                _context.SaveChanges();
+                context.Users.Add(newUser);
+                context.SaveChanges();
                 TempData["SuccessMessage"] = "User added successfully!";
                 return RedirectToAction("ManagerUser");
             }
@@ -453,8 +448,8 @@ namespace ProjectDotNET.Controllers
         [HttpPost]
         public IActionResult EditUser(UserVM user)
         {
-            var existingUser = _context.Users.FirstOrDefault(u => u.UserId == user.Id);
-            if(existingUser == null)
+            var existingUser = context.Users.FirstOrDefault(u => u.UserId == user.Id);
+            if (existingUser == null)
             {
                 TempData["SuccessMessage"] = $"User not found with ID: {user.Id}";
             }
@@ -471,7 +466,7 @@ namespace ProjectDotNET.Controllers
                 {
                     existingUser.Password = new PasswordHasher<UserVM>().HashPassword(user, user.Password);
                 }
-                _context.SaveChanges();
+                context.SaveChanges();
                 TempData["SuccessMessage"] = "User updated successfully!";
                 return RedirectToAction("ManagerUser");
             }
@@ -483,11 +478,11 @@ namespace ProjectDotNET.Controllers
         [HttpPost]
         public IActionResult DeleteUser(int id)
         {
-            var user = _context.Users.FirstOrDefault(u => u.UserId == id);
+            var user = context.Users.FirstOrDefault(u => u.UserId == id);
             if (user != null)
             {
-                _context.Users.Remove(user);
-                _context.SaveChanges();
+                context.Users.Remove(user);
+                context.SaveChanges();
                 TempData["SuccessMessage"] = "User deleted successfully!";
             }
             else
@@ -497,11 +492,7 @@ namespace ProjectDotNET.Controllers
 
             return RedirectToAction("ManagerUser");
         }
-
-=======
-       
-        
-       
->>>>>>> origin/main
     }
 }
+        
+       
