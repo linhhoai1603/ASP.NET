@@ -51,9 +51,6 @@ namespace ProjectDotNET.Controllers
 
             ViewBag.RecentOrders = recentOrders;
 
-
-
-
             return View();
         }
         //[HttpGet]
@@ -97,11 +94,7 @@ namespace ProjectDotNET.Controllers
             var users = context.Users.ToList();
             return View(users);  // Trả về tất cả người dùng
         }
-        [HttpGet]
-        public IActionResult ManagerMessage()
-        {
-            return View();
-        }
+     
         [HttpGet]
         public IActionResult ManagerOrder()
         {
@@ -170,19 +163,6 @@ namespace ProjectDotNET.Controllers
             context.SaveChanges();
 
             return Json(new { success = true });
-        }
-
-
-        [HttpGet]
-        public IActionResult ManagerPayment()
-        {
-            return View();
-        }
-        [HttpGet]
-        public IActionResult ManagerProduct()
-        {
-            var products = context.Products.ToList();
-            return View(products);
         }
 
         // GET: View Product
@@ -443,6 +423,12 @@ namespace ProjectDotNET.Controllers
             TempData["ErrorMessage"] = "Error adding user.";
             return RedirectToAction("ManagerUser");
         }
+        [HttpGet]
+        public IActionResult ManagerProduct()
+        {
+            var products = context.Products.ToList();
+            return View(products);
+        }
 
         // Chỉnh sửa người dùng
         [HttpPost]
@@ -492,6 +478,135 @@ namespace ProjectDotNET.Controllers
 
             return RedirectToAction("ManagerUser");
         }
+        //  Phần quản lý payment
+        [HttpGet]
+        public IActionResult ManagerPayment()
+        {
+            var payments = context.Payments.ToList();
+            return View(payments);
+        }
+        // sửa thông tin thanh toán
+        [HttpPost]
+        public IActionResult EditPayment(Payment payment)
+        {
+            try
+            {
+                var existingPayment = context.Payments.FirstOrDefault(p => p.PaymentId == payment.PaymentId);
+                if (existingPayment != null)
+                {
+                    // Cập nhật các trường thông tin payment
+                    existingPayment.OrderId = payment.OrderId;
+                    existingPayment.Amount = payment.Amount;
+                    existingPayment.Status = payment.Status;
+                    existingPayment.PaymentDate = payment.PaymentDate;
+                    existingPayment.PaymentMethod = payment.PaymentMethod;
+
+                    context.SaveChanges();
+                    TempData["SuccessMessage"] = "Payment updated successfully.";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Payment not found.";
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error updating payment: {ex.Message}";
+            }
+
+            return RedirectToAction("ManagerPayment");
+        }
+        // xóa thông tin thanh toán
+        [HttpPost]
+        public IActionResult DeletePayment(int IdPayment)
+        {
+            try
+            {
+                // Tìm payment cần xóa theo Id
+                var payment = context.Payments.FirstOrDefault(p => p.PaymentId == IdPayment);
+                if (payment == null)
+                {
+                    TempData["ErrorMessage"] = "Payment not found.";
+                    return RedirectToAction("ManagerPayment");
+                }
+
+                // Xóa payment
+                context.Payments.Remove(payment);
+
+                // Lưu thay đổi vào cơ sở dữ liệu
+                context.SaveChanges();
+
+                // Thông báo thành công
+                TempData["SuccessMessage"] = "Payment deleted successfully.";
+            }
+            catch (Exception ex)
+            {
+                // Nếu có lỗi xảy ra, thông báo lỗi
+                TempData["ErrorMessage"] = $"Error deleting payment: {ex.Message}";
+            }
+
+            return RedirectToAction("ManagerPayment");
+        }
+        // method add payment
+        [HttpPost]
+        public IActionResult AddPayment(Payment payment)
+        {
+            try
+            {
+                // Thêm payment mới vào cơ sở dữ liệu
+                context.Payments.Add(payment);
+                context.SaveChanges();
+
+                // Thông báo thành công
+                TempData["SuccessMessage"] = "Payment added successfully.";
+            }
+            catch (Exception ex)
+            {
+                // Nếu có lỗi xảy ra, thông báo lỗi
+                TempData["ErrorMessage"] = $"Error adding payment: {ex.Message}";
+            }
+
+            return RedirectToAction("ManagerPayment");
+        }
+        [HttpGet]
+        public IActionResult ManagerMessage()
+        {
+            var contacts = context.Contacts.ToList();
+            return View(contacts);
+        }
+        // Phương thức để thêm tin nhắn mới (nếu cần)
+        [HttpPost]
+        public IActionResult AddMessage(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Contacts.Add(contact);
+                context.SaveChanges();
+                return RedirectToAction("ManagerMessage");
+            }
+            return View(contact);
+        }
+
+        // Phương thức để xóa tin nhắn
+        [HttpPost]
+        public IActionResult DeleteMessage(int id)
+        {
+            var contact = context.Contacts.FirstOrDefault(c => c.ContactId == id);
+            if (contact != null)
+            {
+                context.Contacts.Remove(contact);
+                context.SaveChanges();
+                TempData["Message"] = "Message deleted successfully!";  // Thông báo thành công
+            }
+            else
+            {
+                TempData["Message"] = "Message not found!";  // Thông báo thất bại
+            }
+
+            return RedirectToAction("ManagerMessage");  // Quay lại trang quản lý
+        }
+
+
     }
 }
         

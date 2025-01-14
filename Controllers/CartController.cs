@@ -21,7 +21,7 @@ namespace ProjectDotNET.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult Cart()
+        public IActionResult Cart(int idColor, int quantity)
         {
             // Lấy giỏ hàng từ session
             var cartSession = HttpContext.Session.GetString("Cart");

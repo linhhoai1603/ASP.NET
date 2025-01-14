@@ -8,9 +8,9 @@ namespace ProjectDotNET.Controllers
     public class ContactController : Controller
     {
         private readonly Shop_Context _context;
-        public ContactController(Shop_Context _context)
+        public ContactController(Shop_Context context)
         {
-            _context = _context;
+            _context = context;
         }
         public IActionResult Index()
         {
@@ -33,14 +33,14 @@ namespace ProjectDotNET.Controllers
                     _context.SaveChanges();
        
                     // 2. Điều hướng đến trang xác nhận hoặc trang chính
-                    TempData["SuccessMessage"] = "Your message has been sent successfully!";
-                    return RedirectToAction("Index");
+                    TempData["SuccessMessage"] = "Gửi tin nhắn thành công, vui lòng đợi nhận viên liên hệ.";
+                    return RedirectToAction("Contact");
                 }
                 catch (Exception ex)
                 {
 
                     // Hiển thị thông báo lỗi đến người dùng
-                    TempData["ErrorMessage"] = "An error occurred while sending your message. Please try again.";
+                    TempData["ErrorMessage"] = "Thông điệp của bạn chưa được gửi đi, vui lòng thử lại.";
                     return View(contact);
                 }
             }
