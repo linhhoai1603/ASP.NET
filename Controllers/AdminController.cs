@@ -199,6 +199,7 @@ namespace ProjectDotNET.Controllers
         }
 
 
+
         [HttpGet]
         public IActionResult ViewProduct(int productId)
         {
@@ -207,6 +208,7 @@ namespace ProjectDotNET.Controllers
             {
                 return Json(new { success = false, message = "Product not found." });
             }
+
             return Json(new { success = true, product });
         }
 
@@ -215,24 +217,23 @@ namespace ProjectDotNET.Controllers
         [HttpPost]
         public IActionResult EditProduct(Product product)
         {
-            if (ModelState.IsValid)
+            var existingProduct = context.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
+            if (existingProduct == null)
             {
-                var existingProduct = context.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
-                if (existingProduct != null)
-                {
-                    existingProduct.ProductName = product.ProductName;
-                    existingProduct.UnitPrice = product.UnitPrice;
-                    existingProduct.Description = product.Description;
-                    existingProduct.BrandId = product.BrandId;
-                    existingProduct.CategoryId = product.CategoryId;
-                    existingProduct.ImgUrl = product.ImgUrl;
-
-                    context.SaveChanges();
-                    return Json(new { success = true, message = "Product updated successfully!" });
-                }
+                return Json(new { success = false, message = "Product not found." });
             }
-            return Json(new { success = false, message = "Failed to update product." });
+
+            existingProduct.ProductName = product.ProductName;
+            existingProduct.UnitPrice = product.UnitPrice;
+            existingProduct.Description = product.Description;
+            existingProduct.BrandId = product.BrandId;
+            existingProduct.CategoryId = product.CategoryId;
+            existingProduct.ImgUrl = product.ImgUrl;
+
+            context.SaveChanges();
+            return Json(new { success = true, message = "Product updated successfully!" });
         }
+
 
         // Thêm sản phẩm
         [HttpPost]
@@ -244,44 +245,48 @@ namespace ProjectDotNET.Controllers
                 context.SaveChanges();
                 return Json(new { success = true, message = "Product added successfully!" });
             }
+
             return Json(new { success = false, message = "Failed to add product." });
         }
+
 
         // Xóa sản phẩm
         [HttpPost]
         public IActionResult DeleteProduct(int productId)
         {
-            var product = context.Products.FirstOrDefault(p => p.ProductId == productId);
-            if (product == null)
+            try
             {
-                return Json(new { success = false, message = "Product not found." });
+                var product = context.Products.Find(productId);  // Tìm sản phẩm trong cơ sở dữ liệu
+                if (product == null)
+                {
+                    return Json(new { success = false, message = "Product not found." });
+                }
+
+                context.Products.Remove(product);  // Xóa sản phẩm
+                context.SaveChanges();  // Lưu thay đổi
+
+                return Json(new { success = true });
             }
-            context.Products.Remove(product);
-            context.SaveChanges();
-            return Json(new { success = true, message = "Product deleted successfully!" });
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
         }
 
 
 
-        // --- Manage Warehouses ---
-
-        // GET: Manager Warehouses
         [HttpGet]
         public IActionResult ManagerWareHouse()
         {
-            // Nạp dữ liệu từ bảng Warehouses và danh sách Products
             var warehouses = context.Warehouses
-                .Include(w => w.Products) // Eager Loading
+                .Include(w => w.Products)
                 .ToList();
-
-            // Đảm bảo danh sách không null
-            return View(warehouses ?? new List<Warehouse>());
+            return View(warehouses);
         }
 
         [HttpGet]
         public IActionResult ViewWarehouse(int warehouseId)
         {
-            // Nạp chi tiết kho và sản phẩm liên quan
             var warehouse = context.Warehouses
                 .Include(w => w.Products)
                 .FirstOrDefault(w => w.WarehouseId == warehouseId);
@@ -291,41 +296,46 @@ namespace ProjectDotNET.Controllers
                 return Json(new { success = false, message = "Warehouse not found." });
             }
 
-            return Json(new { success = true, warehouse });
-        }
-
-        [HttpPost]
-        public IActionResult EditWarehouse(Warehouse warehouse)
-        {
-            if (ModelState.IsValid)
+            return Json(new
             {
-                var existingWarehouse = context.Warehouses
-                    .Include(w => w.Products)
-                    .FirstOrDefault(w => w.WarehouseId == warehouse.WarehouseId);
-
-                if (existingWarehouse != null)
+                success = true,
+                warehouse = new
                 {
-                    existingWarehouse.WarehouseName = warehouse.WarehouseName;
-                    existingWarehouse.Address = warehouse.Address;
-                    context.SaveChanges();
-                    return Json(new { success = true });
+                    warehouse.WarehouseId,
+                    warehouse.WarehouseName,
+                    warehouse.Address,
+                    Products = warehouse.Products.Select(p => new { p.ProductId }).ToList()
                 }
-            }
-
-            return Json(new { success = false, message = "Failed to update warehouse." });
+            });
         }
 
         [HttpPost]
-        public IActionResult AddWarehouse(Warehouse warehouse)
+        public IActionResult AddWarehouse([FromForm] Warehouse warehouse)
         {
-            if (ModelState.IsValid)
+            if (string.IsNullOrEmpty(warehouse.WarehouseName) || string.IsNullOrEmpty(warehouse.Address))
             {
-                context.Warehouses.Add(warehouse);
-                context.SaveChanges();
-                return Json(new { success = true });
+                return Json(new { success = false, message = "Invalid data." });
             }
 
-            return Json(new { success = false });
+            context.Warehouses.Add(warehouse);
+            context.SaveChanges();
+            return Json(new { success = true });
+        }
+
+        [HttpPost]
+        public IActionResult EditWarehouse([FromForm] Warehouse warehouse)
+        {
+            var existingWarehouse = context.Warehouses.FirstOrDefault(w => w.WarehouseId == warehouse.WarehouseId);
+            if (existingWarehouse == null)
+            {
+                return Json(new { success = false, message = "Warehouse not found." });
+            }
+
+            existingWarehouse.WarehouseName = warehouse.WarehouseName;
+            existingWarehouse.Address = warehouse.Address;
+            context.SaveChanges();
+
+            return Json(new { success = true });
         }
 
         [HttpPost]
@@ -335,21 +345,18 @@ namespace ProjectDotNET.Controllers
                 .Include(w => w.Products)
                 .FirstOrDefault(w => w.WarehouseId == warehouseId);
 
-            if (warehouse != null)
+            if (warehouse == null)
             {
-                if (warehouse.Products.Any())
-                {
-                    context.Products.RemoveRange(warehouse.Products);
-                }
-
-                context.Warehouses.Remove(warehouse);
-                context.SaveChanges();
-                return Json(new { success = true });
+                return Json(new { success = false, message = "Warehouse not found." });
             }
 
-            return Json(new { success = false, message = "Warehouse not found." });
+            context.Products.RemoveRange(warehouse.Products);
+            context.Warehouses.Remove(warehouse);
+            context.SaveChanges();
+
+            return Json(new { success = true });
         }
-    
+
 
         //[HttpGet]
         //public IActionResult AddUser()
