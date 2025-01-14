@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewData["Title"] - Admin Panel</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		/* Đảm bảo html và body chiếm toàn bộ chiều cao của cửa sổ trình duyệt */
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+
+		/* Container sử dụng Flexbox để chiếm toàn bộ chiều cao */
+		.container-fluid {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		/* Cấu hình sidebar chiếm chiều cao của toàn bộ trang */
+		.sidebar {
+			height: 100%;
+			position: sticky;
+			top: 0;
+			flex-shrink: 0;
+		}
+
+		/* Đảm bảo main content chiếm phần còn lại */
+		main {
+			flex-grow: 1;
+			overflow-y: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row flex-grow-1">
+			<!-- Sidebar -->
+			<nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+				<div class="position-sticky">
+					<ul class="nav flex-column mt-5">
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("Dashboard", "Admin")">
+								<i class="bi bi-house-door"></i> Dashboard
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("ManagerUser", "Admin")">
+								<i class="bi bi-people"></i> Quản lý người dùng
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("ManagerProduct", "Admin")">
+								<i class="bi bi-phone-fill"></i> Quản lý sản phẩm
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("ManagerWareHouse", "Admin")">
+								<i class="bi bi-diagram-3-fill"></i> Quản lý kho
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("ManagerOrder", "Admin")">
+								<i class="bi bi-bag-fill"></i> Quản lý đơn hàng
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("ManagerPayment", "Admin")">
+								<i class="bi bi-wallet"></i> Quản lý thanh toán
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="@Url.Action("ManagerMessage", "Admin")">
+								<i class="bi bi-chat-dots"></i> Quản lý tin nhắn
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- Main content -->
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+				@RenderBody()
+			</main>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+			// Điền thông tin vào form chỉnh sửa
+		$('#editUserModal').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget);  // Button đã mở modal
+			var userId = button.data('id');
+			var username = button.data('username');
+			var email = button.data('email');
+			var fullName = button.data('fullname');
+			var phone = button.data('phone');
+			var role = button.data('role');
+			var address = button.data('address');
+			var password = button.data('password');
+
+			// Điền dữ liệu vào form
+			$('#editUserId').val(userId);
+			$('#editUsername').val(username);
+			$('#editEmail').val(email);
+			$('#editFullName').val(fullName);
+			$('#editPhone').val(phone);
+			$('#editRole').val(role);
+			$('#editAddress').val(address);
+			$('#editPassword').val(password);
+		});
+
+		// Xóa người dùng
+		$('#deleteUserModal').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget);
+			var userId = button.data('id');
+			var userName = button.data('username');
+
+			// Lưu ID người dùng vào modal
+			$('#confirmDeleteBtn').data('id', userId);
+			$('#confirmDeleteBtn').data('username', userName);
+		});
+
+		// Xác nhận xóa người dùng
+		$('#confirmDeleteBtn').click(function () {
+			var userId = $(this).data('id');
+			$.post('/Admin/DeleteUser', { id: userId }, function () {
+				location.reload();  // Tải lại trang sau khi xóa
+			});
+		});
+
+	</script>
+</body>
+</html>

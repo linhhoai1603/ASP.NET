@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+@model IEnumerable<ProjectDotNET.Models.Order>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dashboard</h1>
+</div>
+
+<!-- Revenue Chart Section -->
+<h2>Monthly Revenue</h2>
+<canvas id="revenueChart" width="400" height="200"></canvas>
+<!-- Recent Orders Section -->
+<h2 class="mt-5">Recent Orders</h2>
+<table class="table table-striped table-bordered mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in ViewBag.RecentOrders as List<Order>)
+        {
+
+            <tr>
+                <td>@order.OrderId</td>
+                <td>@order.User.Username</td>
+                <td>@order.TotalAmount</td>
+                <td>@order.Status</td>
+                <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+<script>
+    // Revenue Chart Data as Bar Chart
+        const revenueChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(Json.Serialize(ViewBag.MonthlyRevenue)), // Labels cho tháng
+            datasets: [{
+                label: 'Revenue',
+                data: @Html.Raw(Json.Serialize(ViewBag.Revenue)), // Dữ liệu doanh thu
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+}
+@model ProjectDotNET.Models.Product;
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<div class="container py-5">
+    <main class="row g-4">
+        <!-- Product Gallery -->
+        <section class="col-md-6">
+            <div id="productGallery" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <!----Ảnh chính----->
+                    <div class="carousel-item active">
+                        <img id="main-image" src="@Model.ImgUrl" class="d-block w-100" alt="@Model.ProductName">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705664.jpg" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705816.jpg" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705854.jpg" class="d-block w-100" alt="Image 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productGallery" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productGallery" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3">
+                <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705664.jpg" alt="Image 1" class="img-thumbnail mx-1" style="width: 75px; height: 75px; cursor: pointer;">
+                <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705816.jpg" alt="Image 2" class="img-thumbnail mx-1" style="width: 75px; height: 75px; cursor: pointer;">
+                <img src="images/samsung-galaxy-a16-5g-a166-128gb-ram-8gb-chinh-hang-01730705854.jpg" alt="Image 3" class="img-thumbnail mx-1" style="width: 75px; height: 75px; cursor: pointer;">
+            </div>
+        </section>
+
+        <!-- Product Info -->
+        <section class="col-md-6">
+            <h1 class="fw-bold">@Model.ProductName</h1>
+            <p class="h4 text-danger">@Model.UnitPrice</p>
+            <p>@Model.Description</p>
+
+            <!-- Actions -->
+            <div class="d-flex gap-2 mt-4">
+                <button class="btn btn-primary w-50"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="btn btn-success w-50">Buy Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Specifications -->
+    <section class="mt-5">
+        <h2 class="mb-4">Specifications</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>RAM</th>
+                    <td>@Model.ProductSpecification?.Ram ?? "N/A"</td>
+                </tr>
+                <tr>
+                    <th>Resolution</th>
+                    <td>@Model.ProductSpecification?.Resolution ?? "N/A"</td>
+                </tr>
+                <tr>
+                    <th>Storage Capacity</th>
+                    <td>@Model.ProductSpecification?.StorageCapacity ?? "N/A"</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+</div>

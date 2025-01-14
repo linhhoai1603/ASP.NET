@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectDotNET.Models;
 
@@ -10,9 +11,11 @@ using ProjectDotNET.Models;
 namespace ProjectDotNET.Migrations
 {
     [DbContext(typeof(Shop_Context))]
-    partial class Shop_ContextModelSnapshot : ModelSnapshot
+    [Migration("20250112134024_v1")]
+    partial class v1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
