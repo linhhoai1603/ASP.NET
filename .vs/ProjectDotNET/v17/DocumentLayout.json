@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\.NET\\Project\\",
   "Documents": [
     {
@@ -65,6 +66,25 @@
     {
       "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|d:\\.net\\project\\views\\products\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\products\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+  "WorkspaceRootPath": "G:\\ASP.NET\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\views\\products\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\products\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|g:\\asp.net\\views\\products\\detailproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97EA79CE-05B5-42FE-A8DA-16A26C73226C}|ProjectDotNET.csproj|solutionrelative:views\\products\\detailproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> 7bfbbbe94ec4523e8086a202ab2cc68953d48f04
     }
   ],
   "DocumentGroupContainers": [
@@ -73,10 +93,11 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 269,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "OrderPaymentVM.cs",
@@ -87,10 +108,35 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T16:11:29.81Z",
+=======
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetailProduct.cshtml",
+              "DocumentMoniker": "G:\\ASP.NET\\Views\\Products\\DetailProduct.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\DetailProduct.cshtml",
+              "ToolTip": "G:\\ASP.NET\\Views\\Products\\DetailProduct.cshtml",
+              "RelativeToolTip": "Views\\Products\\DetailProduct.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAmwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T16:04:53.927Z",
+>>>>>>> 7bfbbbe94ec4523e8086a202ab2cc68953d48f04
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 6,
               "Title": "Orders.cs",
               "DocumentMoniker": "D:\\.NET\\Project\\Models\\Orders.cs",
@@ -100,10 +146,22 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T16:07:11.922Z",
+=======
+              "DocumentIndex": 1,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "G:\\ASP.NET\\Views\\Products\\Search.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Search.cshtml",
+              "ToolTip": "G:\\ASP.NET\\Views\\Products\\Search.cshtml",
+              "RelativeToolTip": "Views\\Products\\Search.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T15:59:48.021Z",
+>>>>>>> 7bfbbbe94ec4523e8086a202ab2cc68953d48f04
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 5,
               "Title": "OrderItemsVM.cs",
               "DocumentMoniker": "D:\\.NET\\Project\\ViewModels\\OrderItemsVM.cs",
@@ -282,6 +340,36 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAuwCIAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T13:21:34.734Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "G:\\ASP.NET\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "G:\\ASP.NET\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T15:49:00.532Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 269,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Products.cshtml",
+              "DocumentMoniker": "G:\\ASP.NET\\Views\\Products\\Products.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Products.cshtml",
+              "ToolTip": "G:\\ASP.NET\\Views\\Products\\Products.cshtml",
+              "RelativeToolTip": "Views\\Products\\Products.cshtml",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAKwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T15:50:15.529Z",
+>>>>>>> 7bfbbbe94ec4523e8086a202ab2cc68953d48f04
               "EditorCaption": ""
             }
           ]
