@@ -104,7 +104,7 @@ namespace ProjectDotNET.Controllers
             {
                 return NotFound(); // Nếu không tìm thấy sản phẩm
             }
-            return View(product); // Trả về View với dữ liệu sản phẩm
+            return View("DetailProduct",product); // Trả về View với dữ liệu sản phẩm
         }
         [HttpGet]
         public IActionResult Search(string query, int? page)
