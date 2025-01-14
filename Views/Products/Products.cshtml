@@ -24,22 +24,7 @@
         new SelectListItem { Text = "Trên 10 triệu", Value = "above10" }
     };
 
-<<<<<<< HEAD
-	// Lọc theo dung lượng
-	var storageOptions = new List<SelectListItem>
-	{
-		new SelectListItem { Text = "Tất cả", Value = "" },
-		new SelectListItem { Text = "64GB", Value = "64" },	
-		new SelectListItem { Text = "128GB", Value = "128" },
-		new SelectListItem { Text = "256GB", Value = "256" },
-		new SelectListItem { Text = "512GB", Value = "512" }
-	};
 
-	var selectedPriceRange = Context.Request.Query["priceRange"].ToString();
-	var selectedStorage = Context.Request.Query["storage"].ToString();
-	//Sort option
-	var selectedSortOption = Context.Request.Query["sortOption"].ToString();
-=======
     // Lọc theo dung lượng
     var storageOptions = new List<SelectListItem>
     {
@@ -49,7 +34,7 @@
         new SelectListItem { Text = "256GB", Value = "256" },
         new SelectListItem { Text = "512GB", Value = "512" }
     };
->>>>>>> e53c7a73246017d4c011f4ba303c632ff5f2b445
+
 
     var selectedPriceRange = Context.Request.Query["priceRange"].ToString();
     var selectedStorage = Context.Request.Query["storage"].ToString();

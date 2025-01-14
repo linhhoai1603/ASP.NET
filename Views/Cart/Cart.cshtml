@@ -3,6 +3,12 @@
 @{
     ViewData["Title"] = "Giỏ hàng";
 }
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
 
 <div class="container mt-5 p-3 rounded cart">
     <div class="row no-gutters">

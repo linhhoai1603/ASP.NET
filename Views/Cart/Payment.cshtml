@@ -6,7 +6,7 @@
 
 <div class="container checkout-container">
     <h1 class="section-title mb-4">Thông tin khách hàng</h1>
-    <form method="post" action="@Url.Action("ProcessPayment", "Payment")">
+    <form method="post" action="@Url.Action("Order", "Cart")">
         <div class="row">
             <input type="hidden" class="form-control" id="UserId" name="UserId" required value="@Model.UserID">
             

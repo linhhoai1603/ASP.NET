@@ -140,6 +140,57 @@ public class CartController : Controller
 
         return View(payment);
     }
+    [HttpPost]
+    public IActionResult Order(OrderPaymentVM model)
+    {
+        // Lấy thông tin từ model
+        var userId = HttpContext.Session.GetInt32("UserId");
+        var cart = CartGet;
+        var totalAmount = cart.Sum(p => p.UnitPrice * p.Quantity);
+        var deliveryMethod = model.DeliveryMethod;
+        var address = model.Address;
+
+        // Tạo một đối tượng Order mới
+        var order = new Order
+        {
+            UserId = (int)userId,
+            OrderDate = DateTime.Now,
+            TotalAmount = totalAmount,
+            Status = "Pending", // Trạng thái mặc định
+            OrderItems = new List<OrderItem>()
+        };
+
+        // Thêm các OrderItem vào Order
+        foreach (var item in cart)
+        {
+            var orderItem = new OrderItem
+            {
+                Price = item.UnitPrice,
+                Quantity = item.Quantity,
+                TotalPrice = item.TotalPrice,
+                ProductId = item.ProductId,
+                Order = order // Liên kết OrderItem với Order
+            };
+
+            order.OrderItems.Add(orderItem);
+        }
+
+        // Xóa giỏ hàng sau khi tạo đơn
+        cart.Clear();
+        HttpContext.Session.Set("Cart", cart);
+
+        // Lưu Order và OrderItems vào CSDL
+        _context.Orders.Add(order);
+        _context.SaveChanges();
+
+        // Gửi thông báo thanh toán thành công đến Cart
+        TempData["SuccessMessage"] = "Thanh toán thành công! Cảm ơn bạn đã mua sắm tại cửa hàng.";
+
+        // Redirect hoặc trả về kết quả
+        return RedirectToAction("Cart", "Cart");
+    }
+
+
 
 
 }
