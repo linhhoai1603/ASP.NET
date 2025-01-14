@@ -25,9 +25,9 @@ namespace ProjectDotNET.Controllers
                                   .Include(p => p.Category)
                                   .Include(p => p.ProductSpecification)
                                   .Include(p => p.Warehouse)
+                                  .Include(p => p.Colors)
                                   .OrderBy(p => p.ProductId)
                                   .ToPagedList(pageNumber, pageSize);
-
             return View(products);
         }
         [HttpGet]
@@ -114,6 +114,7 @@ namespace ProjectDotNET.Controllers
                 .Include(p => p.Brand)
                 .Include(p => p.Category)
                 .Include(p => p.ProductSpecification)
+                .Include(p => p.Colors)
                 .Include(p => p.Warehouse)
                 .AsQueryable();
             if (!string.IsNullOrEmpty(query))
