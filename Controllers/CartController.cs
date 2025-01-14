@@ -32,14 +32,8 @@ public class CartController : Controller
         {
             return NotFound();
         }
-<<<<<<< HEAD
-        [HttpGet]
-        public IActionResult Cart(int idColor, int quantity)
-=======
-
         var selectedColor = product.Colors.FirstOrDefault(c => c.ColorId == colorId);
         if (selectedColor == null)
->>>>>>> 0915c8b8a650f46976edd82b8472fcd2bb585531
         {
             TempData["Error"] = "Màu sắc không hợp lệ.";
             return RedirectToAction("Index", "Products");

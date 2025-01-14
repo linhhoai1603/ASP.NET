@@ -41,6 +41,7 @@ namespace ProjectDotNET.Controllers
                                .Include(p => p.Category)
                                .Include(p => p.ProductSpecification)
                                .Include(p => p.Warehouse)
+                                .Include(p => p.Colors)
                                .OrderBy(p => p.ProductId)
                                .AsQueryable();
             if (!string.IsNullOrEmpty(brand))
@@ -121,10 +122,11 @@ namespace ProjectDotNET.Controllers
             {
                 query = query.ToLower().Trim();
                 products = products.Where(p =>
-           p.ProductName.ToLower().Contains(query) ||          // Tìm theo tên sản phẩm
-           p.Description.ToLower().Contains(query) ||          // Tìm theo mô tả
-           p.Brand.BrandName.ToLower().Contains(query) ||      // Tìm theo tên thương hiệu
-           p.ProductSpecification.StorageCapacity.Contains(query) // Tìm theo dung lượng
+             p.ProductName.ToLower().Contains(query) ||       
+             p.Description.ToLower().Contains(query) ||        
+             p.Brand.BrandName.ToLower().Contains(query) ||      
+             p.ProductSpecification.StorageCapacity.Contains(query) ||
+             p.Colors.Any(c => c.ColorName.ToLower().Contains(query)) 
        );
             }
             products = products.OrderBy(p => p.ProductName);
