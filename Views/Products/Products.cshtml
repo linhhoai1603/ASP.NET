@@ -3,27 +3,28 @@
 @model IPagedList<ProjectDotNET.Models.Product>
 
 @{
-	ViewData["Title"] = "Sản phẩm";
-	//Brands
-	var brands = new List<SelectListItem>
-	{
-		new SelectListItem { Text = "Tất cả", Value = "" },
-		new SelectListItem { Text = "Apple", Value = "APPLE" },
-		new SelectListItem { Text = "Oppo", Value = "OPPO" },
-		new SelectListItem { Text = "Samsung", Value = "SAMSUNG" },
-		new SelectListItem { Text = "Xiaomi", Value = "XIAOMI" },
-		new SelectListItem { Text = "Nokia", Value = "NOKIA" }
-	};
+    ViewData["Title"] = "Sản phẩm";
+    //Brands
+    var brands = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Tất cả", Value = "" },
+        new SelectListItem { Text = "Apple", Value = "APPLE" },
+        new SelectListItem { Text = "Oppo", Value = "OPPO" },
+        new SelectListItem { Text = "Samsung", Value = "SAMSUNG" },
+        new SelectListItem { Text = "Xiaomi", Value = "XIAOMI" },
+        new SelectListItem { Text = "Nokia", Value = "NOKIA" }
+    };
 
-	var selectedBrand = Context.Request.Query["brand"].ToString();
-	var priceRanges = new List<SelectListItem>
-	{
-		new SelectListItem { Text = "Tất cả", Value = "" },
-		new SelectListItem { Text = "Dưới 5 triệu", Value = "below5" },
-		new SelectListItem { Text = "Từ 5 - 10 triệu", Value = "5to10" },
-		new SelectListItem { Text = "Trên 10 triệu", Value = "above10" }
-	};
+    var selectedBrand = Context.Request.Query["brand"].ToString();
+    var priceRanges = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Tất cả", Value = "" },
+        new SelectListItem { Text = "Dưới 5 triệu", Value = "below5" },
+        new SelectListItem { Text = "Từ 5 - 10 triệu", Value = "5to10" },
+        new SelectListItem { Text = "Trên 10 triệu", Value = "above10" }
+    };
 
+<<<<<<< HEAD
 	// Lọc theo dung lượng
 	var storageOptions = new List<SelectListItem>
 	{
@@ -38,121 +39,188 @@
 	var selectedStorage = Context.Request.Query["storage"].ToString();
 	//Sort option
 	var selectedSortOption = Context.Request.Query["sortOption"].ToString();
+=======
+    // Lọc theo dung lượng
+    var storageOptions = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Tất cả", Value = "" },
+        new SelectListItem { Text = "64GB", Value = "64" },
+        new SelectListItem { Text = "128GB", Value = "128" },
+        new SelectListItem { Text = "256GB", Value = "256" },
+        new SelectListItem { Text = "512GB", Value = "512" }
+    };
+>>>>>>> e53c7a73246017d4c011f4ba303c632ff5f2b445
 
+    var selectedPriceRange = Context.Request.Query["priceRange"].ToString();
+    var selectedStorage = Context.Request.Query["storage"].ToString();
+    //Sort option
+    var selectedSortOption = Context.Request.Query["sortOption"].ToString();
 }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
 <link rel="stylesheet" href="~/css/products.css">
 
 <div class="container mt-4">
-	<div class="filter-container mb-4 p-3 border rounded">
-		<form asp-action="Products" method="get" class="row g-3">
-			<!-- Lọc theo thương hiệu -->
-			<div class="col-md-3">
-				<label for="brand" class="form-label">Thương hiệu</label>
-				<select id="brand" name="brand" class="form-select" asp-items="@(new SelectList(brands, "Value", "Text", selectedBrand))">
-				</select>
-			</div>
-			<!-- Lọc theo giá -->
-			<div class="col-md-3">
-				<label for="priceRange" class="form-label">Khoảng giá</label>
-				<select id="priceRange" name="priceRange" class="form-select" asp-items="@(new SelectList(priceRanges, "Value", "Text", selectedPriceRange))">
-				</select>
-			</div>
-			<!-- Lọc theo dung lượng -->
-			<div class="col-md-3">
-				<label for="storage" class="form-label">Dung lượng</label>
-				<select id="storage" name="storage" class="form-select" asp-items="@(new SelectList(storageOptions,"Value","Text",selectedStorage))">
-				</select>
-			</div>
-			<!-- Sắp xếp theo -->
-			<div class="col-md-3">
-				<label class="form-label">Sắp xếp theo</label>
-				<div class="dropdown">
-					<button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-						<i class="bi bi-sort-up"></i> Sắp xếp theo
-					</button>
-					<ul class="dropdown-menu p-3" aria-labelledby="sortDropdown">
-						<!-- Radio button for sorting A → Z -->
-						<div class="form-check">
-							<input class="form-check-input sort-radio" type="radio" name="sortOption" value="a-z" id="sortAZ">
-							<label class="form-check-label" for="sortAZ">A → Z</label>
-						</div>
-						<!-- Radio button for sorting Z → A -->
-						<div class="form-check">
-							<input class="form-check-input sort-radio" type="radio" name="sortOption" value="z-a" id="sortZA">
-							<label class="form-check-label" for="sortZA">Z → A</label>
-						</div>
-						<!-- Radio button for sorting price asc -->
-						<div class="form-check">
-							<input class="form-check-input sort-radio" type="radio" name="sortOption" value="price-asc" id="sortAsc">
-							<label class="form-check-label" for="sortAsc">Giá tăng dần</label>
-						</div>
-						<!-- Radio button for sorting price desc -->
-						<div class="form-check">
-							<input class="form-check-input sort-radio" type="radio" name="sortOption" value="price-desc" id="sortDesc">
-							<label class="form-check-label" for="sortDesc">Giá giảm dần</label>
-						</div>
-					</ul>
-				</div>
-			</div>
-			<!-- Nút áp dụng -->
-			<div class="col-md-12 text-center">
-				<button type="submit" class="btn btn-primary" id="applyFilters">Áp dụng bộ lọc</button>
-			</div>
-		</form>
-	</div>
-	<div class="grid-container">
-		@if (Model != null && Model.Any())
-		{
-			@foreach (var product in Model)
-			{
-				<div class="card">
-					<div class="d-flex justify-content-between p-3">
-						<p class="lead mb-0">@product.Brand.BrandName</p>
-						<div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-							 style="width: 35px; height: 35px;">
-							<p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
-						</div>
-					</div>
-					<img src="@product.ImgUrl" class="card-img-top" alt="@product.ProductName" />
-					<div class="card-body">
-						<h5 class="mb-0">@product.ProductName</h5>
-						<p class="text-muted mb-0">Giá: <span class="fw-bold">@product.UnitPrice.ToString("N0") VNĐ</span></p>
-						<p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
-					</div>
-				</div>
-			}
-		}
-		else
-		{
-			<p>Không có sản phẩm nào.</p>
-		}
-	</div>
-	<div class="mt-4 d-flex justify-content-center">
-		@Html.PagedListPager(
-					Model,
-					page => Url.Action("Products", new
-					{
-						page,
-						brand = Context.Request.Query["brand"],
-						priceRange = Context.Request.Query["priceRange"],
-						storage = Context.Request.Query["storage"],
-						sortOption = Context.Request.Query["sortOption"]
-					}),
-					new PagedListRenderOptions
-		{
-			DisplayLinkToFirstPage = PagedListDisplayMode.Always,
-			DisplayLinkToLastPage = PagedListDisplayMode.Always,
-			DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
-			DisplayLinkToNextPage = PagedListDisplayMode.Always,
-			LinkToFirstPageFormat = "«",
-			LinkToPreviousPageFormat = "‹",
-			LinkToNextPageFormat = "›",
-			LinkToLastPageFormat = "»",
-			MaximumPageNumbersToDisplay = 5,
-			UlElementClasses = new[] { "pagination" },
-			LiElementClasses = new[] { "page-item" },
-			PageClasses = new[] { "page-link" }
-		})
-	</div>
+    <div class="filter-container mb-4 p-3 border rounded">
+        <form asp-action="Products" method="get" class="row g-3">
+            <!-- Lọc theo thương hiệu -->
+            <div class="col-md-3">
+                <label for="brand" class="form-label">Thương hiệu</label>
+                <select id="brand" name="brand" class="form-select" asp-items="@(new SelectList(brands, "Value", "Text", selectedBrand))">
+                </select>
+            </div>
+            <!-- Lọc theo giá -->
+            <div class="col-md-3">
+                <label for="priceRange" class="form-label">Khoảng giá</label>
+                <select id="priceRange" name="priceRange" class="form-select" asp-items="@(new SelectList(priceRanges, "Value", "Text", selectedPriceRange))">
+                </select>
+            </div>
+            <!-- Lọc theo dung lượng -->
+            <div class="col-md-3">
+                <label for="storage" class="form-label">Dung lượng</label>
+                <select id="storage" name="storage" class="form-select" asp-items="@(new SelectList(storageOptions,"Value","Text",selectedStorage))">
+                </select>
+            </div>
+            <!-- Sắp xếp theo -->
+            <div class="col-md-3">
+                <label class="form-label">Sắp xếp theo</label>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-sort-up"></i> Sắp xếp theo
+                    </button>
+                    <ul class="dropdown-menu p-3" aria-labelledby="sortDropdown">
+                        <!-- Radio button for sorting A → Z -->
+                        <div class="form-check">
+                            <input class="form-check-input sort-radio" type="radio" name="sortOption" value="a-z" id="sortAZ">
+                            <label class="form-check-label" for="sortAZ">A → Z</label>
+                        </div>
+                        <!-- Radio button for sorting Z → A -->
+                        <div class="form-check">
+                            <input class="form-check-input sort-radio" type="radio" name="sortOption" value="z-a" id="sortZA">
+                            <label class="form-check-label" for="sortZA">Z → A</label>
+                        </div>
+                        <!-- Radio button for sorting price asc -->
+                        <div class="form-check">
+                            <input class="form-check-input sort-radio" type="radio" name="sortOption" value="price-asc" id="sortAsc">
+                            <label class="form-check-label" for="sortAsc">Giá tăng dần</label>
+                        </div>
+                        <!-- Radio button for sorting price desc -->
+                        <div class="form-check">
+                            <input class="form-check-input sort-radio" type="radio" name="sortOption" value="price-desc" id="sortDesc">
+                            <label class="form-check-label" for="sortDesc">Giá giảm dần</label>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- Nút áp dụng -->
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary" id="applyFilters">Áp dụng bộ lọc</button>
+            </div>
+        </form>
+    </div>
+    <div class="grid-container">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var product in Model)
+            {
+                <div class="card">
+                    <div class="d-flex justify-content-between p-3">
+                        <p class="lead mb-0">@product.Brand.BrandName</p>
+                        <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                             style="width: 35px; height: 35px;">
+                            <p class="text-white mb-0 small">@product.ProductSpecification.Ram</p>
+                        </div>
+                    </div>
+                    <img src="@product.ImgUrl" class="card-img-top" alt="@product.ProductName" />
+                    <div class="card-body">
+                        <h5 class="mb-0">@product.ProductName</h5>
+                        <p class="text-muted mb-0">Giá: <span class="fw-bold">@product.UnitPrice.ToString("N0") VNĐ</span></p>
+                        <p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
+
+                        <!-- Hiển thị các màu sắc -->
+                        <div class="mb-3">
+                            <label><strong>Màu sắc:</strong></label>
+                            <div class="d-flex justify-content-start flex-wrap">
+                                @if (product.Colors != null)
+                                {
+                                @foreach (var color in product.Colors)
+                                {
+                                    <div class="me-2 mb-2">
+                                        <input type="radio"
+                                               name="color_@product.ProductId"
+                                               value="@color.ColorId"
+                                               id="color_@color.ColorId"
+                                               class="btn-check" />
+                                        <label class="btn btn-outline-secondary p-1"
+                                               for="color_@color.ColorId"
+                                               title="@color.ColorName">
+                                            <img src="@color.ColorImg"
+                                                 alt="@color.ColorName"
+                                                 width="30" height="30"
+                                                 style="border-radius: 50%;" />
+                                        </label>
+                                    </div>
+                                }
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Nút thêm vào giỏ hàng -->
+                        <form asp-action="AddToCart" asp-controller="Cart" method="post">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="hidden" name="colorId" id="selectedColor_@product.ProductId" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <input type="number" name="quantity" value="1" min="1" class="form-control w-50 me-2" />
+                                <button type="submit" class="btn btn-success w-50" onclick="setSelectedColor(@product.ProductId)">
+                                    <i class="bi bi-cart-plus"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Không có sản phẩm nào.</p>
+        }
+    </div>
+    <div class="mt-4 d-flex justify-content-center">
+        @Html.PagedListPager(
+                 Model,
+                 page => Url.Action("Products", new
+                 {
+                     page,
+                     brand = Context.Request.Query["brand"],
+                     priceRange = Context.Request.Query["priceRange"],
+                     storage = Context.Request.Query["storage"],
+                     sortOption = Context.Request.Query["sortOption"]
+                 }),
+                 new PagedListRenderOptions
+        {
+            DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+            DisplayLinkToLastPage = PagedListDisplayMode.Always,
+            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+            DisplayLinkToNextPage = PagedListDisplayMode.Always,
+            LinkToFirstPageFormat = "«",
+            LinkToPreviousPageFormat = "‹",
+            LinkToNextPageFormat = "›",
+            LinkToLastPageFormat = "»",
+            MaximumPageNumbersToDisplay = 5,
+            UlElementClasses = new[] { "pagination" },
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        })
+    </div>
 </div>
+
+<script>
+    function setSelectedColor(productId) {
+        var selectedColor = document.querySelector('input[name="color_' + productId + '"]:checked');
+        if (selectedColor) {
+            document.getElementById('selectedColor_' + productId).value = selectedColor.value;
+        } else {
+            alert("Vui lòng chọn màu sắc trước khi thêm vào giỏ hàng!");
+            event.preventDefault(); // Ngăn submit nếu chưa chọn màu
+        }
+    }
+</script>

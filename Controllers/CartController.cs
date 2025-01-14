@@ -43,8 +43,8 @@ public class CartController : Controller
 
         if (item != null)
         {
-            // Nếu sản phẩm đã có, tăng số lượng
             item.Quantity += quantity;
+
         }
         else
         {
