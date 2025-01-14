@@ -43,17 +43,7 @@
 			</div>
 
 			<!-- Thêm vào giỏ hàng -->
-			<form asp-action="AddToCart" asp-controller="Cart" method="post">
-				<input type="hidden" name="productId" value="@Model.ProductId">
-				<input type="hidden" name="colorId" id="selectedColor">
-				<div class="d-flex gap-2 mt-4">
-					<input type="number" name="quantity" value="1" min="1" class="form-control w-25">
-					<button type="submit" class="btn btn-primary w-50" onclick="setSelectedColor()">
-						<i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
-					</button>
-					<button type="button" class="btn btn-success w-50">Mua ngay</button>
-				</div>
-			</form>
+			 
 		</section>
 	</main>
 
@@ -79,14 +69,4 @@
 	</section>
 </div>
 
-<script>
-	function setSelectedColor() {
-		var selectedColor = document.querySelector('input[name="colorId"]:checked');
-		if (selectedColor) {
-			document.getElementById('selectedColor').value = selectedColor.value;
-		} else {
-			alert("Vui lòng chọn màu sắc trước khi thêm vào giỏ hàng!");
-			event.preventDefault();
-		}
-	}
-</script>
+

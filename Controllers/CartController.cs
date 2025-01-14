@@ -116,7 +116,7 @@ public class CartController : Controller
     public IActionResult Payment()
     {
         var userId = HttpContext.Session.GetInt32("UserId");
-       
+
         if (userId == null)
         {
             TempData["ErrorMessage"] = "Bạn cần đăng nhập để thanh toán.";
@@ -136,7 +136,7 @@ public class CartController : Controller
             Status = "Đang chờ xử lý",
             cartItems = cart
         };
-        
+
 
         return View(payment);
     }

@@ -1,4 +1,4 @@
-﻿@using X.PagedList.Mvc.Core
+﻿﻿@using X.PagedList.Mvc.Core
 @using X.PagedList
 @model IPagedList<ProjectDotNET.Models.Product>
 
@@ -24,22 +24,7 @@
         new SelectListItem { Text = "Trên 10 triệu", Value = "above10" }
     };
 
-<<<<<<< HEAD
-	// Lọc theo dung lượng
-	var storageOptions = new List<SelectListItem>
-	{
-		new SelectListItem { Text = "Tất cả", Value = "" },
-		new SelectListItem { Text = "64GB", Value = "64" },	
-		new SelectListItem { Text = "128GB", Value = "128" },
-		new SelectListItem { Text = "256GB", Value = "256" },
-		new SelectListItem { Text = "512GB", Value = "512" }
-	};
 
-	var selectedPriceRange = Context.Request.Query["priceRange"].ToString();
-	var selectedStorage = Context.Request.Query["storage"].ToString();
-	//Sort option
-	var selectedSortOption = Context.Request.Query["sortOption"].ToString();
-=======
     // Lọc theo dung lượng
     var storageOptions = new List<SelectListItem>
     {
@@ -49,7 +34,6 @@
         new SelectListItem { Text = "256GB", Value = "256" },
         new SelectListItem { Text = "512GB", Value = "512" }
     };
->>>>>>> e53c7a73246017d4c011f4ba303c632ff5f2b445
 
     var selectedPriceRange = Context.Request.Query["priceRange"].ToString();
     var selectedStorage = Context.Request.Query["storage"].ToString();
@@ -136,38 +120,11 @@
                         <p class="text-muted mb-0">Giá: <span class="fw-bold">@product.UnitPrice.ToString("N0") VNĐ</span></p>
                         <p class="text-muted mb-0">Còn: <span class="fw-bold">@product.Quantity</span></p>
 
-                        <!-- Hiển thị các màu sắc -->
-                        <div class="mb-3">
-                            <label><strong>Màu sắc:</strong></label>
-                            <div class="d-flex justify-content-start flex-wrap">
-                                @if (product.Colors != null)
-                                {
-                                @foreach (var color in product.Colors)
-                                {
-                                    <div class="me-2 mb-2">
-                                        <input type="radio"
-                                               name="color_@product.ProductId"
-                                               value="@color.ColorId"
-                                               id="color_@color.ColorId"
-                                               class="btn-check" />
-                                        <label class="btn btn-outline-secondary p-1"
-                                               for="color_@color.ColorId"
-                                               title="@color.ColorName">
-                                            <img src="@color.ColorImg"
-                                                 alt="@color.ColorName"
-                                                 width="30" height="30"
-                                                 style="border-radius: 50%;" />
-                                        </label>
-                                    </div>
-                                }
-                                }
-                            </div>
-                        </div>
+                        
 
                         <!-- Nút thêm vào giỏ hàng -->
                         <form asp-action="AddToCart" asp-controller="Cart" method="post">
                             <input type="hidden" name="productId" value="@product.ProductId" />
-                            <input type="hidden" name="colorId" id="selectedColor_@product.ProductId" />
                             <div class="d-flex justify-content-between align-items-center">
                                 <input type="number" name="quantity" value="1" min="1" class="form-control w-50 me-2" />
                                 <button type="submit" class="btn btn-success w-50" onclick="setSelectedColor(@product.ProductId)">
@@ -213,14 +170,3 @@
     </div>
 </div>
 
-<script>
-    function setSelectedColor(productId) {
-        var selectedColor = document.querySelector('input[name="color_' + productId + '"]:checked');
-        if (selectedColor) {
-            document.getElementById('selectedColor_' + productId).value = selectedColor.value;
-        } else {
-            alert("Vui lòng chọn màu sắc trước khi thêm vào giỏ hàng!");
-            event.preventDefault(); // Ngăn submit nếu chưa chọn màu
-        }
-    }
-</script>
