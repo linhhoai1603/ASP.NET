@@ -1,0 +1,92 @@
+﻿@model ProjectDotNET.Models.Product
+
+@{
+	ViewData["Title"] = "Chi tiết sản phẩm";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="container py-5">
+	<main class="row g-4">
+		<!-- Product Gallery -->
+		<section class="col-md-6">
+			<div id="productGallery" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<!-- Ảnh chính -->
+					<div class="carousel-item active">
+						<img id="main-image" src="@Model.ImgUrl" class="d-block w-100" alt="@Model.ProductName">
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Product Info -->
+		<section class="col-md-6">
+			<h1 class="fw-bold">@Model.ProductName</h1>
+			<p class="h4 text-danger fw-bold">@Model.UnitPrice.ToString("N0") VNĐ</p>
+			<p>@Model.Description</p>
+
+			<!-- Chọn màu sắc -->
+			<div class="mb-3">
+				<label><strong>Màu sắc:</strong></label>
+				<div class="d-flex flex-wrap">
+					@foreach (var color in Model.Colors)
+					{
+						<div class="me-2">
+							<input type="radio" name="colorId" value="@color.ColorId" id="color_@color.ColorId" class="btn-check">
+							<label class="btn btn-outline-secondary p-1" for="color_@color.ColorId">
+								<img src="@color.ColorImg" width="30" height="30" style="border-radius: 50%;">
+							</label>
+						</div>
+					}
+				</div>
+			</div>
+
+			<!-- Thêm vào giỏ hàng -->
+			<form asp-action="AddToCart" asp-controller="Cart" method="post">
+				<input type="hidden" name="productId" value="@Model.ProductId">
+				<input type="hidden" name="colorId" id="selectedColor">
+				<div class="d-flex gap-2 mt-4">
+					<input type="number" name="quantity" value="1" min="1" class="form-control w-25">
+					<button type="submit" class="btn btn-primary w-50" onclick="setSelectedColor()">
+						<i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
+					</button>
+					<button type="button" class="btn btn-success w-50">Mua ngay</button>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<!-- Product Specifications -->
+	<section class="mt-5">
+		<h2 class="mb-4">Thông số kỹ thuật</h2>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<th>RAM</th>
+					<td>@Model.ProductSpecification?.Ram </td>
+				</tr>
+				<tr>
+					<th>Độ phân giải</th>
+					<td>@Model.ProductSpecification?.Resolution </td>
+				</tr>
+				<tr>
+					<th>Dung lượng lưu trữ</th>
+					<td>@Model.ProductSpecification?.StorageCapacity</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</div>
+
+<script>
+	function setSelectedColor() {
+		var selectedColor = document.querySelector('input[name="colorId"]:checked');
+		if (selectedColor) {
+			document.getElementById('selectedColor').value = selectedColor.value;
+		} else {
+			alert("Vui lòng chọn màu sắc trước khi thêm vào giỏ hàng!");
+			event.preventDefault();
+		}
+	}
+</script>
