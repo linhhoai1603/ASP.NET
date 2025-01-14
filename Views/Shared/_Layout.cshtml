@@ -12,6 +12,14 @@
           rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet" />
+    <style>
+        .no-bullets {
+            list-style: none; /* Loại bỏ dấu */
+            margin: 0; /* Đặt lại margin nếu cần */
+            padding: 0; /* Đặt lại padding nếu cần */
+            display: flex;
+        }
+    </style>
 </head>
 <body>
   <header class="bg-danger text-black">
@@ -58,16 +66,29 @@
 @*                         }else{ *@
 
 @*                         } *@
-                        @if (Model.Id != null)
+                        @inject IHttpContextAccessor HttpContextAccessor
+                        <ul class="no-bullets">
+                        @if (HttpContextAccessor.HttpContext?.Session?.GetInt32("UserId") != null)
                         {
-                            <li><a href="@Url.Action("Profile", "Home")" class="text-black px-2" style="text-decoration:none;">Hello, @Model.FullName</a></li>
-                            <li><a href="/Home/Logout">Logout</a></li>
+                            <li style="list-style-type: none;"><a href="@Url.Action("Profile", "Home")" class="text-black px-2" style="text-decoration:none;">Hello, @HttpContextAccessor.HttpContext.Session.GetString("Username")</a></li>
+                            <li style="list-style-type: none;"><a href="/Home/Logout">Logout</a></li>
                         }
                         else
                         {
-                            <li><a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a></li>
+                            <li><a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a></li> 
                             <li><a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a></li>
                         }
+                        </ul>
+                        @* @if (Model.Id != null)
+                        @* { *@
+                        @*     <li><a href="@Url.Action("Profile", "Home")" class="text-black px-2" style="text-decoration:none;">Hello, @Model.FullName</a></li> *@
+                        @*     <li><a href="/Home/Logout">Logout</a></li> *@
+                        @* } *@
+                        @* else *@
+                        @* { *@
+                        @*     <li><a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a></li> *@
+                        @*     <li><a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a></li> *@
+                        @* } *@
                 </div>
             </div>
         </div>
