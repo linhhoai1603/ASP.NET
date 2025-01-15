@@ -11,6 +11,7 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;  // Đảm bảo cookie chỉ được truy cập qua HTTP
     options.Cookie.IsEssential = true; // Đảm bảo session cookie cần thiết cho ứng dụng
 });
+builder.Services.AddHttpContextAccessor();
 
 // Thêm bộ nhớ phân tán cho session
 builder.Services.AddDistributedMemoryCache(); // Cung cấp bộ nhớ phân tán để lưu trữ session
