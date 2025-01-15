@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Dashboard";
 }
+@model IEnumerable<ProjectDotNET.Models.Order>
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Dashboard</h1>
@@ -23,52 +24,56 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1001</td>
-            <td>John Doe</td>
-            <td>$250.00</td>
-            <td>Completed</td>
-            <td>2025-01-03</td>
-        </tr>
-        <tr>
-            <td>1002</td>
-            <td>Jane Smith</td>
-            <td>$150.00</td>
-            <td>Pending</td>
-            <td>2025-01-04</td>
-        </tr>
-        <tr>
-            <td>1003</td>
-            <td>Mike Johnson</td>
-            <td>$300.00</td>
-            <td>Shipped</td>
-            <td>2025-01-02</td>
-        </tr>
+        @if (ViewBag.RecentOrders != null && ViewBag.RecentOrders is List<ProjectDotNET.Models.Order>)
+        {
+            foreach (var order in ViewBag.RecentOrders as List<ProjectDotNET.Models.Order>)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.User?.Username</td>
+                    <td>@order.TotalAmount.ToString("C")</td> <!-- Định dạng tiền tệ -->
+                    <td>@order.Status</td>
+                    <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center">No recent orders available.</td>
+            </tr>
+        }
+
     </tbody>
 </table>
 
 <script>
     // Revenue Chart Data as Bar Chart
-    const ctx = document.getElementById('revenueChart').getContext('2d');
-    const revenueChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            datasets: [{
-                label: 'Revenue ($)',
-                data: [1200, 1900, 3000, 5000, 2300, 4000, 6000, 7000, 8000, 9000, 10000, 11000],
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
+        if (@(ViewBag.Revenue != null ? "true" : "false") === "true") {
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: @Html.Raw(Json.Serialize(ViewBag.MonthlyRevenue)),
+                datasets: [{
+                    label: 'Revenue',
+                    data: @Html.Raw(Json.Serialize(ViewBag.Revenue)),
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
-    });
+        });
+    } else {
+        console.log("Revenue data is not available.");
+    }
+
 </script>

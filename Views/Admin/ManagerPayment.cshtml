@@ -2,213 +2,220 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Manage Payments";
 }
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
 
 
-        <!-- Main content -->
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Manage Payments</h1>
+<!-- Main content -->
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Manage Payments</h1>
+</div>
+
+<!-- Table to display payment information -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Payment ID</th>
+                <th>Order ID</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Payment Date</th>
+                <th>Payment Method</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var payment in Model)
+            {
+                <tr>
+                    <td>@payment.PaymentId</td>
+                    <td>@payment.OrderId</td>
+                    <td>@String.Format("${0:N2}", payment.Amount)</td>
+                    <td>@payment.Status</td>
+                    <td>@payment.PaymentDate.ToString("yyyy-MM-dd")</td>
+                    <td>@payment.PaymentMethod</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPaymentModal"
+                                title="Edit" data-id="@payment.PaymentId" data-orderid="@payment.OrderId"
+                                data-amount="@payment.Amount" data-status="@payment.Status"
+                                data-paymentdate="@payment.PaymentDate.ToString("yyyy-MM-dd")"
+                                data-paymentmethod="@payment.PaymentMethod">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"
+                                title="Delete" data-id="@payment.PaymentId">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Add New Payment Button -->
+<div class="text-end mt-4">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPaymentModal">Add New Payment</button>
+</div>
+
+<!-- Modal for Editing a Payment -->
+<div class="modal fade" id="editPaymentModal" tabindex="-1" aria-labelledby="editPaymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editPaymentModalLabel">Edit Payment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-            <!-- Table to display payment information -->
-            <div class="table-responsive">
-                <table class="table table-striped table-bordered mt-4">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Payment ID</th>
-                            <th>Order ID</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Payment Date</th>
-                            <th>Payment Method</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example Payment 1 -->
-                        <tr>
-                            <td>1</td>
-                            <td>1001</td>
-                            <td>$500</td>
-                            <td>Completed</td>
-                            <td>2025-01-02</td>
-                            <td>Credit Card</td>
-                            <td>
-                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewPaymentModal" title="View">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPaymentModal" title="Edit">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deletePaymentModal" title="Delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <!-- Example Payment 2 -->
-                        <tr>
-                            <td>2</td>
-                            <td>1002</td>
-                            <td>$300</td>
-                            <td>Pending</td>
-                            <td>2025-01-03</td>
-                            <td>Paypal</td>
-                            <td>
-                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewPaymentModal" title="View">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPaymentModal" title="Edit">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deletePaymentModal" title="Delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Add New Payment Button -->
-            <div class="text-end mt-4">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPaymentModal">Add New Payment</button>
-            </div>
-
-            <!-- Modal for Viewing a Payment -->
-            <div class="modal fade" id="viewPaymentModal" tabindex="-1" aria-labelledby="viewPaymentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="viewPaymentModalLabel">View Payment</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <strong>Payment ID:</strong> 1 <br>
-                            <strong>Order ID:</strong> 1001 <br>
-                            <strong>Amount:</strong> $500 <br>
-                            <strong>Status:</strong> Completed <br>
-                            <strong>Payment Date:</strong> 2025-01-02 <br>
-                            <strong>Payment Method:</strong> Credit Card
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+            <div class="modal-body">
+                <form id="editPaymentForm" action="/Admin/EditPayment" method="post">
+                    <input type="hidden" name="PaymentId" id="editPaymentId">
+                    <div class="mb-3">
+                        <label for="editOrderId" class="form-label">Order ID</label>
+                        <input type="text" class="form-control" id="editOrderId" name="OrderId" readonly>
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal for Editing a Payment -->
-            <div class="modal fade" id="editPaymentModal" tabindex="-1" aria-labelledby="editPaymentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="editPaymentModalLabel">Edit Payment</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="orderId" class="form-label">Order ID</label>
-                                    <input type="text" class="form-control" id="orderId" value="1001">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="amount" class="form-label">Amount</label>
-                                    <input type="text" class="form-control" id="amount" value="$500">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="status" class="form-label">Status</label>
-                                    <select class="form-select" id="status">
-                                        <option value="Completed" selected>Completed</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Failed">Failed</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="paymentDate" class="form-label">Payment Date</label>
-                                    <input type="date" class="form-control" id="paymentDate" value="2025-01-02">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="paymentMethod" class="form-label">Payment Method</label>
-                                    <select class="form-select" id="paymentMethod">
-                                        <option value="Credit Card" selected>Credit Card</option>
-                                        <option value="Paypal">Paypal</option>
-                                        <option value="Bank Transfer">Bank Transfer</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="editAmount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="editAmount" name="Amount" step="0.01" required>
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal for Deleting a Payment -->
-            <div class="modal fade" id="deletePaymentModal" tabindex="-1" aria-labelledby="deletePaymentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="deletePaymentModalLabel">Delete Payment</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to delete this payment?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="editStatus" class="form-label">Status</label>
+                        <select class="form-select" id="editStatus" name="Status" required>
+                            <option value="Completed">Completed</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Failed">Failed</option>
+                        </select>
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal for Adding a New Payment -->
-            <div class="modal fade" id="addPaymentModal" tabindex="-1" aria-labelledby="addPaymentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="addPaymentModalLabel">Add New Payment</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="newOrderId" class="form-label">Order ID</label>
-                                    <input type="text" class="form-control" id="newOrderId">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newAmount" class="form-label">Amount</label>
-                                    <input type="text" class="form-control" id="newAmount">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newStatus" class="form-label">Status</label>
-                                    <select class="form-select" id="newStatus">
-                                        <option value="Completed">Completed</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Failed">Failed</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newPaymentDate" class="form-label">Payment Date</label>
-                                    <input type="date" class="form-control" id="newPaymentDate">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newPaymentMethod" class="form-label">Payment Method</label>
-                                    <select class="form-select" id="newPaymentMethod">
-                                        <option value="Credit Card">Credit Card</option>
-                                        <option value="Paypal">Paypal</option>
-                                        <option value="Bank Transfer">Bank Transfer</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success">Add Payment</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="editPaymentDate" class="form-label">Payment Date</label>
+                        <input type="date" class="form-control" id="editPaymentDate" name="PaymentDate" required>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="editPaymentMethod" class="form-label">Payment Method</label>
+                        <select class="form-select" id="editPaymentMethod" name="PaymentMethod" required>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Paypal">Paypal</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Deleting Payment -->
+<div class="modal fade" id="deletePaymentModal" tabindex="-1" aria-labelledby="deletePaymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deletePaymentModalLabel">Delete Payment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="deletePaymentForm" action="/Admin/DeletePayment" method="post">
+                    <input type="hidden" name="IdPayment" id="deletePaymentId">
+                    <p>Are you sure you want to delete this payment?</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Adding a New Payment -->
+<div class="modal fade" id="addPaymentModal" tabindex="-1" aria-labelledby="addPaymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPaymentModalLabel">Add New Payment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addPaymentForm" action="/Admin/AddPayment" method="post">
+                    <div class="mb-3">
+                        <label for="newOrderId" class="form-label">Order ID</label>
+                        <input type="text" class="form-control" id="newOrderId" name="OrderId" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newAmount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="newAmount" name="Amount" step="0.01" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newStatus" class="form-label">Status</label>
+                        <select class="form-select" id="newStatus" name="Status" required>
+                            <option value="Completed">Completed</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Failed">Failed</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPaymentDate" class="form-label">Payment Date</label>
+                        <input type="date" class="form-control" id="newPaymentDate" name="PaymentDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPaymentMethod" class="form-label">Payment Method</label>
+                        <select class="form-select" id="newPaymentMethod" name="PaymentMethod" required>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Paypal">Paypal</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="submitAddPaymentForm">Add Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+          document.querySelectorAll('button[data-bs-target="#editPaymentModal"]').forEach(button => {
+        button.addEventListener('click', function () {
+            // Gán giá trị vào các trường của form modal
+            document.getElementById('editPaymentId').value = this.dataset.id;
+            document.getElementById('editOrderId').value = this.dataset.orderid; // Đây là giá trị OrderId, không cần sửa
+            document.getElementById('editAmount').value = parseFloat(this.dataset.amount).toFixed(2);
+            document.getElementById('editStatus').value = this.dataset.status;
+            document.getElementById('editPaymentDate').value = this.dataset.paymentdate;
+            document.getElementById('editPaymentMethod').value = this.dataset.paymentmethod;
+        });
+    });
 
 
+      document.querySelectorAll('button[data-bs-target="#deletePaymentModal"]').forEach(button => {
+        button.addEventListener('click', function() {
+            const deleteId = this.dataset.id;
+            document.getElementById('deletePaymentId').value = deleteId; // Gán ID vào form
+        });
+    });
+        document.getElementById('submitAddPaymentForm').addEventListener('click', function() {
+        // Kiểm tra tính hợp lệ của form
+        const form = document.getElementById('addPaymentForm');
+        if (form.checkValidity()) {
+            // Gửi form nếu hợp lệ
+            form.submit();
+        } else {
+            // Nếu form không hợp lệ, thông báo cho người dùng
+            alert("Please fill out all fields correctly.");
+        }
+    });
+
+
+
+</script>

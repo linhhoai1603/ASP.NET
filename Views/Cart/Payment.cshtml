@@ -1,0 +1,67 @@
+﻿@model ProjectDotNET.ViewModels.PaymentVM
+
+@{
+    ViewData["Title"] = "Thanh toán";
+}
+
+<div class="container checkout-container">
+    <h1 class="section-title mb-4">Thông tin khách hàng</h1>
+    <form method="post" action="@Url.Action("Order", "Cart")">
+        <div class="row">
+            <input type="hidden" class="form-control" id="UserId" name="UserId" required value="@Model.UserID">
+            
+            <!-- Left Column -->
+            <div class="col-md-6 mb-3">
+                <strong class="form-label" for="fullName">Họ và tên (*)</strong>
+                <input type="text" class="form-control" id="fullName" name="FullName" placeholder="Nhập họ và tên" required value="@Model.FullName" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+                <strong class="form-label" for="phone">Số điện thoại (*)</strong>
+                <input type="text" class="form-control" id="phone" name="Phone" placeholder="Nhập số điện thoại thật" required value="@Model.Phone" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <strong class="form-label" for="email">Email</strong>
+                <input type="email" class="form-control" id="email" name="Email" placeholder="Nhập email để nhận ưu đãi và hóa đơn VAT" value="@Model.Email" readonly>
+            </div>
+        </div>
+
+        <h2 class="section-title mt-4 mb-3">Phương thức nhận hàng</h2>
+        <div class="mb-3">
+            <select class="form-select" name="DeliveryMethod" required>
+                <option value="" disabled selected>Chọn phương thức nhận hàng</option>
+                <option value="vat">Xuất hóa đơn VAT đối với hàng Công ty</option>
+                <option value="delivery">Giao hàng miễn phí tận nơi</option>
+                <option value="store">Nhận tại cửa hàng</option>
+            </select>
+        </div>
+
+        <h2 class="section-title mt-4 mb-3">Địa chỉ nhận hàng</h2>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <strong class="form-label" for="city">Nhập chính xác địa chỉ giao hàng</strong>
+                <input type="text" class="form-control" id="city" name="Address" placeholder="Nhập địa chỉ giao hàng" value="@Model.Address" readonly>
+            </div>
+        </div>
+
+        <hr class="line">
+
+        <h2 class="section-title mt-4 mb-3">Tổng đơn</h2>
+        <div class="d-flex justify-content-between">
+            <span>Sản phẩm</span>
+            <span>@Model.TotalAmount.ToString("N0") đ</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <span>Phí vận chuyển</span>
+            <span>Miễn phí vận chuyển</span>
+        </div>
+        <div class="d-flex justify-content-between total-summary mt-3">
+            <span>Cần thanh toán</span>
+            <span style="color: #FF6F00">@Model.TotalAmount.ToString("N0") đ</span>
+        </div>
+
+        <button type="submit" class="btn btn-warning mt-4 w-100">Thanh toán khi nhận hàng</button>
+    </form>
+</div>

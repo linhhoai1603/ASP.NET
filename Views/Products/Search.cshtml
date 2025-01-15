@@ -1,0 +1,70 @@
+﻿@using X.PagedList.Mvc.Core
+@using X.PagedList
+@model IPagedList<ProjectDotNET.Models.Product>
+
+@{
+    ViewData["Title"] = "Kết quả tìm kiếm";
+}
+
+<h2 class="text-center mt-4">Kết quả tìm kiếm</h2>
+
+@if (!Model.Any())
+{
+    <p class="text-center text-danger">Không tìm thấy sản phẩm nào phù hợp.</p>
+}
+@if (ViewBag.Message != null)
+{
+    <p class="text-center text-danger">@ViewBag.Message</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm border-light">
+                    <img src="@product.ImgUrl" class="card-img-top product-img" alt="@product.ProductName" />
+
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@product.ProductName</h5>
+                        <p class="card-text text-center">Giá: @product.UnitPrice.ToString("N0") VNĐ</p>
+                        <p class="card-text">Thương hiệu: @product.Brand.BrandName</p>
+
+                        <!-- Bỏ hoàn toàn phần màu sắc -->
+                        <!-- Nút thêm vào giỏ hàng -->
+                        <form asp-action="AddToCart" asp-controller="Cart" method="post">
+                            <!-- Chỉ giữ lại productId và quantity -->
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <input type="number" name="quantity" value="1" min="1" class="form-control w-50 me-2" />
+                                <button type="submit" class="btn btn-success w-50">
+                                    <i class="bi bi-cart-plus"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Phân trang -->
+    <div class="mt-4 d-flex justify-content-center">
+        @Html.PagedListPager(Model, page => Url.Action("Search", new { query = Context.Request.Query["query"], page }),
+                new PagedListRenderOptions
+    {
+        DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+        DisplayLinkToLastPage = PagedListDisplayMode.Always,
+        DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+        DisplayLinkToNextPage = PagedListDisplayMode.Always,
+        LinkToFirstPageFormat = "«",
+        LinkToPreviousPageFormat = "‹",
+        LinkToNextPageFormat = "›",
+        LinkToLastPageFormat = "»",
+        MaximumPageNumbersToDisplay = 5,
+        UlElementClasses = new[] { "pagination" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" }
+    })
+    </div>
+}

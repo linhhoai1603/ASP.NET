@@ -31,12 +31,12 @@
                 </a>
             </div>
             <div class="w-100 d-flex align-items-center">
-                <form class="d-flex flex-grow-1 mx-3" action="search" method="post">
+                <form class="d-flex flex-grow-1 mx-3" action="@Url.Action("Search","Products")" method="get">
                     <input class="form-control rounded-0 border-danger"
                            type="text"
-                           name="search"
+                           name="query"
                            id="search"
-                           placeholder="Tìm kiếm..." />
+                           placeholder="Tìm kiếm sản phẩm..." />
                     <button class="btn btn-outline-danger rounded-0"
                             type="submit">
                         <i class="bi bi-search"></i>
@@ -59,13 +59,6 @@
                     <a href="@Url.Action("Cart", "Cart")" class="text-white fs-4 px-2"><i class="bi bi-basket"></i></a>
                     <a asp-action="Profile" asp-controller="Home" class="nav-link text-white fs-4 px-2"><i class="bi bi-person-circle"></i></a>
 
-@*                         @if (HttpContext.Session.GetInt32("UserId") != null){ *@
-@*                             <a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a> *@
-@* / *@
-@*                                     < a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a> *@
-@*                         }else{ *@
-
-@*                         } *@
                         @inject IHttpContextAccessor HttpContextAccessor
                         <ul class="no-bullets">
                         @if (HttpContextAccessor.HttpContext?.Session?.GetInt32("UserId") != null)
@@ -79,16 +72,9 @@
                             <li><a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a></li>
                         }
                         </ul>
-                        @* @if (Model.Id != null)
-                        @* { *@
-                        @*     <li><a href="@Url.Action("Profile", "Home")" class="text-black px-2" style="text-decoration:none;">Hello, @Model.FullName</a></li> *@
-                        @*     <li><a href="/Home/Logout">Logout</a></li> *@
-                        @* } *@
-                        @* else *@
-                        @* { *@
-                        @*     <li><a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a></li> *@
-                        @*     <li><a href = "@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a></li> *@
-                        @* } *@
+                    
+                    <a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a>/
+                    <a href="@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a>
                 </div>
             </div>
         </div>

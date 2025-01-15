@@ -4,6 +4,10 @@ namespace ProjectDotNET.ViewModels
 {
     public class OrderVM
     {
+        [Required(ErrorMessage = "Please enter the order id")]
+        [Display(Name = "Order Id")]
+        public int OrderId { get; set; }
+
         [Required(ErrorMessage = "Please enter the order date")]
         [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
