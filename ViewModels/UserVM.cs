@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Org.BouncyCastle.Utilities;
 
 namespace ProjectDotNET.ViewModels
 {
     public class UserVM
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [Required(ErrorMessage = "Username is required.")]
         [StringLength(100)]
         [Display(Name = "User Name")]

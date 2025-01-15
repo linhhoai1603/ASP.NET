@@ -1,229 +1,248 @@
-﻿<!DOCTYPE html>
+﻿@model ProjectDotNET.ViewModels.UserVM
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProjectDotNET</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ProjectDotNET.styles.css" asp-append-version="true" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-          rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
-          rel="stylesheet" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - ProjectDotNET</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/ProjectDotNET.styles.css" asp-append-version="true" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+		  rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+		  rel="stylesheet" />
+	<style>
+		.no-bullets {
+			list-style: none; /* Loại bỏ dấu */
+			margin: 0; /* Đặt lại margin nếu cần */
+			padding: 0; /* Đặt lại padding nếu cần */
+			display: flex;
+		}
+	</style>
 </head>
 <body>
-  <header class="bg-danger text-black">
-    <div class="container">
-        <div class="d-flex align-items-center justify-content-between py-3">
-            <div>
-                <a href="#" class="logo">
-                    <img height="50px" width="50px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/N7-KH.svg/2048px-N7-KH.svg.png" alt="header-logo" class="img-fluid" />
-                </a>
-            </div>
-            <div class="w-100 d-flex align-items-center">
-                <form class="d-flex flex-grow-1 mx-3" action="@Url.Action("Search","Products")" method="get">
-                    <input class="form-control rounded-0 border-danger"
-                           type="text"
-                           name="query"
-                           id="search"
-                           placeholder="Tìm kiếm sản phẩm..." />
-                    <button class="btn btn-outline-danger rounded-0"
-                            type="submit">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </form>
-                <div class="d-flex align-items-center">
-                    <div class="text-center px-2">
-                        <span class="d-block small">Mua hàng - Khiếu nại</span>
-                        <a href="tel:0373772291" style="text-decoration: none">
-                            <strong class="text-black">0373772291</strong>
-                        </a>
-                    </div>
-                    <div class="text-center px-2">
-                        <span class="d-block small">Bảo hành / Phần mềm</span>
-                        <a href="tel:0373772291" style="text-decoration: none">
-                            <strong class="text-black">0373772291</strong>
-                        </a>
-                    </div>
-             
-                    <a href="@Url.Action("Cart", "Cart")" class="text-white fs-4 px-2"><i class="bi bi-basket"></i></a>
-                    <a asp-action="Profile" asp-controller="Home" class="nav-link text-white fs-4 px-2"><i class="bi bi-person-circle"></i></a>
-                    
-                    <!-- Add Login and Register links here -->
-                    <a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a>/
-                    <a href="@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+	<header class="bg-danger text-black">
+		<div class="container">
+			<div class="d-flex align-items-center justify-content-between py-3">
+				<div>
+					<a href="#" class="logo">
+						<img height="50px" width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/N7-KH.svg/2048px-N7-KH.svg.png" alt="header-logo" class="img-fluid" />
+					</a>
+				</div>
+				<div class="w-100 d-flex align-items-center">
+					<form class="d-flex flex-grow-1 mx-3" action="@Url.Action("Search","Products")" method="get">
+						<input class="form-control rounded-0 border-danger"
+							   type="text"
+							   name="query"
+							   id="search"
+							   placeholder="Tìm kiếm sản phẩm..." />
+						<button class="btn btn-outline-danger rounded-0"
+								type="submit">
+							<i class="bi bi-search"></i>
+						</button>
+					</form>
+					<div class="d-flex align-items-center">
+						<div class="text-center px-2">
+							<span class="d-block small">Mua hàng - Khiếu nại</span>
+							<a href="tel:0373772291" style="text-decoration: none">
+								<strong class="text-black">0373772291</strong>
+							</a>
+						</div>
+						<div class="text-center px-2">
+							<span class="d-block small">Bảo hành / Phần mềm</span>
+							<a href="tel:0373772291" style="text-decoration: none">
+								<strong class="text-black">0373772291</strong>
+							</a>
+						</div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" >
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Products", "Products")">Sản phẩm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Ordered", "Ordered")">Đơn hàng đã mua</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="@Url.Action("Contact", "Contact")" class="nav-link">Liên hệ</a>
-                    </li>
+						<a href="@Url.Action("Cart", "Cart")" class="text-white fs-4 px-2"><i class="bi bi-basket"></i></a>
+						<a asp-action="Profile" asp-controller="Home" class="nav-link text-white fs-4 px-2"><i class="bi bi-person-circle"></i></a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Policy", "Policy")">Chính sách</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("ReturnPolicy", "ReturnPolicy")">Chính sách đổi trả</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </nav>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+						@inject IHttpContextAccessor HttpContextAccessor
+						<ul class="no-bullets">
+							@if (HttpContextAccessor.HttpContext?.Session?.GetInt32("UserId") != null)
+							{
+								<li style="list-style-type: none;"><a href="@Url.Action("Profile", "Home")" class="text-black px-2" style="text-decoration:none;">Hello, @HttpContextAccessor.HttpContext.Session.GetString("Username")</a></li>
+								<li style="list-style-type: none;"><a href="/Home/Logout">Logout</a></li>
+							}
+							else
+							{
+								<li><a href="@Url.Action("Login", "Home")" class="text-black px-2" style="text-decoration:none;">Đăng nhập</a></li>
+								<li><a href="@Url.Action("Register", "Home")" class="text-black  px-2" style="text-decoration:none;">Đăng ký</a></li>
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-    <footer class="bg-dark text-center text-white">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Right -->
-            <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Công ty ABC
-                        </h6>
-                        <p>
-                            Ở đây chúng tôi bán mọi loại điện thoại, từ điện thoại cổ đến điện thoại mới nhất
-                            . Chúng tôi có tất cả các loại điện thoại từ các hãng nổi tiếng như Apple, Samsung, Xiaomi, Oppo, Vivo, Realme, ...
-                        </p>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" class="w-100 h-100">
-                            </div>
-                            <div class="col-md-3">
-                                <img src="https://graphicsprings.com/wp-content/uploads/2023/07/image-58-1024x512.png?x57371" alt="Samsung" class="w-100 h-100">
-                            </div>
-                            <div class="col-md-3">
-                                <img src="https://cdn.tgdd.vn/Files/2019/03/12/1154295/new-oppo-logo_600x173.png" alt="Samsung" class="w-100 h-100">
-                            </div>
-                            <div class="col-md-3">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Vivo_logo_2019.svg/3953px-Vivo_logo_2019.svg.png" alt="Samsung" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Các hãng hợp tác
-                        </h6>
-                        <p>
-                            <a href="https://www.samsung.com/vn/" class="text-reset">Samsung</a>
-                        </p>
-                        <p>
-                            <a href="https://www.apple.com/vn/" class="text-reset ">Apple</a>
-                        </p>
-                        <p>
-                            <a href="https://www.oppo.com/vn/" class="text-reset">Oppo</a>
-                        </p>
-                        <p>
-                            <a href="https://www.vivo.com/vn" class="text-reset">Vivo</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Tiện ích
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Sản phẩm</a>
-                        </p>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="@Url.Action("Products", "Products")">Sản phẩm</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="@Url.Action("Ordered", "Ordered")">Đơn hàng đã mua</a>
+					</li>
+					<li class="nav-item">
+						<a href="@Url.Action("Contact", "Contact")" class="nav-link">Liên hệ</a>
+					</li>
 
-                        <p>
-                            <a href="#!" class="text-reset">Đơn hàng</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Chính sách đổi trả</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Cài đặt</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Liên hệ</h6>
-                        <p><i class="fas fa-home me-3"></i> Thủ Đức TP.HCM</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            asp.net@gmail.com.vn
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> + 81 456 789 19</p>
-                        <p><i class="fas fa-print me-3"></i> + 81 234 567 89</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-        <!-- Copyright -->
-        <div class="text-center text-white p-4" style="background-color: #d70018">
-            © 2021 - 2025&nbsp;&nbsp;
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">ASP.NET.com.vn</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+					<li class="nav-item">
+						<a class="nav-link" href="@Url.Action("Policy", "Policy")">Chính sách</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="@Url.Action("ReturnPolicy", "ReturnPolicy")">Chính sách đổi trả</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="bg-dark text-center text-white">
+		<!-- Section: Social media -->
+		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+			<!-- Right -->
+			<div>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-google"></i>
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-github"></i>
+				</a>
+			</div>
+			<!-- Right -->
+		</section>
+		<!-- Section: Social media -->
+		<!-- Section: Links  -->
+		<section class="">
+			<div class="container text-center text-md-start mt-5">
+				<!-- Grid row -->
+				<div class="row mt-3">
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+						<!-- Content -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="fas fa-gem me-3"></i>Công ty ABC
+						</h6>
+						<p>
+							Ở đây chúng tôi bán mọi loại điện thoại, từ điện thoại cổ đến điện thoại mới nhất
+							. Chúng tôi có tất cả các loại điện thoại từ các hãng nổi tiếng như Apple, Samsung, Xiaomi, Oppo, Vivo, Realme, ...
+						</p>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" class="w-100 h-100">
+							</div>
+							<div class="col-md-3">
+								<img src="https://graphicsprings.com/wp-content/uploads/2023/07/image-58-1024x512.png?x57371" alt="Samsung" class="w-100 h-100">
+							</div>
+							<div class="col-md-3">
+								<img src="https://cdn.tgdd.vn/Files/2019/03/12/1154295/new-oppo-logo_600x173.png" alt="Samsung" class="w-100 h-100">
+							</div>
+							<div class="col-md-3">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Vivo_logo_2019.svg/3953px-Vivo_logo_2019.svg.png" alt="Samsung" class="w-100">
+							</div>
+						</div>
+					</div>
+					<!-- Grid column -->
+					<!-- Grid column -->
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Các hãng hợp tác
+						</h6>
+						<p>
+							<a href="https://www.samsung.com/vn/" class="text-reset">Samsung</a>
+						</p>
+						<p>
+							<a href="https://www.apple.com/vn/" class="text-reset ">Apple</a>
+						</p>
+						<p>
+							<a href="https://www.oppo.com/vn/" class="text-reset">Oppo</a>
+						</p>
+						<p>
+							<a href="https://www.vivo.com/vn" class="text-reset">Vivo</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Tiện ích
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">Sản phẩm</a>
+						</p>
+
+						<p>
+							<a href="#!" class="text-reset">Đơn hàng</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Chính sách đổi trả</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Cài đặt</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+					<!-- Grid column -->
+					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">Liên hệ</h6>
+						<p><i class="fas fa-home me-3"></i> Thủ Đức TP.HCM</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i>
+							asp.net@gmail.com.vn
+						</p>
+						<p><i class="fas fa-phone me-3"></i> + 81 456 789 19</p>
+						<p><i class="fas fa-print me-3"></i> + 81 234 567 89</p>
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</div>
+		</section>
+		<!-- Section: Links  -->
+		<!-- Copyright -->
+		<div class="text-center text-white p-4" style="background-color: #d70018">
+			© 2021 - 2025&nbsp;&nbsp;
+			<a class="text-reset fw-bold" href="https://mdbootstrap.com/">ASP.NET.com.vn</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
